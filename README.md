@@ -65,12 +65,13 @@ This repository focuses on representative and high-quality works rather than an 
 
 ## Evaluation and Analysis
 
-| Year | Paper                                                                                                                                                        | Venue             |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| 2026 | [Understanding Generalization in Role-Playing Models via Information Theory](https://arxiv.org/abs/2512.17270)                                               | ACL Findings 2026 |
-| 2025 | [Spotting Out-of-Character Behavior: Atomic-Level Evaluation of Persona Fidelity in Open-Ended Generation](https://aclanthology.org/2025.findings-acl.1349/) | ACL Findings 2025 |
-| 2025 | [When Harry Meets Superman: The Role of The Interlocutor in Persona-Based Dialogue Generation](https://aclanthology.org/2025.acl-long.879/)                  | ACL 2025          |
-| 2025 | [Reasoning Does Not Necessarily Improve Role-Playing Ability](https://aclanthology.org/2025.findings-acl.537/)                                               | ACL Findings 2025 |
+| Year | Paper                                                                                                                                                        | Venue             | Code                                      |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | ----------------------------------------- |
+| 2026 | [PersonaArena: Dynamic Simulation for Evaluating and Enhancing Persona-Level Role-Playing in Large Language Models](https://aclanthology.org/2026.findings-acl.471/) | ACL Findings 2026 | [Code](https://anonymous.4open.science/r/PersonaArena-B323/) |
+| 2026 | [Understanding Generalization in Role-Playing Models via Information Theory](https://arxiv.org/abs/2512.17270)                                               | ACL Findings 2026 | -                                         |
+| 2025 | [Spotting Out-of-Character Behavior: Atomic-Level Evaluation of Persona Fidelity in Open-Ended Generation](https://aclanthology.org/2025.findings-acl.1349/) | ACL Findings 2025 | -                                         |
+| 2025 | [When Harry Meets Superman: The Role of The Interlocutor in Persona-Based Dialogue Generation](https://aclanthology.org/2025.acl-long.879/)                  | ACL 2025          | -                                         |
+| 2025 | [Reasoning Does Not Necessarily Improve Role-Playing Ability](https://aclanthology.org/2025.findings-acl.537/)                                               | ACL Findings 2025 | -                                         |
 
 ---
 
