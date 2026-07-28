@@ -52,7 +52,12 @@
             "Multi-agent",
             "Dataset"
           ],
-          "description": "Adaptive multi-agent role-playing with scene management."
+          "description": "Adaptive multi-agent role-playing with scene management.",
+          "detailId": "2601.11007",
+          "details": {
+            "abstractZh": "现有大语言模型角色扮演系统往往对动态环境建模不足，并默认场景与角色阵容基本固定，因而难以支持多角色调度、场景切换和临时引入角色。AdaMARP 将思考、动作、环境与言语组织为统一的沉浸式消息格式，并引入场景管理器，通过初始化场景、选择说话者、切换场景、添加角色和结束互动等离散动作控制叙事过程。研究还构建了用于训练演员模型的 AdaRPSet、监督调度决策的 AdaSMSet，以及面向完整交互轨迹的 AdaptiveBench。不同模型和规模上的实验表明，该框架能够提升角色一致性、环境依据、叙事连贯性、场景转换和角色引入的自然程度，较小规模的演员与管理器模型也能取得具有竞争力的表现。",
+            "abstractEn": "AdaMARP addresses limited immersion and adaptability in LLM role-playing by combining a four-channel message format—thought, action, environment, and speech—with a Scene Manager that controls speaker selection, scene changes, character insertion, and episode termination. The authors build AdaRPSet to train actor behavior, AdaSMSet to supervise orchestration decisions, and AdaptiveBench for trajectory-level evaluation. Across several model families and scales, the framework improves character consistency, environmental grounding, narrative coherence, scene transitions, and role introduction; relatively small actor and manager models also compare favorably with stronger commercial systems."
+          }
         },
         {
           "year": 2026,
@@ -66,7 +71,12 @@
           "tags": [
             "State modeling"
           ],
-          "description": "Models latent character states with codified FSMs."
+          "description": "Models latent character states with codified FSMs.",
+          "detailId": "2602.05905",
+          "details": {
+            "abstractZh": "稳定且有吸引力的角色扮演需要持续跟踪驱动角色行为的潜在状态，而常见的提示方法通常只描述表层动作。该工作提出 Codified Finite-State Machines，利用基于大语言模型的代码生成，将文本角色档案自动转化为可解释的有限状态机，以显式状态和转移约束角色行为。进一步提出的概率版本 CPFSM 使用状态转移概率分布表达角色行为中的不确定性与多样性。合成任务和真实作品角色扮演场景上的实验显示，CFSM 与 CPFSM 在结构化状态跟踪和开放式随机状态探索中均优于通用基线，说明可执行的状态表示能够在不训练模型参数的情况下改善角色一致性。",
+            "abstractEn": "Consistent role-playing requires tracking latent character states, which surface-level prompting often misses. This work automatically converts textual character profiles into interpretable finite-state machines through LLM-based coding. CFSM defines explicit states and transitions that constrain behavior, while its probabilistic extension, CPFSM, represents uncertainty by assigning distributions over possible next states. Evaluations on synthetic tasks and real role-playing scenarios show that these codified state models outperform general baselines in structured state tracking and open-ended stochastic exploration, suggesting that executable state representations can improve character consistency without training model parameters."
+          }
         },
         {
           "year": 2026,
@@ -84,7 +94,12 @@
             "Profile induction",
             "Decision trees"
           ],
-          "description": "Derives executable character logic from storylines as validated decision trees without parameter training."
+          "description": "Derives executable character logic from storylines as validated decision trees without parameter training.",
+          "detailId": "2601.10080",
+          "details": {
+            "abstractZh": "角色扮演智能体通常依赖行为档案保持人物一致性，但传统档案多为非结构化文本，既难以直接执行，也缺少系统验证。Codified Decision Trees 从大规模叙事数据中归纳可解释的决策结构：内部节点表示经过验证的场景条件，叶节点存放有叙事证据支持的行为规则，使系统能够针对当前情境确定性地检索合适规则。方法通过反复生成候选的场景—行为规则、依据数据验证规则，并进行分层细化来构建决策树。在覆盖 16 部作品、85 个角色的多项基准上，该方法明显优于人工编写档案和已有档案归纳方法，表明经过验证、可执行的角色逻辑能够在无需参数训练的情况下提升角色依据性、透明度和可维护性。",
+            "abstractEn": "Role-playing agents often depend on behavioral profiles that are unstructured, difficult to execute, and weakly validated. Codified Decision Trees learns an interpretable decision structure from narrative data: internal nodes encode validated scene conditions, while leaves contain grounded behavioral rules that can be retrieved deterministically for the current context. Candidate scene-action rules are repeatedly induced, checked against evidence, and refined through hierarchical specialization. Experiments covering 85 characters from 16 narrative works show substantial gains over human-written profiles and earlier profile-induction methods, indicating that validated executable character logic can improve grounding, transparency, and maintainability without parameter training."
+          }
         },
         {
           "year": 2026,

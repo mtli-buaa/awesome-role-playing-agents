@@ -9,6 +9,7 @@ const state = {
   category: "all",
   year: "all",
   tags: new Set(),
+  openDetailId: "",
 };
 
 const els = {
@@ -23,7 +24,15 @@ const els = {
   activeTags: document.querySelector("#active-tags"),
   clear: document.querySelector("#clear-filters"),
   menu: document.querySelector(".mobile-menu"),
+  detail: document.querySelector("#paper-detail"),
+  detailBackdrop: document.querySelector("#detail-backdrop"),
+  detailClose: document.querySelector("#detail-close"),
+  detailTitle: document.querySelector("#detail-title"),
+  detailAbstractZh: document.querySelector("#detail-abstract-zh"),
+  detailAbstractEn: document.querySelector("#detail-abstract-en"),
 };
+
+let detailReturnFocus = null;
 
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -42,6 +51,8 @@ function parseData(data) {
       resourceUrl: entry.resource?.url || "",
       type: [...entry.trainingMethods, ...entry.tags].join(" + "),
       description: entry.description || "",
+      detailId: entry.detailId || "",
+      details: entry.details || null,
     })),
   );
   return { entries, sections };
@@ -203,9 +214,11 @@ function entryMatches(entry) {
 }
 
 function paperCard(entry) {
-  const title = entry.paperUrl
-    ? `<a href="${entry.paperUrl}" target="_blank" rel="noreferrer">${entry.title} ↗</a>`
-    : entry.title;
+  const title = entry.details
+    ? `<button type="button" class="paper-detail-trigger" data-paper-id="${entry.detailId}" aria-haspopup="dialog">${entry.title}<span aria-hidden="true"> →</span></button>`
+    : entry.paperUrl
+      ? `<a href="${entry.paperUrl}" target="_blank" rel="noreferrer">${entry.title} ↗</a>`
+      : entry.title;
   const tags = getEntryTags(entry)
     .map(
       (tag) =>
@@ -214,6 +227,9 @@ function paperCard(entry) {
     .join("");
   const resource = entry.resourceUrl
     ? `<a href="${entry.resourceUrl}" target="_blank" rel="noreferrer">${entry.resourceLabel || "Resource"} ↗</a>`
+    : "";
+  const paperLink = entry.details && entry.paperUrl
+    ? `<a href="${entry.paperUrl}" target="_blank" rel="noreferrer">Paper ↗</a>`
     : "";
 
   return `
@@ -226,10 +242,63 @@ function paperCard(entry) {
       </div>
       <div class="paper-links">
         ${entry.venue ? `<span class="venue">${entry.venue}</span>` : ""}
+        ${paperLink}
         ${resource}
       </div>
     </article>
   `;
+}
+
+function showPaperDetail(entry, updateHistory = true) {
+  if (!entry?.details) return;
+  const wasOpen = Boolean(state.openDetailId);
+  detailReturnFocus = document.activeElement;
+  state.openDetailId = entry.detailId;
+  els.detailTitle.textContent = entry.title;
+  els.detailAbstractZh.textContent = entry.details.abstractZh;
+  els.detailAbstractEn.textContent = entry.details.abstractEn;
+  els.detail.setAttribute("aria-hidden", "false");
+  els.detailBackdrop.hidden = false;
+  document.body.classList.add("detail-open");
+
+  if (updateHistory) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("paper", entry.detailId);
+    const method = wasOpen ? "replaceState" : "pushState";
+    window.history[method]({ ...window.history.state, paperDetail: entry.detailId }, "", url);
+  }
+
+  window.requestAnimationFrame(() => els.detailClose.focus());
+}
+
+function hidePaperDetail(returnFocus = true) {
+  if (!state.openDetailId) return;
+  state.openDetailId = "";
+  document.body.classList.remove("detail-open");
+  els.detail.setAttribute("aria-hidden", "true");
+  els.detailBackdrop.hidden = true;
+  if (returnFocus && detailReturnFocus?.isConnected) detailReturnFocus.focus();
+}
+
+function requestClosePaperDetail() {
+  if (window.history.state?.paperDetail) {
+    window.history.back();
+    return;
+  }
+  const url = new URL(window.location.href);
+  url.searchParams.delete("paper");
+  window.history.replaceState(window.history.state, "", url);
+  hidePaperDetail();
+}
+
+function syncPaperDetailFromUrl() {
+  const detailId = new URL(window.location.href).searchParams.get("paper");
+  const entry = state.entries.find((item) => item.detailId === detailId && item.details);
+  if (entry) {
+    showPaperDetail(entry, false);
+  } else {
+    hidePaperDetail();
+  }
 }
 
 function renderCollection() {
@@ -272,6 +341,7 @@ async function init() {
     renderFilters();
     renderStats();
     renderCollection();
+    syncPaperDetailFromUrl();
   } catch (error) {
     els.results.textContent = "Could not load the collection.";
     els.collection.innerHTML = `<div class="empty">The paper data could not be loaded. Please refresh the page.</div>`;
@@ -333,6 +403,12 @@ els.clear.addEventListener("click", () => {
   renderCollection();
 });
 els.collection.addEventListener("click", (event) => {
+  const detailTrigger = event.target.closest(".paper-detail-trigger");
+  if (detailTrigger) {
+    const entry = state.entries.find((item) => item.detailId === detailTrigger.dataset.paperId);
+    showPaperDetail(entry);
+    return;
+  }
   const tag = event.target.closest(".tag");
   if (tag) toggleTag(tag.dataset.tag);
 });
@@ -348,6 +424,28 @@ els.navigation.addEventListener("click", () => {
   document.body.classList.remove("menu-open");
   els.menu.setAttribute("aria-expanded", "false");
 });
+els.detailClose.addEventListener("click", requestClosePaperDetail);
+els.detailBackdrop.addEventListener("click", requestClosePaperDetail);
+els.detail.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    event.preventDefault();
+    els.detailClose.focus();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.openDetailId) requestClosePaperDetail();
+});
+document.addEventListener("click", (event) => {
+  if (
+    state.openDetailId &&
+    !event.target.closest("#paper-detail") &&
+    !event.target.closest(".paper-detail-trigger") &&
+    !event.target.closest("#detail-backdrop")
+  ) {
+    requestClosePaperDetail();
+  }
+});
+window.addEventListener("popstate", syncPaperDetailFromUrl);
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 init();

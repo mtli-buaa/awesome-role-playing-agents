@@ -32,6 +32,7 @@ function validate(data) {
 
   const sectionIds = new Set();
   const paperUrls = new Set();
+  const detailIds = new Set();
   for (const section of data.sections) {
     if (!section.id || !section.name || !["overview", "papers", "datasets"].includes(section.kind)) {
       fail(`Invalid section metadata: ${JSON.stringify(section)}.`);
@@ -60,6 +61,17 @@ function validate(data) {
       }
       if (entry.resource && (!entry.resource.label || !entry.resource.url)) {
         fail(`Incomplete resource link on: ${entry.title}.`);
+      }
+      if (entry.details) {
+        if (!entry.detailId || detailIds.has(entry.detailId)) {
+          fail(`Missing or duplicate detailId on: ${entry.title}.`);
+        }
+        detailIds.add(entry.detailId);
+        if (!entry.details.abstractZh?.trim() || !entry.details.abstractEn?.trim()) {
+          fail(`Both Chinese and English abstracts are required on: ${entry.title}.`);
+        }
+      } else if (entry.detailId) {
+        fail(`Remove detailId or add details on: ${entry.title}.`);
       }
     }
   }
