@@ -1,4 +1,6 @@
-const DATA_URL = "./papers.json";
+const scriptUrl = new URL(document.currentScript?.src || window.location.href);
+const buildVersion = scriptUrl.searchParams.get("v") || "development";
+const DATA_URL = `./papers.json?v=${encodeURIComponent(buildVersion)}`;
 
 const state = {
   entries: [],
@@ -257,7 +259,7 @@ function renderCollection() {
 
 async function init() {
   try {
-    const response = await fetch(DATA_URL);
+    const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error("Paper data unavailable");
     const parsed = parseData(await response.json());
     state.entries = parsed.entries;

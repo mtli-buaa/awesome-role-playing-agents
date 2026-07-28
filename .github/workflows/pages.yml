@@ -26,7 +26,9 @@ jobs:
       - name: Validate research data
         run: node scripts/generate-readme.mjs --check
       - name: Prepare site
-        run: cp data/papers.json docs/papers.json
+        run: |
+          cp data/papers.json docs/papers.json
+          sed -i "s/__BUILD_VERSION__/${GITHUB_SHA}/g" docs/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
