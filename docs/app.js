@@ -6,6 +6,7 @@ const state = {
   query: "",
   category: "all",
   year: "all",
+  tags: new Set(),
 };
 
 const els = {
@@ -15,6 +16,7 @@ const els = {
   category: document.querySelector("#category-filter"),
   year: document.querySelector("#year-filter"),
   results: document.querySelector("#results-count"),
+  activeTags: document.querySelector("#active-tags"),
   clear: document.querySelector("#clear-filters"),
   menu: document.querySelector(".mobile-menu"),
 };
@@ -115,14 +117,51 @@ function renderStats() {
   document.querySelector("#latest-year").textContent = Math.max(...years.map(Number));
 }
 
+function getEntryTags(entry) {
+  return entry.type ? entry.type.split(/\s*\+\s*/).filter(Boolean) : [];
+}
+
+function updateTagUrl() {
+  const url = new URL(window.location.href);
+  if (state.tags.size) {
+    url.searchParams.set("tags", [...state.tags].join(","));
+  } else {
+    url.searchParams.delete("tags");
+  }
+  window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function toggleTag(tag) {
+  if (state.tags.has(tag)) {
+    state.tags.delete(tag);
+  } else {
+    state.tags.add(tag);
+  }
+  updateTagUrl();
+  renderCollection();
+}
+
+function renderActiveTags() {
+  els.activeTags.innerHTML = state.tags.size
+    ? `<span>Filtering by</span>${[...state.tags]
+        .map(
+          (tag) =>
+            `<button type="button" class="active-tag" data-tag="${tag}" aria-label="Remove ${tag} filter">${tag}<span aria-hidden="true">×</span></button>`,
+        )
+        .join("")}`
+    : "";
+}
+
 function entryMatches(entry) {
   const haystack = [entry.title, entry.venue, entry.type, entry.description, entry.section]
     .join(" ")
     .toLowerCase();
+  const entryTags = getEntryTags(entry);
   return (
     (!state.query || haystack.includes(state.query)) &&
     (state.category === "all" || entry.section === state.category) &&
-    (state.year === "all" || entry.year === state.year)
+    (state.year === "all" || entry.year === state.year) &&
+    [...state.tags].every((tag) => entryTags.includes(tag))
   );
 }
 
@@ -130,9 +169,12 @@ function paperCard(entry) {
   const title = entry.paperUrl
     ? `<a href="${entry.paperUrl}" target="_blank" rel="noreferrer">${entry.title} ↗</a>`
     : entry.title;
-  const tags = entry.type
-    ? entry.type.split(/\s*\+\s*/).map((tag) => `<span class="tag">${tag}</span>`).join("")
-    : "";
+  const tags = getEntryTags(entry)
+    .map(
+      (tag) =>
+        `<button type="button" class="tag${state.tags.has(tag) ? " selected" : ""}" data-tag="${tag}" aria-pressed="${state.tags.has(tag)}">${tag}</button>`,
+    )
+    .join("");
   const resource = entry.resourceUrl
     ? `<a href="${entry.resourceUrl}" target="_blank" rel="noreferrer">${entry.resourceLabel || "Resource"} ↗</a>`
     : "";
@@ -160,6 +202,7 @@ function renderCollection() {
     .filter(([, entries]) => entries.length);
 
   els.results.textContent = `${filtered.length} of ${state.entries.length} entries`;
+  renderActiveTags();
   els.collection.innerHTML = grouped.length
     ? grouped
         .map(
@@ -184,6 +227,10 @@ async function init() {
     const parsed = parseReadme(await response.text());
     state.entries = parsed.entries;
     state.sections = parsed.sections;
+    const initialTags = new URL(window.location.href).searchParams.get("tags");
+    if (initialTags) {
+      initialTags.split(",").filter(Boolean).forEach((tag) => state.tags.add(tag));
+    }
     renderNav();
     renderFilters();
     renderStats();
@@ -210,10 +257,20 @@ els.clear.addEventListener("click", () => {
   state.query = "";
   state.category = "all";
   state.year = "all";
+  state.tags.clear();
   els.search.value = "";
   els.category.value = "all";
   els.year.value = "all";
+  updateTagUrl();
   renderCollection();
+});
+els.collection.addEventListener("click", (event) => {
+  const tag = event.target.closest(".tag");
+  if (tag) toggleTag(tag.dataset.tag);
+});
+els.activeTags.addEventListener("click", (event) => {
+  const tag = event.target.closest(".active-tag");
+  if (tag) toggleTag(tag.dataset.tag);
 });
 els.menu.addEventListener("click", () => {
   const open = document.body.classList.toggle("menu-open");

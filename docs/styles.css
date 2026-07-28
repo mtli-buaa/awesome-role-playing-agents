@@ -189,6 +189,21 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 62px); line-height: 1.05; letter-spa
 .search input { padding-left: 48px; }
 .results-meta { display: flex; justify-content: space-between; margin: 22px 0; color: var(--muted); font: 11px "DM Mono", monospace; }
 .results-meta button { border: 0; padding: 0; background: none; color: var(--green); cursor: pointer; }
+.active-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; min-height: 0; margin: -8px 0 22px; color: var(--muted); font: 10px "DM Mono", monospace; }
+.active-tags:empty { display: none; }
+.active-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 8px;
+  border: 1px solid var(--green);
+  border-radius: 2px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.active-tag span { font-size: 14px; line-height: 8px; }
 .collection { display: grid; gap: 72px; }
 .research-section { scroll-margin-top: 32px; }
 .research-section-header { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 14px; border-bottom: 2px solid var(--ink); }
@@ -210,7 +225,18 @@ h2 { margin: 0; font-size: clamp(38px, 4vw, 62px); line-height: 1.05; letter-spa
 .paper-title a:hover { color: var(--green); }
 .paper-description { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .paper-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.tag { padding: 4px 7px; border-radius: 2px; background: var(--green-soft); color: var(--green); font: 10px "DM Mono", monospace; }
+.tag {
+  padding: 4px 7px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: var(--green-soft);
+  color: var(--green);
+  cursor: pointer;
+  font: 10px "DM Mono", monospace;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.tag:hover { border-color: var(--green); }
+.tag.selected { background: var(--green); color: #fff; }
 .paper-links { display: flex; justify-content: flex-end; align-items: flex-start; flex-wrap: wrap; gap: 7px; }
 .paper-links a, .venue {
   padding: 6px 8px;
