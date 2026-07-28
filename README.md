@@ -1,5 +1,8 @@
 # Awesome Role-Playing Agents
 
+[![Website](https://img.shields.io/badge/Website-Explore_the_collection-1e6b4f?style=flat-square)](https://mtli-buaa.github.io/awesome-role-playing-agents/)
+[![GitHub Pages](https://github.com/mtli-buaa/awesome-role-playing-agents/actions/workflows/pages.yml/badge.svg)](https://github.com/mtli-buaa/awesome-role-playing-agents/actions/workflows/pages.yml)
+
 A curated collection of selected papers, datasets, benchmarks, and resources on **role-playing agents**, **character simulation**, **persona consistency**, **memory modeling**, and **narrative reasoning**.
 
 This repository focuses on representative and high-quality works rather than an exhaustive list.
