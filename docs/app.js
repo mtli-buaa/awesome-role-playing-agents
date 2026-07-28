@@ -1,4 +1,4 @@
-const README_URL = "./README.md";
+const DATA_URL = "./papers.json";
 
 const state = {
   entries: [],
@@ -25,70 +25,21 @@ function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-function splitRow(line) {
-  return line
-    .trim()
-    .replace(/^\||\|$/g, "")
-    .split("|")
-    .map((cell) => cell.trim());
-}
-
-function extractLink(value = "") {
-  const match = value.match(/\[([^\]]+)\]\(([^)]+)\)/);
-  return match ? { label: match[1], url: match[2] } : { label: value, url: "" };
-}
-
-function cleanMarkdown(value = "") {
-  return value
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-    .replace(/[*_`]/g, "")
-    .trim();
-}
-
-function parseReadme(markdown) {
-  const lines = markdown.split(/\r?\n/);
-  const ignored = new Set(["Contents", "Selection Criteria", "Contributing", "Contributors"]);
-  const entries = [];
-  const sections = [];
-  let section = "";
-
-  for (let index = 0; index < lines.length; index += 1) {
-    const heading = lines[index].match(/^##\s+(?:[^\w\s]+\s*)?(.+)$/);
-    if (heading) {
-      section = cleanMarkdown(heading[1]);
-      continue;
-    }
-
-    if (!section || ignored.has(section) || !lines[index].trim().startsWith("|")) continue;
-
-    const headers = splitRow(lines[index]).map((cell) => cell.toLowerCase());
-    const divider = lines[index + 1] || "";
-    if (!divider.includes("---") || !headers.includes("year") || !headers.includes("paper")) continue;
-
-    if (!sections.includes(section)) sections.push(section);
-    index += 2;
-
-    while (index < lines.length && lines[index].trim().startsWith("|")) {
-      const cells = splitRow(lines[index]);
-      const row = Object.fromEntries(headers.map((header, cellIndex) => [header, cells[cellIndex] || ""]));
-      const paper = extractLink(row.paper);
-      const resource = extractLink(row.code || "");
-      entries.push({
-        section,
-        year: cleanMarkdown(row.year),
-        title: cleanMarkdown(paper.label),
-        paperUrl: paper.url,
-        venue: cleanMarkdown(row.venue),
-        resourceLabel: cleanMarkdown(resource.label),
-        resourceUrl: resource.url,
-        type: cleanMarkdown(row.type || row.scope),
-        description: cleanMarkdown(row.description),
-      });
-      index += 1;
-    }
-    index -= 1;
-  }
-
+function parseData(data) {
+  const sections = data.sections.map((section) => section.name);
+  const entries = data.sections.flatMap((section) =>
+    section.entries.map((entry) => ({
+      section: section.name,
+      year: String(entry.year),
+      title: entry.title,
+      paperUrl: entry.paperUrl,
+      venue: entry.venue,
+      resourceLabel: entry.resource?.label || "",
+      resourceUrl: entry.resource?.url || "",
+      type: [...entry.trainingMethods, ...entry.tags].join(" + "),
+      description: entry.description || "",
+    })),
+  );
   return { entries, sections };
 }
 
@@ -222,9 +173,9 @@ function renderCollection() {
 
 async function init() {
   try {
-    const response = await fetch(README_URL);
-    if (!response.ok) throw new Error("README unavailable");
-    const parsed = parseReadme(await response.text());
+    const response = await fetch(DATA_URL);
+    if (!response.ok) throw new Error("Paper data unavailable");
+    const parsed = parseData(await response.json());
     state.entries = parsed.entries;
     state.sections = parsed.sections;
     const initialTags = new URL(window.location.href).searchParams.get("tags");
@@ -237,7 +188,7 @@ async function init() {
     renderCollection();
   } catch (error) {
     els.results.textContent = "Could not load the collection.";
-    els.collection.innerHTML = `<div class="empty">The README data could not be loaded. Please refresh the page.</div>`;
+    els.collection.innerHTML = `<div class="empty">The paper data could not be loaded. Please refresh the page.</div>`;
   }
 }
 

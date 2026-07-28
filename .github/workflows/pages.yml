@@ -23,8 +23,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate research data
+        run: node scripts/generate-readme.mjs --check
       - name: Prepare site
-        run: cp README.md docs/README.md
+        run: cp data/papers.json docs/papers.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

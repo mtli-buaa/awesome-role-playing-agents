@@ -1,0 +1,983 @@
+{
+  "schemaVersion": 1,
+  "trainingMethodVocabulary": [
+    "Training-free",
+    "SFT",
+    "RL",
+    "OPD"
+  ],
+  "sections": [
+    {
+      "id": "survey-and-overview",
+      "name": "Survey and Overview",
+      "kind": "overview",
+      "entries": [
+        {
+          "year": 2024,
+          "title": "From Persona to Personalization: A Survey on Role-Playing Language Agents",
+          "paperUrl": "https://arxiv.org/abs/2404.18231",
+          "venue": "TMLR 2024",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "Two Tales of Persona in LLMs: A Survey of Role-Playing and Personalization",
+          "paperUrl": "https://arxiv.org/abs/2406.01171",
+          "venue": "EMNLP Findings 2024",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "role-playing-agents",
+      "name": "Role-Playing Agents",
+      "kind": "papers",
+      "entries": [
+        {
+          "year": 2026,
+          "title": "AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing",
+          "paperUrl": "https://arxiv.org/abs/2601.11007",
+          "venue": "ACL Findings 2026",
+          "resource": null,
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Multi-agent",
+            "Dataset"
+          ],
+          "description": "Adaptive multi-agent role-playing with scene management."
+        },
+        {
+          "year": 2026,
+          "title": "Codified Finite-state Machines for Role-playing",
+          "paperUrl": "https://arxiv.org/abs/2602.05905",
+          "venue": "ICLR 2026",
+          "resource": null,
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "State modeling"
+          ],
+          "description": "Models latent character states with codified FSMs."
+        },
+        {
+          "year": 2026,
+          "title": "Deriving Character Logic from Storyline as Codified Decision Trees",
+          "paperUrl": "https://arxiv.org/abs/2601.10080",
+          "venue": "ACL 2026 Oral",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/KomeijiForce/Codified_Decision_Tree"
+          },
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Profile induction",
+            "Decision trees"
+          ],
+          "description": "Derives executable character logic from storylines as validated decision trees without parameter training."
+        },
+        {
+          "year": 2026,
+          "title": "Enhancing Persona Following at Decoding Time via Dynamic Importance Estimation for Role-Playing Agents",
+          "paperUrl": "https://arxiv.org/abs/2603.01438",
+          "venue": "ICLR 2026",
+          "resource": null,
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Decoding-time alignment"
+          ],
+          "description": "Improves persona following through inference-time reward-guided decoding without fine-tuning."
+        },
+        {
+          "year": 2026,
+          "title": "HER: Human-like Reasoning and Reinforcement Learning for LLM Role-playing",
+          "paperUrl": "https://arxiv.org/abs/2601.21459",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/cydu24/HER"
+          },
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Trains role-playing models with dual-layer thinking and rewards."
+        },
+        {
+          "year": 2026,
+          "title": "HumanLLM: Benchmarking and Improving LLM Anthropomorphism via Human Cognitive Patterns",
+          "paperUrl": "https://aclanthology.org/2026.acl-long.1783/",
+          "venue": "ACL 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/YJGoodbye2024/HumanLLM"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Cognitive modeling",
+            "Dataset"
+          ],
+          "description": "Models interacting human cognitive patterns for more authentic anthropomorphic role-playing."
+        },
+        {
+          "year": 2026,
+          "title": "HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing",
+          "paperUrl": "https://arxiv.org/abs/2511.08017",
+          "venue": "AAAI 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/yshihao-ai/HyCoRA"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "PEFT",
+            "Contrastive learning"
+          ],
+          "description": "Balances role-specific and shared character traits."
+        },
+        {
+          "year": 2026,
+          "title": "ThinkPersona: Thinking with Persona Graphs for Faithful Individualized Role-Playing",
+          "paperUrl": "https://aclanthology.org/2026.acl-long.449/",
+          "venue": "ACL 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Hualeez/ThinkPersona"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Persona graphs",
+            "Dataset"
+          ],
+          "description": "Grounds role-playing responses in structured persona histories."
+        },
+        {
+          "year": 2026,
+          "title": "EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World",
+          "paperUrl": "https://arxiv.org/abs/2607.17250",
+          "venue": "arXiv 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/HKUST-KnowComp/EvolvingWorld"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "World model",
+            "Dataset"
+          ],
+          "description": "Co-evolves open-schema character profiles and world states for long-horizon literary role-playing."
+        },
+        {
+          "year": 2026,
+          "title": "Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization",
+          "paperUrl": "https://arxiv.org/abs/2606.27025",
+          "venue": "arXiv",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Psychology-grounded CoT"
+          ],
+          "description": "Introduces Psy-CoT and RAPO for role-specific reasoning and token-aware policy optimization."
+        },
+        {
+          "year": 2026,
+          "title": "From Facts to Insights: A Persona-Driven Dual Memory Framework and Dataset for Role-Playing Agents",
+          "paperUrl": "https://arxiv.org/abs/2605.25693",
+          "venue": "arXiv 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/role2026/rolememo"
+          },
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Memory framework",
+            "Dataset"
+          ],
+          "description": "Decouples factual cognition and persona-conditioned insight for long-term persona fidelity."
+        },
+        {
+          "year": 2026,
+          "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
+          "paperUrl": "https://arxiv.org/abs/2606.25632",
+          "venue": "arXiv 2026",
+          "resource": null,
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Memory",
+            "Graph",
+            "Dataset"
+          ],
+          "description": "Uses perspective-bounded episodic, semantic, and personality memory to preserve character knowledge boundaries and situated behavior."
+        },
+        {
+          "year": 2026,
+          "title": "Character-R1: Enhancing Role-Aware Reasoning in Role-Playing Agents via RLVR",
+          "paperUrl": "https://arxiv.org/abs/2601.04611",
+          "venue": "arXiv",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [],
+          "description": "Enhances role-aware reasoning with verifiable rewards."
+        },
+        {
+          "year": 2025,
+          "title": "Beyond Dialogue: A Profile-Dialogue Alignment Framework Towards General Role-Playing Language Model",
+          "paperUrl": "https://aclanthology.org/2025.acl-long.586/",
+          "venue": "ACL 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/yuyouyu32/BeyondDialogue"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Aligns role profiles and dialogues."
+        },
+        {
+          "year": 2025,
+          "title": "CogDual: Enhancing Dual Cognition of LLMs via Reinforcement Learning with Implicit Rule-Based Rewards",
+          "paperUrl": "https://aclanthology.org/2025.emnlp-main.1389/",
+          "venue": "EMNLP 2025",
+          "resource": null,
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [],
+          "description": "Enhances dual cognition with rule-based rewards."
+        },
+        {
+          "year": 2025,
+          "title": "CoSER: Coordinating LLM-Based Persona Simulation of Established Roles",
+          "paperUrl": "https://arxiv.org/abs/2502.09082",
+          "venue": "ICML 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Neph0s/CoSER"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Coordinates persona simulation for established characters."
+        },
+        {
+          "year": 2025,
+          "title": "CPO: Addressing Reward Ambiguity in Role-playing Dialogue via Comparative Policy Optimization",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.18/",
+          "venue": "EMNLP Findings 2025",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [],
+          "description": "Optimizes role-playing dialogue with comparative rewards."
+        },
+        {
+          "year": 2025,
+          "title": "Crab: A Novel Configurable Role-Playing LLM with Assessing Benchmark",
+          "paperUrl": "https://aclanthology.org/2025.acl-long.731/",
+          "venue": "ACL 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/KaiHe-better/Crab"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Evaluation",
+            "Dataset"
+          ],
+          "description": "Builds a configurable role-playing LLM."
+        },
+        {
+          "year": 2025,
+          "title": "Crafting Customisable Characters with LLMs: A Persona-Driven Role-Playing Agent Framework",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.1100/",
+          "venue": "EMNLP Findings 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Bernard-Yang/SimsChat"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Persona",
+            "Dataset"
+          ],
+          "description": "Builds customizable role-playing agents."
+        },
+        {
+          "year": 2025,
+          "title": "Enhancing Persona Consistency for LLMs’ Role-Playing using Persona-Aware Contrastive Learning",
+          "paperUrl": "https://aclanthology.org/2025.findings-acl.1344/",
+          "venue": "ACL Findings 2025",
+          "resource": null,
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Contrastive learning"
+          ],
+          "description": "Enhances persona consistency in role-playing."
+        },
+        {
+          "year": 2025,
+          "title": "OmniCharacter: Towards Immersive Role-Playing Agents with Seamless Speech-Language Personality Interaction",
+          "paperUrl": "https://aclanthology.org/2025.acl-long.1276/",
+          "venue": "ACL 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/OmniCharacter"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Speech-language RPA",
+            "Dataset"
+          ],
+          "description": "Models personality and voice traits for immersive role-playing."
+        },
+        {
+          "year": 2025,
+          "title": "PsyMem: Fine-grained psychological alignment and Explicit Memory Control for Advanced Role-Playing LLMs",
+          "paperUrl": "https://arxiv.org/abs/2505.12814",
+          "venue": "TACL",
+          "resource": null,
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Psychology",
+            "Memory",
+            "Dataset"
+          ],
+          "description": "Aligns psychological traits and explicit memories."
+        },
+        {
+          "year": 2025,
+          "title": "R-CHAR: A Metacognition-Driven Framework for Role-Playing in Large Language Models",
+          "paperUrl": "https://aclanthology.org/2025.emnlp-main.1372/",
+          "venue": "EMNLP 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/lavapapa/R-CHAR"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Reasoning"
+          ],
+          "description": "Fine-tunes on guided thinking trajectories."
+        },
+        {
+          "year": 2025,
+          "title": "RolePlot: A Systematic Framework for Evaluating and Enhancing the Plot-Progression Capabilities of Role-Playing Agents",
+          "paperUrl": "https://aclanthology.org/2025.acl-long.603/",
+          "venue": "ACL 2025",
+          "resource": null,
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Enhances plot progression with trigger-based prompting."
+        },
+        {
+          "year": 2025,
+          "title": "TailorRPA: A Retrieval-Based Framework for Eliciting Personalized and Coherent Role-Playing Agents in General Domain",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.288/",
+          "venue": "EMNLP Findings 2025",
+          "resource": null,
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Retrieval",
+            "Dataset"
+          ],
+          "description": "Uses retrieval for memories and knowledge boundaries."
+        },
+        {
+          "year": 2025,
+          "title": "Thinking in Character: Advancing Role-playing Agents with Role-Aware Reasoning",
+          "paperUrl": "https://papers.neurips.cc/paper_files/paper/2025/file/aacca7b6a20d157112205a44f42821c8-Paper-Conference.pdf",
+          "venue": "NeurIPS 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Toyhom/thinking_in_character"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Reasoning"
+          ],
+          "description": "Improves role-playing with role-aware reasoning traces."
+        },
+        {
+          "year": 2025,
+          "title": "MMRole: A Comprehensive Framework for Developing and Evaluating Multimodal Role-Playing Agents",
+          "paperUrl": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a5c7206fd66e8314bb21a04492359353-Abstract-Conference.html",
+          "venue": "ICLR 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/YanqiDai/MMRole"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Multimodal RPA",
+            "Dataset",
+            "Evaluation"
+          ],
+          "description": "Develops multimodal role-playing agents with a personalized multimodal dataset and specialized evaluation framework."
+        },
+        {
+          "year": 2025,
+          "title": "MOA: Multi-Objective Alignment for Role-Playing Agents",
+          "paperUrl": "https://arxiv.org/abs/2512.09756",
+          "venue": "arXiv",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Multi-objective"
+          ],
+          "description": "Aligns role-playing agents with multi-objective rewards."
+        },
+        {
+          "year": 2025,
+          "title": "RAIDEN-R1: Improving Role-awareness of LLMs via GRPO with Verifiable Reward",
+          "paperUrl": "https://arxiv.org/abs/2505.10218",
+          "venue": "arXiv",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/whn09/RAIDEN-R1"
+          },
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Reward"
+          ],
+          "description": "Improves role-awareness with verifiable role rewards."
+        },
+        {
+          "year": 2024,
+          "title": "Capturing Minds, Not Just Words: Enhancing Role-Playing Language Models with Personality-Indicative Data",
+          "paperUrl": "https://aclanthology.org/2024.findings-emnlp.853/",
+          "venue": "EMNLP Findings 2024",
+          "resource": null,
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Uses personality-indicative data for role-playing."
+        },
+        {
+          "year": 2024,
+          "title": "CharacterGLM: Customizing Chinese Conversational AI Characters with Large Language Models",
+          "paperUrl": "https://arxiv.org/abs/2311.16832",
+          "venue": "EMNLP Industry 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/thu-coai/CharacterGLM-6B"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Dataset"
+          ],
+          "description": "Customizes Chinese conversational characters."
+        },
+        {
+          "year": 2024,
+          "title": "Large Language Models are Superpositions of All Characters: Attaining Arbitrary Role-play via Self-Alignment",
+          "paperUrl": "https://arxiv.org/abs/2401.12474",
+          "venue": "ACL 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/OFA-Sys/Ditto"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Self-alignment",
+            "Dataset"
+          ],
+          "description": "Fine-tunes on self-generated role-play data."
+        },
+        {
+          "year": 2024,
+          "title": "Neeko: Leveraging Dynamic LoRA for Efficient Multi-Character Role-Playing Agent",
+          "paperUrl": "https://arxiv.org/abs/2402.13717",
+          "venue": "EMNLP 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/weiyifan1023/Neeko"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Dynamic LoRA"
+          ],
+          "description": "Trains character-specific dynamic LoRA blocks on supervised role-playing dialogues."
+        },
+        {
+          "year": 2024,
+          "title": "Quantifying and Optimizing Global Faithfulness in Persona-driven Role-playing",
+          "paperUrl": "https://arxiv.org/abs/2405.07726",
+          "venue": "NeurIPS 2024",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Faithfulness"
+          ],
+          "description": "Optimizes persona faithfulness with APC-based rewards."
+        },
+        {
+          "year": 2023,
+          "title": "Character-LLM: A Trainable Agent for Role-Playing",
+          "paperUrl": "https://arxiv.org/abs/2310.10158",
+          "venue": "EMNLP 2023",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/choosewhatulike/trainable-agents"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [],
+          "description": "Trains agents from profiles, experiences, and emotions."
+        }
+      ]
+    },
+    {
+      "id": "evaluation-and-analysis",
+      "name": "Evaluation and Analysis",
+      "kind": "overview",
+      "entries": [
+        {
+          "year": 2026,
+          "title": "Understanding Generalization in Role-Playing Models via Information Theory",
+          "paperUrl": "https://arxiv.org/abs/2512.17270",
+          "venue": "ACL Findings 2026",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "Reasoning Does Not Necessarily Improve Role-Playing Ability",
+          "paperUrl": "https://aclanthology.org/2025.findings-acl.537/",
+          "venue": "ACL Findings 2025",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "Spotting Out-of-Character Behavior: Atomic-Level Evaluation of Persona Fidelity in Open-Ended Generation",
+          "paperUrl": "https://aclanthology.org/2025.findings-acl.1349/",
+          "venue": "ACL Findings 2025",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "When Harry Meets Superman: The Role of The Interlocutor in Persona-Based Dialogue Generation",
+          "paperUrl": "https://aclanthology.org/2025.acl-long.879/",
+          "venue": "ACL 2025",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "datasets-and-benchmarks",
+      "name": "Datasets and Benchmarks",
+      "kind": "datasets",
+      "entries": [
+        {
+          "year": 2026,
+          "title": "OmniCharacter++: Towards Comprehensive Benchmark for Realistic Role-Playing Agents",
+          "paperUrl": "https://doi.org/10.1109/TPAMI.2026.3690447",
+          "venue": "TPAMI 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/zchoi/OmniCharacter-plus"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Multimodal multi-character role-playing"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2026,
+          "title": "PersonaArena: Dynamic Simulation for Evaluating and Enhancing Persona-Level Role-Playing in Large Language Models",
+          "paperUrl": "https://aclanthology.org/2026.findings-acl.471/",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://anonymous.4open.science/r/PersonaArena-B323/"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Dynamic persona-level role-playing evaluation"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2026,
+          "title": "RoleConflictBench: A Benchmark of Role Conflict Scenarios for Evaluating LLMs' Contextual Sensitivity",
+          "paperUrl": "https://arxiv.org/abs/2509.25897",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/ddindidu/RoleConflictBench"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Role conflict"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2026,
+          "title": "StratMem-Bench: Evaluating Strategic Memory Use in Virtual Character Conversation Beyond Factual Recall",
+          "paperUrl": "https://arxiv.org/abs/2604.26243",
+          "venue": "ACL 2026",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Strategic memory use"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2026,
+          "title": "ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?",
+          "paperUrl": "https://arxiv.org/abs/2606.05553",
+          "venue": "arXiv 2026",
+          "resource": null,
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Dataset",
+            "Temporal character evolution"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "Character is Destiny: Can Persona-assigned Language Models Make Personal Choices?",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.813/",
+          "venue": "EMNLP Findings 2025",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Persona-driven decision making"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "CharacterBench: Benchmarking Character Customization of Large Language Models",
+          "paperUrl": "https://arxiv.org/abs/2412.11912",
+          "venue": "AAAI 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/thu-coai/CharacterBench"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Character customization"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "CharacterBox: Evaluating the Role-Playing Capabilities of LLMs in Text-Based Virtual Worlds",
+          "paperUrl": "https://aclanthology.org/2025.naacl-long.323/",
+          "venue": "NAACL 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Paitesanshi/CharacterBox"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Text-based virtual worlds"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "PersonaGym: Evaluating Persona Agents and LLMs",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.368/",
+          "venue": "EMNLP Findings 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/vsamuel2003/PersonaGym"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Persona-agent evaluation"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "Revealing and Mitigating the Challenge of Detecting Character Knowledge Errors in LLM Role-Playing",
+          "paperUrl": "https://aclanthology.org/2025.emnlp-main.1689/",
+          "venue": "EMNLP 2025",
+          "resource": {
+            "label": "Data",
+            "url": "https://github.com/WYRipple/rp_kw_errors"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Character knowledge errors"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "RMTBench: Benchmarking LLMs Through Multi-Turn User-Centric Role-Playing",
+          "paperUrl": "https://aclanthology.org/2025.findings-emnlp.730/",
+          "venue": "EMNLP Findings 2025",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Multi-turn user-centric role-playing"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2025,
+          "title": "RoleMRC: A Fine-Grained Composite Benchmark for Role-Playing and Instruction-Following",
+          "paperUrl": "https://aclanthology.org/2025.findings-acl.1082/",
+          "venue": "ACL Findings 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/LuJunru/RoleMRC"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Role-playing instruction following"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation",
+          "paperUrl": "https://aclanthology.org/2024.acl-long.638/",
+          "venue": "ACL 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/morecry/CharacterEval"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Chinese role-playing evaluation"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "Evaluating Character Understanding of Large Language Models via Character Profiling from Fictional Works",
+          "paperUrl": "https://aclanthology.org/2024.emnlp-main.456/",
+          "venue": "EMNLP 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Joanna0123/character_profiling"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Character profiling"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "InCharacter: Evaluating Personality Fidelity in Role-Playing Agents through Psychological Interviews",
+          "paperUrl": "https://aclanthology.org/2024.acl-long.102/",
+          "venue": "ACL 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Neph0s/InCharacter"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Personality fidelity"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "Mitigating Hallucination in Fictional Character Role-Play",
+          "paperUrl": "https://aclanthology.org/2024.findings-emnlp.846/",
+          "venue": "EMNLP Findings 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/NafisSadeq/rolefact"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Character hallucination"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "RoleLLM: Benchmarking, Eliciting, and Enhancing Role-Playing Abilities of Large Language Models",
+          "paperUrl": "https://arxiv.org/abs/2310.00746",
+          "venue": "ACL Findings 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/InteractiveNLP-Team/RoleLLM-public"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Role-playing ability"
+          ],
+          "description": ""
+        },
+        {
+          "year": 2024,
+          "title": "TimeChara: Evaluating Point-in-Time Character Hallucination of Role-Playing Large Language Models",
+          "paperUrl": "https://aclanthology.org/2024.findings-acl.197/",
+          "venue": "ACL Findings 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/ahnjaewoo/timechara"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Point-in-time hallucination"
+          ],
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "interactive-storytelling-and-simulation",
+      "name": "Interactive Storytelling and Simulation",
+      "kind": "papers",
+      "entries": [
+        {
+          "year": 2025,
+          "title": "BookWorld: From Novels to Interactive Agent Societies for Creative Story Generation",
+          "paperUrl": "https://arxiv.org/abs/2504.14538",
+          "venue": "ACL 2025",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/alienet1109/BookWorld"
+          },
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Multi-agent simulation"
+          ],
+          "description": "Builds novel-based agent societies for interactive story generation without parameter training."
+        },
+        {
+          "year": 2024,
+          "title": "From Role-Play to Drama-Interaction: An LLM Solution",
+          "paperUrl": "https://aclanthology.org/2024.findings-acl.196/",
+          "venue": "ACL Findings 2024",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/vickywu1022/DramaLLM"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "Interactive drama"
+          ],
+          "description": "Builds drama LLMs for controllable interactive storytelling."
+        }
+      ]
+    }
+  ]
+}
