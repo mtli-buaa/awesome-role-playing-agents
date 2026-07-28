@@ -406,11 +406,27 @@ body.detail-open .paper-detail {
 }
 .detail-title {
   max-width: 620px;
-  margin: 0 0 54px;
+  margin: 0 0 20px;
   font-size: clamp(28px, 3vw, 43px);
   line-height: 1.12;
   letter-spacing: -.045em;
 }
+.detail-paper-url {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 48px;
+  color: var(--muted);
+  font: 11px/1.65 "DM Mono", monospace;
+}
+.detail-paper-url span { flex: 0 0 auto; color: var(--ink); }
+.detail-paper-url a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.detail-paper-url a:hover { color: var(--orange); }
 .detail-section { padding: 31px 0 36px; border-top: 1px solid var(--line); }
 .detail-section h3 {
   margin: 0 0 18px;
@@ -469,7 +485,8 @@ footer { display: flex; justify-content: space-between; padding: 26px clamp(34px
   .paper-detail { width: 100%; border-left: 0; }
   .detail-inner { padding: 44px 24px 64px; }
   .detail-close { top: 14px; margin-top: -30px; }
-  .detail-title { margin-bottom: 40px; font-size: 30px; }
+  .detail-title { margin-bottom: 18px; font-size: 30px; }
+  .detail-paper-url { margin-bottom: 38px; }
   footer { flex-direction: column; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {

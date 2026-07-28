@@ -28,6 +28,7 @@ const els = {
   detailBackdrop: document.querySelector("#detail-backdrop"),
   detailClose: document.querySelector("#detail-close"),
   detailTitle: document.querySelector("#detail-title"),
+  detailPaperUrl: document.querySelector("#detail-paper-url"),
   detailAbstractZh: document.querySelector("#detail-abstract-zh"),
   detailAbstractEn: document.querySelector("#detail-abstract-en"),
 };
@@ -255,6 +256,8 @@ function showPaperDetail(entry, updateHistory = true) {
   detailReturnFocus = document.activeElement;
   state.openDetailId = entry.detailId;
   els.detailTitle.textContent = entry.title;
+  els.detailPaperUrl.href = entry.paperUrl;
+  els.detailPaperUrl.textContent = `${entry.paperUrl} ↗`;
   els.detailAbstractZh.textContent = entry.details.abstractZh;
   els.detailAbstractEn.textContent = entry.details.abstractEn;
   els.detail.setAttribute("aria-hidden", "false");
