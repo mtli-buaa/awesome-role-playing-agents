@@ -94,14 +94,48 @@
             <span aria-hidden="true">⌕</span>
             <input id="search-input" type="search" placeholder="Search papers, methods, venues…" />
           </label>
-          <label>
-            <span class="sr-only">Category</span>
-            <select id="category-filter"><option value="all">All categories</option></select>
-          </label>
-          <label>
-            <span class="sr-only">Year</span>
-            <select id="year-filter"><option value="all">All years</option></select>
-          </label>
+          <div class="filter-select" data-filter="category">
+            <button
+              id="category-filter"
+              class="filter-select-trigger"
+              type="button"
+              aria-label="Filter by category"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="category-options"
+            >
+              <span class="filter-select-value">All categories</span>
+              <span class="filter-select-chevron" aria-hidden="true"></span>
+            </button>
+            <div
+              id="category-options"
+              class="filter-select-menu"
+              role="listbox"
+              aria-label="Category"
+              hidden
+            ></div>
+          </div>
+          <div class="filter-select" data-filter="year">
+            <button
+              id="year-filter"
+              class="filter-select-trigger"
+              type="button"
+              aria-label="Filter by year"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="year-options"
+            >
+              <span class="filter-select-value">All years</span>
+              <span class="filter-select-chevron" aria-hidden="true"></span>
+            </button>
+            <div
+              id="year-options"
+              class="filter-select-menu"
+              role="listbox"
+              aria-label="Year"
+              hidden
+            ></div>
+          </div>
         </div>
 
         <div class="results-meta">

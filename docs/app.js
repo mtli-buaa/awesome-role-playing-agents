@@ -15,6 +15,8 @@ const els = {
   search: document.querySelector("#search-input"),
   category: document.querySelector("#category-filter"),
   year: document.querySelector("#year-filter"),
+  categoryOptions: document.querySelector("#category-options"),
+  yearOptions: document.querySelector("#year-options"),
   results: document.querySelector("#results-count"),
   activeTags: document.querySelector("#active-tags"),
   clear: document.querySelector("#clear-filters"),
@@ -56,8 +58,90 @@ function renderNav() {
 
 function renderFilters() {
   const years = [...new Set(state.entries.map((entry) => entry.year))].sort((a, b) => Number(b) - Number(a));
-  els.category.innerHTML += state.sections.map((section) => `<option value="${section}">${section}</option>`).join("");
-  els.year.innerHTML += years.map((year) => `<option value="${year}">${year}</option>`).join("");
+  renderFilterOptions("category", [
+    { value: "all", label: "All categories" },
+    ...state.sections.map((section) => ({ value: section, label: section })),
+  ]);
+  renderFilterOptions("year", [
+    { value: "all", label: "All years" },
+    ...years.map((year) => ({ value: year, label: year })),
+  ]);
+}
+
+const filterControls = {
+  category: {
+    root: document.querySelector('[data-filter="category"]'),
+    trigger: els.category,
+    menu: els.categoryOptions,
+  },
+  year: {
+    root: document.querySelector('[data-filter="year"]'),
+    trigger: els.year,
+    menu: els.yearOptions,
+  },
+};
+
+function renderFilterOptions(filter, options) {
+  const control = filterControls[filter];
+  control.options = options;
+  control.menu.innerHTML = options
+    .map(
+      ({ value, label }) =>
+        `<button type="button" class="filter-select-option" role="option" data-value="${value}" aria-selected="${state[filter] === value}" tabindex="-1">${label}</button>`,
+    )
+    .join("");
+  updateFilterControl(filter);
+}
+
+function updateFilterControl(filter) {
+  const control = filterControls[filter];
+  const selected = control.options.find((option) => option.value === state[filter]) || control.options[0];
+  control.trigger.querySelector(".filter-select-value").textContent = selected.label;
+  control.menu.querySelectorAll(".filter-select-option").forEach((option) => {
+    option.setAttribute("aria-selected", String(option.dataset.value === selected.value));
+  });
+}
+
+function closeFilter(filter, returnFocus = false) {
+  const control = filterControls[filter];
+  control.root.classList.remove("open");
+  control.menu.hidden = true;
+  control.trigger.setAttribute("aria-expanded", "false");
+  if (returnFocus) control.trigger.focus();
+}
+
+function closeAllFilters(except = "") {
+  Object.keys(filterControls).forEach((filter) => {
+    if (filter !== except) closeFilter(filter);
+  });
+}
+
+function openFilter(filter, focusSelected = false) {
+  const control = filterControls[filter];
+  closeAllFilters(filter);
+  control.root.classList.add("open");
+  control.menu.hidden = false;
+  control.trigger.setAttribute("aria-expanded", "true");
+  if (focusSelected) {
+    const selected =
+      control.menu.querySelector('[aria-selected="true"]') ||
+      control.menu.querySelector(".filter-select-option");
+    selected?.focus();
+  }
+}
+
+function selectFilterOption(filter, value) {
+  state[filter] = value;
+  updateFilterControl(filter);
+  closeFilter(filter, true);
+  renderCollection();
+}
+
+function moveFilterFocus(control, direction) {
+  const options = [...control.menu.querySelectorAll(".filter-select-option")];
+  const current = options.indexOf(document.activeElement);
+  const next = current < 0 ? 0 : (current + direction + options.length) % options.length;
+  options[next]?.focus();
 }
 
 function renderStats() {
@@ -196,13 +280,44 @@ els.search.addEventListener("input", (event) => {
   state.query = event.target.value.trim().toLowerCase();
   renderCollection();
 });
-els.category.addEventListener("change", (event) => {
-  state.category = event.target.value;
-  renderCollection();
+Object.entries(filterControls).forEach(([filter, control]) => {
+  control.trigger.addEventListener("click", () => {
+    if (control.root.classList.contains("open")) {
+      closeFilter(filter);
+    } else {
+      openFilter(filter);
+    }
+  });
+  control.trigger.addEventListener("keydown", (event) => {
+    if (["ArrowDown", "ArrowUp", "Enter", " "].includes(event.key)) {
+      event.preventDefault();
+      openFilter(filter, true);
+      if (event.key === "ArrowUp") moveFilterFocus(control, -1);
+    }
+  });
+  control.menu.addEventListener("click", (event) => {
+    const option = event.target.closest(".filter-select-option");
+    if (option) selectFilterOption(filter, option.dataset.value);
+  });
+  control.menu.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      moveFilterFocus(control, event.key === "ArrowDown" ? 1 : -1);
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      const options = control.menu.querySelectorAll(".filter-select-option");
+      options[event.key === "Home" ? 0 : options.length - 1]?.focus();
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      document.activeElement.click();
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      closeFilter(filter, true);
+    }
+  });
 });
-els.year.addEventListener("change", (event) => {
-  state.year = event.target.value;
-  renderCollection();
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".filter-select")) closeAllFilters();
 });
 els.clear.addEventListener("click", () => {
   state.query = "";
@@ -210,8 +325,8 @@ els.clear.addEventListener("click", () => {
   state.year = "all";
   state.tags.clear();
   els.search.value = "";
-  els.category.value = "all";
-  els.year.value = "all";
+  updateFilterControl("category");
+  updateFilterControl("year");
   updateTagUrl();
   renderCollection();
 });

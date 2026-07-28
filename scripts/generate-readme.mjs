@@ -44,6 +44,9 @@ function validate(data) {
       if (!Number.isInteger(entry.year) || !entry.title || !entry.paperUrl || !entry.venue) {
         fail(`Missing required paper data in ${section.name}: ${entry.title || "untitled entry"}.`);
       }
+      if (/^arxiv(?:\s+\d{4})?$/i.test(entry.venue) && entry.venue !== `arXiv ${entry.year}`) {
+        fail(`Use "arXiv ${entry.year}" as the venue for: ${entry.title}.`);
+      }
       if (paperUrls.has(entry.paperUrl)) fail(`Duplicate paper URL: ${entry.paperUrl}.`);
       paperUrls.add(entry.paperUrl);
       if (!Array.isArray(entry.trainingMethods) || !Array.isArray(entry.tags)) {

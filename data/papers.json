@@ -194,7 +194,7 @@
           "year": 2026,
           "title": "Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization",
           "paperUrl": "https://arxiv.org/abs/2606.27025",
-          "venue": "arXiv",
+          "venue": "arXiv 2026",
           "resource": null,
           "trainingMethods": [
             "RL"
@@ -243,7 +243,7 @@
           "year": 2026,
           "title": "Character-R1: Enhancing Role-Aware Reasoning in Role-Playing Agents via RLVR",
           "paperUrl": "https://arxiv.org/abs/2601.04611",
-          "venue": "arXiv",
+          "venue": "arXiv 2026",
           "resource": null,
           "trainingMethods": [
             "RL"
@@ -481,7 +481,7 @@
           "year": 2025,
           "title": "MOA: Multi-Objective Alignment for Role-Playing Agents",
           "paperUrl": "https://arxiv.org/abs/2512.09756",
-          "venue": "arXiv",
+          "venue": "arXiv 2025",
           "resource": null,
           "trainingMethods": [
             "RL"
@@ -495,7 +495,7 @@
           "year": 2025,
           "title": "RAIDEN-R1: Improving Role-awareness of LLMs via GRPO with Verifiable Reward",
           "paperUrl": "https://arxiv.org/abs/2505.10218",
-          "venue": "arXiv",
+          "venue": "arXiv 2025",
           "resource": {
             "label": "Code",
             "url": "https://github.com/whn09/RAIDEN-R1"
