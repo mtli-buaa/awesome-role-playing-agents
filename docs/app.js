@@ -67,6 +67,7 @@ function renderNav() {
         `<a href="#${slugify(section)}"><span class="nav-index">${String(index + 1).padStart(2, "0")}</span>${section}</a>`,
     ),
     `<a href="#contributing"><span class="nav-index">${String(state.sections.length + 1).padStart(2, "0")}</span>Contributing</a>`,
+    `<a href="#contributors"><span class="nav-index">${String(state.sections.length + 2).padStart(2, "0")}</span>Contributors</a>`,
   ].join("");
 }
 
