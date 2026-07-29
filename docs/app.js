@@ -214,6 +214,14 @@ function entryMatches(entry) {
   );
 }
 
+function venueWithYear(entry) {
+  const venueWithoutYear = (entry.venue || "")
+    .replace(new RegExp(`\\b${entry.year}\\b`, "g"), "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return [entry.year, venueWithoutYear].filter(Boolean).join(" ");
+}
+
 function paperCard(entry) {
   const title = entry.details
     ? `<button type="button" class="paper-detail-trigger" data-paper-id="${entry.detailId}" aria-haspopup="dialog">${entry.title}<span aria-hidden="true"> →</span></button>`
@@ -235,14 +243,13 @@ function paperCard(entry) {
 
   return `
     <article class="paper-card">
-      <div class="paper-year">${entry.year}</div>
+      <div class="paper-year">${venueWithYear(entry)}</div>
       <div>
         <h4 class="paper-title">${title}</h4>
         ${entry.description ? `<p class="paper-description">${entry.description}</p>` : ""}
         ${tags ? `<div class="paper-meta">${tags}</div>` : ""}
       </div>
       <div class="paper-links">
-        ${entry.venue ? `<span class="venue">${entry.venue}</span>` : ""}
         ${paperLink}
         ${resource}
       </div>
