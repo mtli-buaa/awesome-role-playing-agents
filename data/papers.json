@@ -20,7 +20,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2404.18231",
+          "details": {
+            "abstractZh": "近年来，大语言模型（LLMs）的进步显著推动了角色扮演语言智能体（RPLAs）的兴起。这类专用人工智能系统旨在模拟指定的人物设定。借助大语言模型的多种高级能力，包括上下文学习、指令遵循和社会智能，RPLAs 能够呈现出显著的拟人感和生动的角色扮演表现。它们可以模拟多种人物，从历史人物和虚构角色到现实中的个人，并由此催生了情感陪伴、互动电子游戏、个性化助手与副驾驶以及数字分身等众多人工智能应用。本文对该领域进行了全面综述，梳理 RPLAs 与前沿大语言模型技术融合发展的演变历程和最新进展。作者将人物设定分为三类：第一，人口统计人物设定，主要利用统计刻板印象；第二，角色人物设定，聚焦于已有明确形象的人物；第三，个体化人物设定，通过持续的用户交互进行定制，以提供个性化服务。文章首先全面介绍现有 RPLA 方法，随后分别讨论每类人物设定所涉及的数据来源、智能体构建和评估方法；之后分析 RPLAs 的根本风险、现有局限与未来前景。此外，文章还简要回顾了 RPLAs 在人工智能应用中的实践，这些应用反映了塑造并推动该领域研究的真实用户需求。本文旨在为 RPLA 研究与应用建立清晰的分类体系，促进这一重要且持续演进领域的未来研究，并为人类与 RPLAs 和谐共存的未来铺平道路。",
+            "abstractEn": "Recent advancements in large language models (LLMs) have significantly boosted the rise of Role-Playing Language Agents (RPLAs), i.e., specialized AI systems designed to simulate assigned personas. By harnessing multiple advanced abilities of LLMs, including in-context learning, instruction following, and social intelligence, RPLAs achieve a remarkable sense of human likeness and vivid role-playing performance. RPLAs can mimic a wide range of personas, ranging from historical figures and fictional characters to real-life individuals. Consequently, they have catalyzed numerous AI applications, such as emotional companions, interactive video games, personalized assistants and copilots, and digital clones. In this paper, we conduct a comprehensive survey of this field, illustrating the evolution and recent progress in RPLAs integrating with cutting-edge LLM technologies. We categorize personas into three types: 1) Demographic Persona, which leverages statistical stereotypes; 2) Character Persona, focused on well-established figures; and 3) Individualized Persona, customized through ongoing user interactions for personalized services. We begin by presenting a comprehensive overview of current methodologies for RPLAs, followed by the details for each persona type, covering corresponding data sourcing, agent construction, and evaluation. Afterward, we discuss the fundamental risks, existing limitations, and future prospects of RPLAs. Additionally, we provide a brief review of RPLAs in AI applications, which reflects practical user demands that shape and drive RPLA research. Through this work, we aim to establish a clear taxonomy of RPLA research and applications, and facilitate future research in this critical and ever-evolving field, and pave the way for a future where humans and RPLAs coexist in harmony."
+          }
         },
         {
           "year": 2024,
@@ -30,7 +35,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2406.01171",
+          "details": {
+            "abstractZh": "人物设定这一概念最初应用于对话研究，如今再次兴起，成为针对特定情境定制大语言模型（LLMs）的一种具有前景的框架，例如个性化搜索和以大语言模型作为评审。然而，当前利用人物设定的大语言模型研究相对分散，缺少系统性的分类体系。为弥补这一空白，本文进行了一项全面综述，对该领域的现状进行归纳。作者识别出两条研究路线：第一，大语言模型角色扮演，即为大语言模型分配人物设定；第二，大语言模型个性化，即由大语言模型理解并服务于用户的人物画像。此外，文章还介绍了现有的大语言模型人格评估方法。据作者所知，这是首篇在统一的人物设定视角下同时讨论大语言模型角色扮演与个性化的综述。作者持续维护一个论文合集，以推动未来研究：https://github.com/MiuLab/PersonaLLM-Survey",
+            "abstractEn": "The concept of persona, originally adopted in dialogue literature, has re-surged as a promising framework for tailoring large language models (LLMs) to specific context (e.g., personalized search, LLM-as-a-judge). However, the growing research on leveraging persona in LLMs is relatively disorganized and lacks a systematic taxonomy. To close the gap, we present a comprehensive survey to categorize the current state of the field. We identify two lines of research, namely (1) LLM Role-Playing, where personas are assigned to LLMs, and (2) LLM Personalization, where LLMs take care of user personas. Additionally, we introduce existing methods for LLM personality evaluation. To the best of our knowledge, we present the first survey for role-playing and personalization in LLMs under the unified view of persona. We continuously maintain a paper collection to foster future endeavors: https://github.com/MiuLab/PersonaLLM-Survey"
+          }
         }
       ]
     },
@@ -55,8 +65,8 @@
           "description": "Adaptive multi-agent role-playing with scene management.",
           "detailId": "2601.11007",
           "details": {
-            "abstractZh": "现有大语言模型角色扮演系统往往对动态环境建模不足，并默认场景与角色阵容基本固定，因而难以支持多角色调度、场景切换和临时引入角色。AdaMARP 将思考、动作、环境与言语组织为统一的沉浸式消息格式，并引入场景管理器，通过初始化场景、选择说话者、切换场景、添加角色和结束互动等离散动作控制叙事过程。研究还构建了用于训练演员模型的 AdaRPSet、监督调度决策的 AdaSMSet，以及面向完整交互轨迹的 AdaptiveBench。不同模型和规模上的实验表明，该框架能够提升角色一致性、环境依据、叙事连贯性、场景转换和角色引入的自然程度，较小规模的演员与管理器模型也能取得具有竞争力的表现。",
-            "abstractEn": "AdaMARP addresses limited immersion and adaptability in LLM role-playing by combining a four-channel message format—thought, action, environment, and speech—with a Scene Manager that controls speaker selection, scene changes, character insertion, and episode termination. The authors build AdaRPSet to train actor behavior, AdaSMSet to supervise orchestration decisions, and AdaptiveBench for trajectory-level evaluation. Across several model families and scales, the framework improves character consistency, environmental grounding, narrative coherence, scene transitions, and role introduction; relatively small actor and manager models also compare favorably with stronger commercial systems."
+            "abstractZh": "大语言模型角色扮演旨在在互动叙事中塑造任意角色，但现有系统往往存在沉浸感和适应性不足的问题。它们通常未能充分建模动态环境信息，并且大多假设场景和角色阵容保持静态，因此无法充分支持多角色调度、场景转换以及即时引入新角色。本文提出一种自适应多智能体角色扮演框架 AdaMARP。该框架采用一种沉浸式消息格式，将 [思考]、（动作）、<环境> 和言语交错组织在一起，并配备一个显式的场景管理器。该管理器通过一组带有理由说明的离散动作来控制角色扮演过程，包括初始化场景、选择说话者、切换场景、添加角色和结束互动。为训练这些能力，作者构建了用于演员模型的 AdaRPSet、用于监督调度决策的 AdaSMSet，并提出用于轨迹级评估的 AdaptiveBench。基于多种基础模型和不同模型规模的实验均显示出稳定提升：AdaRPSet 增强了角色一致性、环境依据性和叙事连贯性，其中 8B 演员模型超过了多个商业大语言模型；AdaSMSet 则使场景转换更加顺畅、角色引入更加自然，仅使用 14B 大语言模型便超过了 Claude Sonnet 4.5。",
+            "abstractEn": "LLM role-playing aims to portray arbitrary characters in interactive narratives, yet existing systems often suffer from limited immersion and adaptability. They typically under-model dynamic environmental information and assume largely static scenes and casts, offering insufficient support for multi-character orchestration, scene transitions, and on-the-fly character introduction. We propose an adaptive multi-agent role-playing framework, AdaMARP, featuring an immersive message format that interleaves [Thought], (Action), <Environment>, and Speech, together with an explicit Scene Manager that governs role-playing through discrete actions (init_scene, pick_speaker, switch_scene, add_role, end) accompanied by rationales. To train these capabilities, we construct AdaRPSet for the Actor Model and AdaSMSet for supervising orchestration decisions, and introduce AdaptiveBench for trajectory-level evaluation. Experiments across multiple backbones and model scales demonstrate consistent improvements: AdaRPSet enhances character consistency, environment grounding, and narrative coherence, with an 8B actor outperforming several commercial LLMs, while AdaSMSet enables smoother scene transitions and more natural role introductions, surpassing Claude Sonnet 4.5 using only a 14B LLM."
           }
         },
         {
@@ -74,8 +84,8 @@
           "description": "Models latent character states with codified FSMs.",
           "detailId": "2602.05905",
           "details": {
-            "abstractZh": "稳定且有吸引力的角色扮演需要持续跟踪驱动角色行为的潜在状态，而常见的提示方法通常只描述表层动作。该工作提出 Codified Finite-State Machines，利用基于大语言模型的代码生成，将文本角色档案自动转化为可解释的有限状态机，以显式状态和转移约束角色行为。进一步提出的概率版本 CPFSM 使用状态转移概率分布表达角色行为中的不确定性与多样性。合成任务和真实作品角色扮演场景上的实验显示，CFSM 与 CPFSM 在结构化状态跟踪和开放式随机状态探索中均优于通用基线，说明可执行的状态表示能够在不训练模型参数的情况下改善角色一致性。",
-            "abstractEn": "Consistent role-playing requires tracking latent character states, which surface-level prompting often misses. This work automatically converts textual character profiles into interpretable finite-state machines through LLM-based coding. CFSM defines explicit states and transitions that constrain behavior, while its probabilistic extension, CPFSM, represents uncertainty by assigning distributions over possible next states. Evaluations on synthetic tasks and real role-playing scenarios show that these codified state models outperform general baselines in structured state tracking and open-ended stochastic exploration, suggesting that executable state representations can improve character consistency without training model parameters."
+            "abstractZh": "对于使用大语言模型（LLMs）实现连贯且富有吸引力的角色扮演（RP）而言，对角色潜在状态进行建模至关重要。然而，现有的提示式方法主要捕捉表层动作，往往无法追踪驱动互动的潜在状态。本文重新审视有限状态机（FSMs）；有限状态机长期以来一直被用于游戏设计中的状态转换建模。尽管它们在规模较小且定义明确的状态空间中十分有效，但传统的手工规则式有限状态机难以适应角色扮演开放式的语义空间。为解决这一问题，本文提出 Codified Finite-State Machines（CFSMs），这是一种利用基于大语言模型的代码生成，将文本角色档案自动编码为有限状态机的框架。CFSMs 直接从角色档案中提取关键状态和状态转换，生成能够约束角色一致性的可解释结构。为进一步刻画不确定性与多样性，作者将 CFSMs 扩展为 Codified Probabilistic Finite-State Machines（CPFSMs），其中状态转换被建模为状态上的概率分布。通过合成评测和已有作品中的真实角色扮演场景，研究表明 CFSM 和 CPFSM 均优于广泛使用的基线方法，不仅在结构化任务中有效，也适用于开放式的随机状态探索。",
+            "abstractEn": "Modeling latent character states is crucial for consistent and engaging role-playing (RP) with large language models (LLMs). Yet, existing prompting-based approaches mainly capture surface actions, often failing to track the latent states that drive interaction. We revisit finite-state machines (FSMs), long used in game design to model state transitions. While effective in small, well-specified state spaces, traditional hand-crafted, rule-based FSMs struggle to adapt to the open-ended semantic space of RP. To address this, we introduce Codified Finite-State Machines (CFSMs), a framework that automatically codifies textual character profiles into FSMs using LLM-based coding. CFSMs extract key states and transitions directly from the profile, producing interpretable structures that enforce character consistency. To further capture uncertainty and variability, we extend CFSMs into Codified Probabilistic Finite-State Machines (CPFSMs), where transitions are modeled as probability distributions over states. Through both synthetic evaluations and real-world RP scenarios in established artifacts, we demonstrate that CFSM and CPFSM outperform generally applied baselines, verifying effectiveness not only in structured tasks but also in open-ended stochastic state exploration."
           }
         },
         {
@@ -97,8 +107,8 @@
           "description": "Derives executable character logic from storylines as validated decision trees without parameter training.",
           "detailId": "2601.10080",
           "details": {
-            "abstractZh": "角色扮演智能体通常依赖行为档案保持人物一致性，但传统档案多为非结构化文本，既难以直接执行，也缺少系统验证。Codified Decision Trees 从大规模叙事数据中归纳可解释的决策结构：内部节点表示经过验证的场景条件，叶节点存放有叙事证据支持的行为规则，使系统能够针对当前情境确定性地检索合适规则。方法通过反复生成候选的场景—行为规则、依据数据验证规则，并进行分层细化来构建决策树。在覆盖 16 部作品、85 个角色的多项基准上，该方法明显优于人工编写档案和已有档案归纳方法，表明经过验证、可执行的角色逻辑能够在无需参数训练的情况下提升角色依据性、透明度和可维护性。",
-            "abstractEn": "Role-playing agents often depend on behavioral profiles that are unstructured, difficult to execute, and weakly validated. Codified Decision Trees learns an interpretable decision structure from narrative data: internal nodes encode validated scene conditions, while leaves contain grounded behavioral rules that can be retrieved deterministically for the current context. Candidate scene-action rules are repeatedly induced, checked against evidence, and refined through hierarchical specialization. Experiments covering 85 characters from 16 narrative works show substantial gains over human-written profiles and earlier profile-induction methods, indicating that validated executable character logic can improve grounding, transparency, and maintainability without parameter training."
+            "abstractZh": "角色扮演（RP）智能体依赖行为档案在不同叙事情境中保持行为一致，但现有档案大多缺乏结构、无法执行且验证不足，导致智能体行为较为脆弱。本文提出 Codified Decision Trees（CDT），这是一个数据驱动的框架，能够从大规模叙事数据中归纳出可执行且可解释的决策结构。CDT 将行为档案表示为由条件规则组成的树，其中内部节点对应经过验证的场景条件，叶节点编码有依据的行为陈述，使系统能够在执行时确定性地检索适合当前情境的规则。该决策树通过反复归纳候选的场景—动作规则、使用数据验证这些规则，并通过分层特化进行细化来学习，从而生成支持透明检查和原则化更新的角色档案。在多个基准上，CDT 针对 16 部作品中的 85 个角色，显著优于人工编写的档案和以往的档案归纳方法。这表明，经过编码和验证的行为表示能够为智能体提供更加可靠的角色依据。",
+            "abstractEn": "Role-playing (RP) agents rely on behavioral profiles to act consistently across diverse narrative contexts, yet existing profiles are largely unstructured, non-executable, and weakly validated, leading to brittle agent behavior. We propose Codified Decision Trees (CDT), a data-driven framework that induces an executable and interpretable decision structure from large-scale narrative data. CDT represents behavioral profiles as a tree of conditional rules, where internal nodes correspond to validated scene conditions and leaves encode grounded behavioral statements, enabling deterministic retrieval of context-appropriate rules at execution time. The tree is learned by iteratively inducing candidate scene-action rules, validating them against data, and refining them through hierarchical specialization, yielding profiles that support transparent inspection and principled updates. Across multiple benchmarks, CDT substantially outperforms human-written profiles and prior profile induction methods on 85 characters across 16 artifacts, indicating that codified and validated behavioral representations lead to more reliable agent grounding."
           }
         },
         {
@@ -113,7 +123,12 @@
           "tags": [
             "Decoding-time alignment"
           ],
-          "description": "Improves persona following through inference-time reward-guided decoding without fine-tuning."
+          "description": "Improves persona following through inference-time reward-guided decoding without fine-tuning.",
+          "detailId": "2603.01438",
+          "details": {
+            "abstractZh": "随着大语言模型的普及，角色扮演语言智能体在社会学研究中的应用价值日益增长。为了实现真实的社会模拟，这些智能体必须遵循角色档案所定义的人物设定；然而，现有策略——静态提示工程或成本高昂的微调——无法使人物设定适应动态情境。认知—情感人格系统等心理学理论为这一问题提供了关键解释：人物设定对行为的影响并非静态不变，而是会随情境发生变化。这种情境依赖性凸显了自适应人物设定管理的重要需求。为弥补这一空白，本文提出一种由理论驱动的新方法，动态估计人物设定在不同情境下的重要程度，并将其整合进加权的奖励引导解码中，从而在推理阶段实现人物设定遵循。具体而言，作者提出 Persona Dynamic Decoding（PDD）框架，其中包含两个核心组件：（1）Persona Importance Estimation（PIE）模块，无需真实标签监督即可动态量化人物属性在当前语境中的重要性；（2）Persona-Guided Inference-Time Alignment（PIA）范式，利用这些重要性分数构建加权多目标奖励，并在推理过程中调节生成概率。大量实验表明，该方法能够有效提升话语一致性和行为忠实度。",
+            "abstractEn": "The utility of Role-Playing Language Agents in sociological research is growing alongside the adoption of Large Language Models. For realism in social simulation, these agents must adhere to their personas defined by character profiles, yet existing strategies-static prompt engineering or costly fine-tuning-fail to adapt personas to dynamic scenarios. Psychological theories, such as the Cognitive-Affective Personality Systems, provide a crucial explanation for this failure: a persona's influence on behavior is not static but varies with the scenarios. This context-dependence highlights the critical need for adaptive persona management. To address this gap, we propose a novel, theory-driven method that dynamically estimates context-dependent persona importance and integrates it into weighted reward-guided decoding, enabling inference-time persona following. Specifically, we introduce the Persona Dynamic Decoding (PDD) framework, which consists of two key components: (1) Persona Importance Estimation (PIE) module, which dynamically quantifies the contextual importance of persona attributes without requiring ground-truth supervision; and (2) Persona-Guided Inference-Time Alignment (PIA) paradigm, which leverages these importance scores to construct weighted multi-objective rewards and modulate generation probabilities during inference. Extensive experiments show the effectiveness of our method in utterance consistency and behavioral fidelity."
+          }
         },
         {
           "year": 2026,
@@ -131,7 +146,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Trains role-playing models with dual-layer thinking and rewards."
+          "description": "Trains role-playing models with dual-layer thinking and rewards.",
+          "detailId": "2601.21459",
+          "details": {
+            "abstractZh": "大语言模型角色扮演，即使用大语言模型模拟特定人物设定，已经成为陪伴、内容创作和数字游戏等多种应用中的一项关键能力。尽管当前模型能够有效捕捉角色的语气和知识，但模拟其行为背后的内心思考仍然具有挑战。以大语言模型角色扮演中的认知模拟为目标，现有工作主要存在两方面不足：缺少带有高质量推理轨迹的数据，以及缺少与人类偏好一致的可靠奖励信号。本文提出 HER，一个面向认知层级人物模拟的统一框架。HER 引入双层思考，将角色的第一人称思考与大语言模型的第三人称思考区分开来。为弥补上述不足，作者通过逆向工程整理带有推理增强的角色扮演数据，并构建符合人类偏好的原则和奖励模型。利用这些资源，研究通过监督学习和强化学习，在 Qwen3-32B 的基础上训练 HER 模型。大量实验验证了该方法的有效性。值得注意的是，HER 模型显著优于 Qwen3-32B 基线，在 CoSER 基准上提高 30.26 分，在 Minimax Role-Play Bench 上提升 14.97%。作者公开了数据集、原则和模型，以促进未来研究。",
+            "abstractEn": "LLM role-playing, i.e., using LLMs to simulate specific personas, has emerged as a key capability in various applications, such as companionship, content creation and digital games. While current models effectively capture character tones and knowledge, simulating the inner thoughts behind their behaviors remains a challenge. Towards cognitive simulation in LLM role-play, previous efforts mainly suffer from two deficiencies: lacking data with high-quality reasoning traces, and lacking reliable reward signals aligned with human preferences. In this paper, we propose HER, a unified framework for cognitive-level persona simulation. HER introduces dual-layer thinking, which distinguishes characters' first-person thinking from LLMs' third-person thinking. To bridge these gaps, we curate reasoning-augmented role-playing data via reverse engineering, and construct human-aligned principles and reward models. Leveraging these resources, we train HER models based on Qwen3-32B via supervised and reinforcement learning. Extensive experiments validate the effectiveness of our approach. Notably, our models significantly outperform the Qwen3-32B baseline, achieving a 30.26 improvement on the CoSER benchmark and a 14.97% gain on the Minimax Role-Play Bench. Our datasets, principles, and models are released to facilitate future research."
+          }
         },
         {
           "year": 2026,
@@ -149,7 +169,12 @@
             "Cognitive modeling",
             "Dataset"
           ],
-          "description": "Models interacting human cognitive patterns for more authentic anthropomorphic role-playing."
+          "description": "Models interacting human cognitive patterns for more authentic anthropomorphic role-playing.",
+          "detailId": "2026.acl-long.1783",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）在推理和生成方面展现出卓越能力，并成为高级人物模拟和角色扮演语言智能体（RPLAs）的基础。然而，让这些智能体真正与人类的认知和行为模式保持一致，仍然是一项关键挑战。本文提出 HumanLLM，这是一个将心理模式视为相互作用的因果力量的框架。作者从约 12,000 篇学术论文中整理出 244 种模式，并合成了 11,359 个场景；每个场景中有 2 至 5 种模式相互强化、冲突或调节，并通过多轮对话呈现内心思考、行动和言语。其双层检查表既评估单个模式的忠实度，也评估多个模式共同作用后涌现出的动态特征，与人工评价表现出很强的一致性（r=0.90）；同时，研究发现整体性指标会将模拟准确性与社会期许混为一谈。尽管参数量少 4 倍，HumanLLM-8B 在多模式动态方面仍优于 Qwen3-32B。这表明，真实的拟人化需要认知建模：不仅要模拟人类做什么，还要模拟产生这些行为的心理过程。数据集、代码和模型可在以下地址获取：https://github.com/YJGoodbye2024/HumanLLM",
+            "abstractEn": "Large Language Models (LLMs) have demonstrated remarkable capabilities in reasoning and generation, serving as the foundation for advanced persona simulation and Role-Playing Language Agents (RPLAs). However, achieving authentic alignment with human cognitive and behavioral patterns remains a critical challenge for these agents. We present HumanLLM, a framework treating psychological patterns as interacting causal forces. We construct 244 patterns from ∼12,000 academic papers and synthesize 11,359 scenarios where 2-5 patterns reinforce, conflict, or modulate each other, with multi-turn conversations expressing inner thoughts, actions, and dialogue. Our dual-level checklists evaluate both individual pattern fidelity and emergent multi-pattern dynamics, achieving strong human alignment (r=0.90) while revealing that holistic metrics conflate simulation accuracy with social desirability. HumanLLM-8B outperforms Qwen3-32B on multi-pattern dynamics despite 4× fewer parameters, demonstrating that authentic anthropomorphism requires cognitive modeling—simulating not just what humans do, but the psychological processes generating those behaviors. Our dataset, code, and model are available at: https://github.com/YJGoodbye2024/HumanLLM"
+          }
         },
         {
           "year": 2026,
@@ -167,7 +192,12 @@
             "PEFT",
             "Contrastive learning"
           ],
-          "description": "Balances role-specific and shared character traits."
+          "description": "Balances role-specific and shared character traits.",
+          "detailId": "2511.08017",
+          "details": {
+            "abstractZh": "多角色角色扮演旨在赋予模型模拟不同角色的能力。现有方法要么为所有角色使用同一个共享参数化模块，要么为每个角色分别分配独立的参数化模块。然而，角色共享模块可能忽略每个角色的独特特征，从而削弱人物性格学习；角色专属模块则可能忽视多个角色之间的共同特征，妨碍共性建模。本文提出一种新的 HyCoRA（Hyper-Contrastive Role-Adaptive）学习框架，通过平衡独特特征与共享特征的学习，高效提升多角色角色扮演能力。具体而言，作者提出 Hyper-Half Low-Rank Adaptation 结构，其中一半是由轻量级超网络生成的角色专属模块，另一半是可训练的角色共享模块。角色专属模块用于表示不同人物特有的标志性特征，角色共享模块则用于捕捉共同特征。此外，为了更充分地体现不同角色之间的性格差异，作者设计了超对比学习机制，帮助超网络区分各角色的独特特点。在现有的英语和中文基准上进行的大量实验表明，该框架具有优越性；进一步的 GPT-4 评测和可视化分析也验证了 HyCoRA 捕捉角色特征的能力。",
+            "abstractEn": "Multi-character role-playing aims to equip models with the capability to simulate diverse roles. Existing methods either use one shared parameterized module across all roles or assign a separate parameterized module to each role. However, the role-shared module may ignore distinct traits of each role, weakening personality learning, while the role-specific module may overlook shared traits across multiple roles, hindering commonality modeling. In this paper, we propose a novel HyCoRA: Hyper-Contrastive Role-Adaptive learning framework, which efficiently improves multi-character role-playing ability by balancing the learning of distinct and shared traits. Specifically, we propose a Hyper-Half Low-Rank Adaptation structure, where one half is a role-specific module generated by a lightweight hyper-network, and the other half is a trainable role-shared module. The role-specific module is devised to represent distinct persona signatures, while the role-shared module serves to capture common traits. Moreover, to better reflect distinct personalities across different roles, we design a hyper-contrastive learning mechanism to help the hyper-network distinguish their unique characteristics. Extensive experimental results on both English and Chinese available benchmarks demonstrate the superiority of our framework. Further GPT-4 evaluations and visual analyses also verify the capability of HyCoRA to capture role characteristics."
+          }
         },
         {
           "year": 2026,
@@ -185,7 +215,12 @@
             "Persona graphs",
             "Dataset"
           ],
-          "description": "Grounds role-playing responses in structured persona histories."
+          "description": "Grounds role-playing responses in structured persona histories.",
+          "detailId": "2026.acl-long.449",
+          "details": {
+            "abstractZh": "大语言模型正越来越多地被用作角色扮演智能体（RPAs），在互动环境中模拟人物。然而，当前的角色扮演智能体经常生成扁平化、刻板化的人物，缺乏足够的深度和忠实度。这一局限源于两个核心挑战：一是对复杂个人经历和内在逻辑的建模不足；二是推理缺乏依据，无法在对话语境不断变化时维持人物设定的连贯性。为解决这些问题，本文提出 ThinkPersona，这是一种经过训练、能够明确依据个体身份生成回答的角色扮演智能体。作者提出 Persona Graphs，将生活轨迹、价值观、人际关系和事件编码为相互关联的结构化知识。研究从真实访谈中构建了 1,201 张 Persona Graphs，并由此生成包含 23,401 个样本的“问题—推理—回答”（QRA）数据集，用于监督模型依据人物证据进行推理。在 QRA 上进行微调，使 ThinkPersona 能够内化人物逻辑，并在长上下文对话中生成与人物设定一致的回答。三个基准上的实验表明，与现有方法相比，ThinkPersona 提升了角色扮演忠实度、行为一致性和有依据的推理能力，同时保留了通用指令遵循能力。代码和数据集可在以下地址获取：https://github.com/Hualeez/ThinkPersona。",
+            "abstractEn": "Large Language Models are increasingly utilized as Role-Playing Agents (RPAs) to simulate personas in interactive settings. However, current RPAs often produce flattened and stereotypical personas with limited depth and fidelity. This limitation arises from two core challenges: insufficient modeling of complex personal histories and internal logic, and ungrounded reasoning that fails to preserve persona coherence as dialogue context evolves. To address these challenges, we propose ThinkPersona, a role-playing agent trained to explicitly ground responses in individual identity. We introduce Persona Graphs as structured representations that encode life trajectories, values, relationships, and events as interconnected knowledge. We construct 1,201 Persona Graphs from real-world interviews and derive a Question–Reasoning–Answer (QRA) dataset of 23,401 samples that supervises reasoning over persona evidence. Fine-tuning on QRA enables ThinkPersona to internalize persona logic and generate persona-consistent responses in long-context dialogues. Experiments on three benchmarks show that ThinkPersona improves role-playing fidelity, behavioral consistency, and grounded reasoning over existing methods, while preserving general instruction-following capabilities. Our code and dataset are available at https://github.com/Hualeez/ThinkPersona."
+          }
         },
         {
           "year": 2026,
@@ -203,7 +238,12 @@
             "World model",
             "Dataset"
           ],
-          "description": "Co-evolves open-schema character profiles and world states for long-horizon literary role-playing."
+          "description": "Co-evolves open-schema character profiles and world states for long-horizon literary role-playing.",
+          "detailId": "2607.17250",
+          "details": {
+            "abstractZh": "本文提出 EvolvingWorld，这是一个面向互动文学世界中角色与世界共同演化的框架和基准。现有系统要么将互动文学模拟视为静态的人物模仿，要么将其视为孤立的场景生成，因而无法捕捉角色和世界如何随时间共同演变。为解决这一问题，EvolvingWorld 将文学模拟建模为一个长时间跨度的过程，其中角色持续互动、场景不断推进，角色状态与世界状态也会被持续更新。不同于依赖固定模式的以往系统，EvolvingWorld 采用开放模式框架，以支持多种文学世界中的模拟。该框架由两个相互耦合的模块组成：Character Agent 负责多角色扮演和人物档案的持续演化；基于大语言模型的 World Model 则负责维护全局状态、地点与实体层级状态，并推动场景发展。基于这一架构，作者定义了 7 项可训练任务，涵盖场景初始化、互动生成和状态更新。研究从 57 本书中构建数据集，生成 138,596 条监督训练样本和 222 个测试快照。此外，作者提出一种轨迹级的 LLM-as-Judge 评估方案，覆盖 10 个维度和 20 项指标。实验表明，EvolvingWorld 能够有效维持角色与世界持续且连贯的发展，从而改善长时间跨度的模拟。",
+            "abstractEn": "This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds. Existing systems either treat interactive literary simulation as static persona imitation or isolated scene generation, failing to capture how characters and worlds evolve together over time. To address this, EvolvingWorld models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated. Unlike prior systems relying on fixed schemas, EvolvingWorld adopts an open-schema framework to support simulation across diverse literary worlds. The framework consists of two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression. Based on this architecture, we formulate 7 trainable tasks for scene initialization, interaction generation, and state update. We construct a dataset from 57 books, producing 138,596 supervised training samples and 222 snapshots for testing. Furthermore, we introduce a trajectory-level LLM-as-Judge evaluation protocol spanning 10 dimensions and 20 metrics. Experiments show that EvolvingWorld can improve long-horizon simulation by effectively maintaining persistent, coherent character and world development."
+          }
         },
         {
           "year": 2026,
@@ -217,7 +257,12 @@
           "tags": [
             "Psychology-grounded CoT"
           ],
-          "description": "Introduces Psy-CoT and RAPO for role-specific reasoning and token-aware policy optimization."
+          "description": "Introduces Psy-CoT and RAPO for role-specific reasoning and token-aware policy optimization.",
+          "detailId": "2606.27025",
+          "details": {
+            "abstractZh": "要构建能够依据自然语言档案忠实扮演任意角色的通用角色扮演智能体，仍然是一项具有挑战性的任务。当前的主流范式——监督微调——鼓励模型模仿行为，却没有形成深入且类似人类的内在思考过程，因此在分布外场景中的泛化能力较差。为此，本文提出 Psy-CoT，一个以心理学为基础的思维链框架，将回答前的推理拆分为三个角色特定步骤：互动感知、心理共情和逻辑构建，使模型能够依据角色档案进行动态思考，而不只是模仿表面模式。结构化推理虽然提供了基础，但仅靠它仍然不够；强化学习对于进一步使模型与人物忠实度对齐至关重要。然而，作者观察到，在基于大语言模型的奖励模型下，能够利用奖励模型漏洞的通用短语与真正体现角色特征的短语会获得相同的梯度信号。这种奖励投机会在训练过程中不断累积，误导模型将两者视为同样理想的选择。为解决这一问题，本文提出 Role-Aware Policy Optimization（RAPO），使用角色档案与词元之间的互信息对梯度进行非对称加权：在正优势下放大角色特定词元，在负优势下减弱这些词元。CoSER、CharacterBench 和 CharacterEval 上的实验表明，Psy-CoT 优于现有的角色扮演思维链方法，而 RAPO 在多种模型规模上均持续超过 GRPO。",
+            "abstractEn": "Building general-purpose role-playing agents that faithfully portray any character from a natural-language profile remains challenging. The dominant paradigm -- supervised fine-tuning -- encourages behavioral mimicry without deep, human-like internal thought processes, resulting in poor out-of-distribution generalization. Therefore, we propose Psy-CoT, a psychology-grounded chain-of-thought framework that decomposes pre-response reasoning into three role-specific steps -- Interaction Perception, Psychological Empathy, and Logical Construction -- so that the model thinks dynamically from the profile rather than merely mimicking surface patterns. While structured reasoning provides a foundation, it alone is insufficient; reinforcement learning is essential to further align the model with character fidelity. However, we observe that under LLM-based reward models, both generic phrases that hack the reward model and genuinely role-specific phrases receive identical gradient signals -- this hacking accumulates over training, misleading the model into treating both as equally optimal choices. To address this, we propose Role-Aware Policy Optimization (RAPO), which uses profile--token mutual information to weight gradients asymmetrically -- amplifying role-specific tokens under positive advantage while attenuating them under negative advantage. Experiments on CoSER, CharacterBench, and CharacterEval demonstrate that Psy-CoT outperforms existing role-playing CoT methods, and RAPO consistently surpasses GRPO across multiple model scales."
+          }
         },
         {
           "year": 2026,
@@ -236,7 +281,12 @@
             "Memory framework",
             "Dataset"
           ],
-          "description": "Decouples factual cognition and persona-conditioned insight for long-term persona fidelity."
+          "description": "Decouples factual cognition and persona-conditioned insight for long-term persona fidelity.",
+          "detailId": "2605.25693",
+          "details": {
+            "abstractZh": "尽管角色扮演智能体在短期互动中表现出色，但长期对话会超出上下文窗口的承载能力，因此需要引入外部记忆框架。当前系统通常依赖与人物设定无关的摘要，只记录事实而不进行人物特定的解释，因而容易生成通用化回答，损害人物忠实度。为弥补这一空白，本文提出 RoleMemo 数据集，其中包含四项推理任务；模型必须从人物设定的视角解释事实片段，才能得出正确答案。RoleMemo 上的评测揭示了人物设定无关型框架的关键局限。基于此，作者提出 DualMem，将记忆解耦为两条信息流：事实认知和人物设定条件化洞察。该框架通过监督微调（SFT）和强化学习（RL）进行训练，其 4B 参数模型在维持长期人物忠实度方面，优于由 DeepSeek-V3.2 驱动的零样本、人物设定无关型框架。相关资源可在以下地址获取：https://github.com/role2026/rolememo。",
+            "abstractEn": "While role-playing agents excel in short-term interactions, long-term conversations overwhelm context windows, motivating external memory frameworks. Current systems typically rely on persona-agnostic summarization, which records facts without persona-specific interpretation, yielding generic responses that compromise persona fidelity. To bridge this gap, we introduce RoleMemo, a dataset featuring four reasoning tasks where the factual fragments must be interpreted through the persona to reach the correct answer. Evaluation on RoleMemo exposes critical limitations of persona-agnostic frameworks. We thus propose DualMem, which decouples memory into two streams: factual cognition and persona-conditioned insight. Trained through Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL), our framework with a 4B-parameter model outperforms zero-shot persona-agnostic frameworks powered by DeepSeek-V3.2 for sustained persona fidelity. Our resources are available at https://github.com/role2026/rolememo."
+          }
         },
         {
           "year": 2026,
@@ -252,7 +302,12 @@
             "Graph",
             "Dataset"
           ],
-          "description": "Uses perspective-bounded episodic, semantic, and personality memory to preserve character knowledge boundaries and situated behavior."
+          "description": "Uses perspective-bounded episodic, semantic, and personality memory to preserve character knowledge boundaries and situated behavior.",
+          "detailId": "2606.25632",
+          "details": {
+            "abstractZh": "近期的大语言模型角色扮演系统通过从小说中提取人物、场景和关系来构建角色智能体。然而，长篇叙事角色扮演存在两类问题：一是事实越界，即共享检索或参数化记忆使角色能够使用超出其自身视角的事实；二是风格单调，即人物档案描述将角色压缩为一种固定口吻。为解决这些问题，本文提出 REVERIEMEM，一个面向书籍角色智能体的三层记忆架构。情景层存储第一人称场景记忆；语义层存储带有可见性标记的事实；人格层则存储随情境变化的语言和行为模式。为进行评估，作者构建了 KBF-QA，这是一个覆盖八部小说、包含 4,386 个问题的知识边界测试基准。与最强的已有方法相比，REVERIEMEM 将知识边界忠实度提高了 34.6 个百分点。在 BOOKWORLD 的五维成对叙事评估方案上，REVERIEMEM 取得约 79% 的胜率。这表明，受人物视角约束的记忆既能提升知识边界忠实度，也能改善以角色为依据的叙事生成。",
+            "abstractEn": "Recent LLM role-playing systems build character agents from novels by extracting characters, scenes, and relations. Yet long-narrative role-playing suffers from two failures: Factual Overreach, where shared retrieval or parametric memory lets a character use facts outside its perspective, and Stylistic Monotony, where profile descriptions flatten a character into a fixed voice. To address these failures, we propose REVERIEMEM, a three-layer memory architecture for book-based character agents. The episodic layer stores first-person scene memories; the semantic layer stores visibility-tagged facts; and the personality layer stores situation-dependent speech and behaviour patterns. For evaluation, we construct KBF-QA, a 4,386-question benchmark over eight novels for testing knowledge boundaries. REVERIEMEM improves Knowledge Boundary Fidelity by 34.6 percentage points over the strongest prior method. On BOOKWORLD's five-dimension pairwise narrative protocol, REVERIEMEM achieves a ~ 79% win rate, suggesting that perspective-bounded memory improves both boundary fidelity and character-grounded narrative generation."
+          }
         },
         {
           "year": 2026,
@@ -264,7 +319,12 @@
             "RL"
           ],
           "tags": [],
-          "description": "Enhances role-aware reasoning with verifiable rewards."
+          "description": "Enhances role-aware reasoning with verifiable rewards.",
+          "detailId": "2601.04611",
+          "details": {
+            "abstractZh": "当前的角色扮演智能体（RPAs）通常通过模仿表层行为来构建，但这种方法缺乏内在认知一致性，因而在复杂情境中经常出现脱离角色的错误。为解决这一问题，本文提出 Character-R1，一个旨在为有效的角色感知推理提供全面可验证奖励信号的框架，而此类信号正是近期研究所欠缺的。具体而言，该框架包含三项核心设计：（1）Cognitive Focus Reward，通过基于明确标签的分析，要求模型分析包括世界观在内的 10 项角色要素，从而对内在认知进行结构化；（2）Reference-Guided Reward，利用回答与参考回复之间基于重叠度的指标作为优化锚点，以增强探索和模型表现；（3）Character-Conditioned Reward Normalization，根据角色类别调整奖励分布，确保在不同类型的角色上实现稳健优化。大量实验表明，Character-R1 在知识、记忆等方面显著优于现有方法。",
+            "abstractEn": "Current role-playing agents (RPAs) are typically constructed by imitating surface-level behaviors, but this approach lacks internal cognitive consistency, often causing out-of-character errors in complex situations. To address this, we propose Character-R1, a framework designed to provide comprehensive verifiable reward signals for effective role-aware reasoning, which are missing in recent studies. Specifically, our framework comprises three core designs: (1) Cognitive Focus Reward, which enforces explicit label-based analysis of 10 character elements (e.g., worldview) to structure internal cognition; (2) Reference-Guided Reward, which utilizes overlap-based metrics with reference responses as optimization anchors to enhance exploration and performance; and (3) Character-Conditioned Reward Normalization, which adjusts reward distributions based on character categories to ensure robust optimization across heterogeneous roles. Extensive experiments demonstrate that Character-R1 significantly outperforms existing methods in knowledge, memory and others."
+          }
         },
         {
           "year": 2025,
@@ -281,7 +341,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Aligns role profiles and dialogues."
+          "description": "Aligns role profiles and dialogues.",
+          "detailId": "2025.acl-long.586",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）的快速发展彻底改变了角色扮演，并推动了通用角色扮演模型的发展。然而，当前的角色扮演训练存在两个重要问题：（I）使用预先定义的角色档案为特定场景生成对话训练提示，通常会导致对话与档案之间出现偏差甚至冲突，进而造成训练偏差；（II）模型只依据角色档案学习模仿角色，而忽视档案与对话在句子层面的对齐。为克服上述障碍，本文提出一个新的框架 Beyond Dialogue。该框架引入“超越对话”任务，在每个场景中将对话与角色档案特征对齐，从而消除训练过程中的偏差。此外，该框架通过一种创新的提示机制生成用于训练的推理数据，实现角色档案与对话之间细粒度的句子级对齐。上述方法完全自动化且成本较低。实验结果表明，该模型在遵循角色档案方面表现出色，超过了大多数闭源通用模型和专门的角色扮演基线。代码和数据见：https://github.com/yuyouyu32/BeyondDialogue。",
+            "abstractEn": "The rapid advancement of large language models (LLMs) has revolutionized role-playing, enabling the development of general role-playing models. However, current role-playing training has two significant issues: (I) Using a predefined role profile to prompt dialogue training for specific scenarios usually leads to biases and even conflicts between the dialogue and the profile, resulting in training biases. (II) Models learn to imitate the role based solely on the profile, neglecting profile-dialogue alignment at the sentence level. To overcome the aforementioned hurdles, we propose a novel framework Beyond Dialogue, which introduces “beyond dialogue” tasks to align dialogue with profile traits for each scenario, eliminating biases during training. Furthermore, the framework achieves a sentence-level fine-grained alignment between profile and dialogue through an innovative prompting mechanism that generates reasoning data for training. Moreover, the aforementioned methods are fully automated and low-cost. Experimental results demonstrate our model excels in adhering to role profiles, outperforming most proprietary general and specialized role-playing baselines. The code and data are provided in https://github.com/yuyouyu32/BeyondDialogue."
+          }
         },
         {
           "year": 2025,
@@ -294,7 +359,12 @@
             "RL"
           ],
           "tags": [],
-          "description": "Enhances dual cognition with rule-based rewards."
+          "description": "Enhances dual cognition with rule-based rewards.",
+          "detailId": "2025.emnlp-main.1389",
+          "details": {
+            "abstractZh": "角色扮演语言智能体（RPLAs）已经成为大语言模型（LLMs）的一个重要应用方向。现有方法通常依赖提示工程或监督微调，使模型能够在特定场景中模仿角色行为，但往往忽视驱动这些行为的底层认知机制。受认知心理学启发，本文提出 CogDual，这是一种采用“先认知、后回应”推理范式的新型角色扮演语言智能体。通过联合建模外部情境感知和内部自我认知，CogDual 能够生成具有更强角色一致性且与上下文更加契合的回答。为进一步优化模型表现，作者采用强化学习，并设计了两种适用于开放领域文本生成的通用奖励方案。在 CoSER 基准以及 Cross-MR 和 LifeChoice 上进行的大量实验表明，CogDual 持续优于现有基线，并能够有效泛化到多种角色扮演任务。",
+            "abstractEn": "Role-Playing Language Agents (RPLAs) have emerged as a significant application direction for Large Language Models (LLMs). Existing approaches typically rely on prompt engineering or supervised fine-tuning to enable models to imitate character behaviors in specific scenarios, but often neglect the underlying cognitive mechanisms driving these behaviors. Inspired by cognitive psychology, we introduce CogDual, a novel RPLA adopting a cognize-then-respond reasoning paradigm. By jointly modeling external situational awareness and internal self-awareness, CogDual generates responses with improved character consistency and contextual alignment. To further optimize the performance, we employ reinforcement learning with two general-purpose reward schemes designed for open-domain text generation. Extensive experiments on the CoSER benchmark, as well as Cross-MR and LifeChoice, demonstrate that CogDual consistently outperforms existing baselines and generalizes effectively across diverse role-playing tasks."
+          }
         },
         {
           "year": 2025,
@@ -311,7 +381,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Coordinates persona simulation for established characters."
+          "description": "Coordinates persona simulation for established characters.",
+          "detailId": "2502.09082",
+          "details": {
+            "abstractZh": "角色扮演语言智能体（RPLAs）已经成为大语言模型（LLMs）颇具前景的应用。然而，由于缺少真实的角色数据集以及利用此类数据进行细致评估的方法，让角色扮演语言智能体模拟已有明确设定的人物仍然是一项具有挑战性的任务。本文提出 CoSER，它由高质量数据集、开放模型和一套评估方案组成，旨在构建能够有效模拟既有人物的角色扮演语言智能体。CoSER 数据集涵盖 771 本知名书籍中的 17,966 个角色，既提供包含现实复杂性的真实对话，也包含对话场景设定、人物经历和内心思考等多种数据类型。借鉴表演方法，作者提出“规定情境表演”，用于训练和评估角色扮演大语言模型；在该设置中，大语言模型需要依次扮演书籍场景中的多个角色。利用这一数据集，作者开发了 CoSER 8B 和 CoSER 70B，即基于 LLaMA-3.1 构建的先进开放角色扮演大语言模型。大量实验验证了 CoSER 数据集在角色扮演语言智能体训练、评估和检索方面的价值。此外，CoSER 70B 在作者的评测及三个现有基准上展现出领先性能，达到或超过 GPT-4o；其中在 InCharacter 和 LifeChoice 基准上的准确率分别为 75.80% 和 93.47%。",
+            "abstractEn": "Role-playing language agents (RPLAs) have emerged as promising applications of large language models (LLMs). However, simulating established characters presents a challenging task for RPLAs, due to the lack of authentic character datasets and nuanced evaluation methods using such data. In this paper, we present CoSER, a collection of a high-quality dataset, open models, and an evaluation protocol towards effective RPLAs of established characters. The CoSER dataset covers 17,966 characters from 771 renowned books. It provides authentic dialogues with real-world intricacies, as well as diverse data types such as conversation setups, character experiences and internal thoughts. Drawing from acting methodology, we introduce given-circumstance acting for training and evaluating role-playing LLMs, where LLMs sequentially portray multiple characters in book scenes. Using our dataset, we develop CoSER 8B and CoSER 70B, i.e., advanced open role-playing LLMs built on LLaMA-3.1 models. Extensive experiments demonstrate the value of the CoSER dataset for RPLA training, evaluation and retrieval. Moreover, CoSER 70B exhibits state-of-the-art performance surpassing or matching GPT-4o on our evaluation and three existing benchmarks, i.e., achieving 75.80% and 93.47% accuracy on the InCharacter and LifeChoice benchmarks respectively."
+          }
         },
         {
           "year": 2025,
@@ -323,7 +398,12 @@
             "RL"
           ],
           "tags": [],
-          "description": "Optimizes role-playing dialogue with comparative rewards."
+          "description": "Optimizes role-playing dialogue with comparative rewards.",
+          "detailId": "2025.findings-emnlp.18",
+          "details": {
+            "abstractZh": "强化学习微调（RLFT）在具有客观可验证答案的任务中取得了显著成功，例如代码生成和数学推理，但在角色扮演对话等开放式主观任务中仍然面临困难。传统奖励建模方法依赖对每个样本进行独立评分，因此面临两方面挑战：评价标准具有主观性，奖励信号也不稳定。基于人类评价本质上会将明确标准与隐式比较判断相结合这一观察，本文提出 Comparative Policy Optimization（CPO）。CPO 将奖励评估方式从逐样本评分转变为组内比较评分，从而重新定义奖励评估范式。基于同一原则，作者还提出 CharacterArena 评估框架，其中包含两个阶段：（1）上下文化的多轮角色扮演模拟；（2）轨迹级比较评估。CharacterArena 通过客观的轨迹比较实现对主观评分的操作化，从而减少上下文偏差，并实现更加稳健和公平的性能评估。CharacterEval、CharacterBench 和 CharacterArena 上的实验结果表明，CPO 能够有效缓解奖励歧义，并显著提升对话质量。",
+            "abstractEn": "Reinforcement Learning Fine-Tuning (RLFT) has achieved notable success in tasks with objectively verifiable answers (e.g., code generation, mathematical reasoning), yet struggles with open-ended subjective tasks like role-playing dialogue. Traditional reward modeling approaches, which rely on independent sample-wise scoring, face dual challenges: subjective evaluation criteria and unstable reward signals. Motivated by the insight that human evaluation inherently combines explicit criteria with implicit comparative judgments, we propose Comparative Policy Optimization (CPO). CPO redefines the reward evaluation paradigm by shifting from sample-wise scoring to comparative group-wise scoring. Building on the same principle, we introduce the CharacterArena evaluation framework, which comprises two stages: (1) Contextualized Multi-turn Role-playing Simulation, and (2) Trajectory-level Comparative Evaluation. By operationalizing subjective scoring via objective trajectory comparisons, CharacterArena minimizes contextual bias and enables more robust and fair performance evaluation. Empirical results on CharacterEval, CharacterBench, and CharacterArena confirm that CPO effectively mitigates reward ambiguity and leads to substantial improvements in dialogue quality."
+          }
         },
         {
           "year": 2025,
@@ -341,7 +421,12 @@
             "Evaluation",
             "Dataset"
           ],
-          "description": "Builds a configurable role-playing LLM."
+          "description": "Builds a configurable role-playing LLM.",
+          "detailId": "2025.acl-long.731",
+          "details": {
+            "abstractZh": "本文提出 Crab，一种配备评测基准的新型可配置角色扮演（RP）大语言模型。该方法由以角色为中心的数据集整理、体现人物设定的大语言模型构建，以及面向角色扮演对话生成的综合基准创建三部分组成。不同于仅使用少量预设角色的传统角色扮演模型，Crab 支持动态配置所需角色，从而提高灵活性和适应能力。为有效训练角色扮演大语言模型，作者整理了规模最大的角色扮演训练数据集。该数据集为每段对话提供详细的角色概述，包括人物档案、对话场景和带标签的主题，覆盖广泛的角色行为、情绪和互动。作者还注意到，当前基准既缺少合适的评估标准，也缺少恰当的评估方法。因此，为验证角色扮演大语言模型的有效性，研究提出一个新基准，其中包含评估标准、带人工标注的测试数据集，以及用于自动评估角色扮演特定方面并与人类感知保持一致的奖励模型 RoleRM。充分的实验表明，在对角色扮演进行细粒度评估时，RoleRM 显著优于 ChatGPT 和其他评估方法；由 Crab 支持的角色扮演大语言模型在多个细粒度方面也展现出更优表现。",
+            "abstractEn": "This study introduces Crab, a novel Configurable Role-Playing (RP) LLM with Assessing Benchmark, which consists of Role-Centric Dataset Curation, Persona-Embodying LLM Construction, and Comprehensive Benchmark Creation for RP dialogue generation. Distinct from traditional RP models that employ only several preset roles, Crab enables dynamic configuration of desired roles, thereby enhancing related flexibility and adaptability. To effectively train RP-LLMs, we curated the largest RP training dataset. The dataset provides a detailed role overview for each dialogue, including character profile, conversation scenario, and tagged topic, capturing a broad range of role-based behaviors, emotions, and interactions. We also noticed that current benchmarks lack both proper evaluation standards and methods. Thus, to validate RP-LLMs’ effectiveness, we introduced a new benchmark containing an evaluation standard, a test dataset with manual annotations, and a reward model RoleRM designed to automatically assess specific aspects of RP while aligning with human perception. Sufficient experiments reveal that RoleRM significantly outperforms ChatGPT and other evaluation methods in conducting fine-grained evaluations of RP. Also, RP-LLMs powered by Crab demonstrate superior performance across various fine-grained aspects."
+          }
         },
         {
           "year": 2025,
@@ -359,7 +444,12 @@
             "Persona",
             "Dataset"
           ],
-          "description": "Builds customizable role-playing agents."
+          "description": "Builds customizable role-playing agents.",
+          "detailId": "2025.findings-emnlp.1100",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）展现出卓越的指令理解和类人文本生成能力，使智能体模拟能够超越基本的行为复现。然而，自由创建可定制角色的潜力仍未得到充分探索。本文提出 Customisable Conversation Agent Framework，通过注入个性化特征，使用大语言模型模拟现实人物，使用户能够根据自身偏好创建不同角色。作者提出 SimsConv 数据集，其中包含 68 个定制角色，以及分布在 1,360 个现实场景中的 13,971 段多轮角色扮演对话。角色首先使用预定义要素进行定制，包括职业、志向、性格特征和技能，随后再通过个人档案和社会档案扩展。在此基础上，本文提出 SimsChat，一个可自由定制的角色扮演智能体，包含多种现实设置和围绕指定主题展开的角色互动。在 SimsConv 和 WikiRoleEval 数据集上的实验表明，与现有模型相比，SimsChat 在保持角色一致性、知识准确性和恰当拒绝问题方面表现更优。全面的消融实验验证了各组件对整体表现的贡献，其中预定义属性框架和场景构建的影响尤为显著。该框架为开发更加准确且可定制的人类模拟体提供了有价值的启示。数据和代码已公开于：https://github.com/Bernard-Yang/SimsChat。",
+            "abstractEn": "Large Language Models (LLMs) demonstrate remarkable ability to comprehend instructions and generate human-like text, enabling sophisticated agent simulation beyond basic behavior replication. However, the potential for creating freely customisable characters remains underexplored. We introduce the Customisable Conversation Agent Framework, which employs LLMs to simulate real-world characters through personalised characteristic feature injection, enabling diverse character creation according to user preferences. We propose the SimsConv dataset, comprising 68 customised characters and 13,971 multi-turn role-playing dialogues across 1,360 real-world scenes. Characters are initially customised using pre-defined elements (career, aspiration, traits, skills), then expanded through personal and social profiles. Building on this, we present SimsChat, a freely customisable role-playing agent incorporating various realistic settings and topic-specified character interactions. Experimental results on both SimsConv and WikiRoleEval datasets demonstrate SimsChat’s superior performance in maintaining character consistency, knowledge accuracy, and appropriate question rejection compared to existing models. Comprehensive ablation studies validate each component’s contribution to overall performance, with the pre-defined aspects framework and scene construction showing particularly significant impact. Our framework provides valuable insights for developing more accurate and customisable human simulacra. Our data and code are publicly available at https://github.com/Bernard-Yang/SimsChat."
+          }
         },
         {
           "year": 2025,
@@ -374,7 +464,12 @@
           "tags": [
             "Contrastive learning"
           ],
-          "description": "Enhances persona consistency in role-playing."
+          "description": "Enhances persona consistency in role-playing.",
+          "detailId": "2025.findings-acl.1344",
+          "details": {
+            "abstractZh": "近年来，大语言模型（LLMs）在多项对话生成任务中取得了突破性进展。然而，情感和细粒度角色感知的不足，进一步限制了模型提供个性化、多样化互动的能力。现有方法在为角色扮演等场景收集高质量标注数据时成本高昂；同时，由于角色扮演场景中的模型行为天然具有多样性，传统的人类对齐方法也难以部署。受通过人类反馈强化学习（RLHF）使模型安全行为对齐的启发，本文从人物设定对齐的视角重新审视模型的角色扮演行为，并提出一种无需标注的新框架 Persona-Aware Contrastive Learning（PCL），用于在角色扮演过程中对齐大语言模型的行为，增强模型的角色一致性。具体而言，作者首先设计 Role Chain 方法，鼓励模型根据角色特征和对话上下文进行自我追问，以调整人物一致性；随后，通过使用与不使用角色特征之间的迭代对抗建模，进一步增强模型的角色扮演策略。在黑盒和白盒大语言模型上的实验表明，配备 PCL 的模型在自动评估（CharEval 与 GPT-4）和人类专家评估中均显著优于未经处理的基础模型。",
+            "abstractEn": "In recent years, large language models (LLMs) have achieved breakthrough progress in many dialogue generation tasks. However, their lack of emotion and fine-grained role awareness limits the model’s ability to provide personalized and diverse interactions further. Current methods face high costs in collecting high-quality annotated data for scenarios such as role-playing, and traditional human alignment methods are difficult to deploy due to the inherent diversity of model behavior in role-playing scenarios. Inspired by the alignment of models for safety behaviors through RLHF (Reinforcement Learning from Human Feedback), in this paper, we revisit model role-playing behavior from the perspective of persona alignment and propose a novel annotation-free framework named Persona-Aware Contrastive Learning (PCL) to align LLMs’ behavior during role-playing, enhancing the model’s role consistency. Specifically, we first design a role chain method to encourage the model to self-question based on the role characteristics and dialogue context to adjust personality consistency. Then, we further enhance the model’s role-playing strategy through iterative adversarial modeling between the use of role characteristics and not. Experiments on both black-box and white-box LLMs show that LLMs equipped with PCL significantly outperform vanilla LLMs under automatic evaluation methods (CharEval & GPT-4) and human expert evaluation."
+          }
         },
         {
           "year": 2025,
@@ -392,7 +487,12 @@
             "Speech-language RPA",
             "Dataset"
           ],
-          "description": "Models personality and voice traits for immersive role-playing."
+          "description": "Models personality and voice traits for immersive role-playing.",
+          "detailId": "2025.acl-long.1276",
+          "details": {
+            "abstractZh": "受益于大语言模型，角色扮演智能体（RPAs）正成为一种新兴的交互式人工智能系统，能够模拟具有不同性格的角色或人物。然而，现有方法主要关注以文本形式模仿角色间的对话，忽视了角色的声音特征——例如声音风格和情绪——在互动中的关键作用，而这些特征能够在现实场景中带来更强的沉浸体验。为实现这一目标，本文提出 OmniCharacter，首个无缝的语音—语言人格交互模型，以低延迟实现沉浸式角色扮演智能体。OmniCharacter 使智能体能够在整个互动过程中持续呈现角色特定的性格特征和声音特征，并支持语音与语言回答的混合。为使模型与语音—语言场景对齐，作者构建 OmniCharacter-10K 数据集，其中包含更多具有差异性的角色（20 个）、具有丰富上下文的多轮对话（10K）和动态语音回答（135K）。实验结果表明，与现有角色扮演智能体及主流语音—语言模型相比，该方法在回答内容和风格方面都表现更好，响应延迟最低可达 289 毫秒。",
+            "abstractEn": "Role-Playing Agents (RPAs), benefiting from large language models, is an emerging interactive AI system that simulates roles or characters with diverse personalities. However, existing methods primarily focus on mimicking dialogues among roles in textual form, neglecting the role’s voice traits (e.g., voice style and emotions) as playing a crucial effect in interaction, which tends to be more immersive experiences in realistic scenarios. Towards this goal, we propose OmniCharacter, a first seamless speech-language personality interaction model to achieve immersive RPAs with low latency. Specifically, OmniCharacter enables agents to consistently exhibit role-specific personality traits and vocal traits throughout the interaction, enabling a mixture of speech and language responses. To align the model with speech-language scenarios, we construct a dataset named OmniCharacter-10K, which involves more distinctive characters (20), richly contextualized multi-round dialogue (10K), and dynamic speech response (135K). Experimental results showcase that our method yields better responses in terms of both content and style compared to existing RPAs and mainstream speech-language models, with a response latency as low as 289ms."
+          }
         },
         {
           "year": 2025,
@@ -408,7 +508,12 @@
             "Memory",
             "Dataset"
           ],
-          "description": "Aligns psychological traits and explicit memories."
+          "description": "Aligns psychological traits and explicit memories.",
+          "detailId": "2505.12814",
+          "details": {
+            "abstractZh": "现有基于大语言模型的角色扮演方法经常依赖表层的文本描述或过于简单的指标，无法充分建模角色的内在与外在维度。此外，这些方法通常利用模型的隐式知识或基础的检索增强生成来模拟角色记忆，却没有进行显式的记忆对齐，因而损害了记忆一致性。这两个问题削弱了角色扮演大语言模型在可信社会模拟等多种应用中的可靠性。为解决这些局限，本文提出 PsyMem，这是一个将细粒度心理属性与显式记忆控制结合起来的新型角色扮演框架。PsyMem 使用 26 项心理指标补充文本描述，从而更细致地建模角色。此外，PsyMem 实施记忆对齐训练，显式训练模型使角色回答与记忆保持一致，由此支持在推理阶段根据记忆动态控制回答。作者使用专门设计的数据集训练 Qwen2.5-7B-Instruct；该数据集包含从小说中提取的 5,414 个角色和 38,962 段对话。所得模型被称为 PsyMem-Qwen，在角色扮演任务上优于基线模型，并在人类相似度和角色忠实度方面取得最佳表现。",
+            "abstractEn": "Existing LLM-based role-playing methods often rely on superficial textual descriptions or simplistic metrics, inadequately modeling both intrinsic and extrinsic character dimensions. Additionally, they typically simulate character memory with implicit model knowledge or basic retrieval augment generation without explicit memory alignment, compromising memory consistency. The two issues weaken reliability of role-playing LLMs in several applications, such as trustworthy social simulation. To address these limitations, we propose PsyMem, a novel framework integrating fine-grained psychological attributes and explicit memory control for role-playing. PsyMem supplements textual descriptions with 26 psychological indicators to detailed model character. Additionally, PsyMem implements memory alignment training, explicitly trains the model to align character's response with memory, thereby enabling dynamic memory-controlled responding during inference. By training Qwen2.5-7B-Instruct on our specially designed dataset (including 5,414 characters and 38,962 dialogues extracted from novels), the resulting model, termed as PsyMem-Qwen, outperforms baseline models in role-playing, achieving the best performance in human-likeness and character fidelity."
+          }
         },
         {
           "year": 2025,
@@ -425,7 +530,12 @@
           "tags": [
             "Reasoning"
           ],
-          "description": "Fine-tunes on guided thinking trajectories."
+          "description": "Fine-tunes on guided thinking trajectories.",
+          "detailId": "2025.emnlp-main.1372",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）的角色扮演能力在需要深入理解和连贯推理的复杂场景中经常缺乏认知一致性。尽管近期的推理模型在数学和代码任务中表现出色，但它们在开放式角色扮演场景中的效果有限。本文提出 R-CHAR（Role-Consistent Hierarchical Adaptive Reasoning），一个由元认知驱动的框架，通过合成受引导的思考轨迹和自适应评估来增强角色扮演表现。该方法表明，在角色扮演社会智能任务中，与复杂冗长的推理链相比，简洁的思考过程能够以更高效率取得更优表现，并超过现有的专用模型。SocialBench 基准上的实验结果显示，在不同复杂程度的场景中，R-CHAR 均带来显著且稳定的性能提升，尤其擅长长上下文理解——从 34.64% 提升至 68.59%——以及群体层级的社会互动。该工作推动了具有认知一致性的角色扮演系统的发展，缩小了表层模仿与真实角色模拟之间的差距。",
+            "abstractEn": "Role-playing capabilities in large language models (LLMs) often lack cognitive consistency in complex scenarios that require deep understanding and coherent reasoning. While recent reasoning models excel in math and coding tasks, they show limited effectiveness in open-ended role-playing scenarios. We introduce R-CHAR (Role-Consistent Hierarchical Adaptive Reasoning), a metacognition-driven framework that enhances role-playing performance through guided thinking trajectories synthesis and adaptive evaluation. Our approach demonstrates that concise thinking processes can achieve superior performance efficiently compared to elaborate reasoning chains in role-playing social intelligence tasks, outperforming existing specialized models. Experimental results on the SocialBench benchmark show significant and stable performance improvements across varying scenario complexities, showing particular strength in long-context comprehension (from 34.64% to 68.59%) and group-level social interactions. Our work advances the development of cognitively consistent role-playing systems, bridging the gap between surface-level mimicry and authentic character simulation."
+          }
         },
         {
           "year": 2025,
@@ -439,7 +549,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Enhances plot progression with trigger-based prompting."
+          "description": "Enhances plot progression with trigger-based prompting.",
+          "detailId": "2025.acl-long.603",
+          "details": {
+            "abstractZh": "作为一种新型对话人工智能，角色扮演智能体（RPAs）正受到越来越多的关注。以往研究主要聚焦于其塑造指定角色的能力，而本文从用户中心的视角提出，要提供更具吸引力的互动，角色扮演智能体推动剧情发展的能力仍需得到显著改善。为弥补这一空白，作者提出 RolePlot，一个专门用于评估并增强角色扮演智能体剧情推进能力的框架。RolePlot 首先基于人工创作的文学剧本和专门设计的合成数据构建剧情推进数据集，随后进行由叙事理论指导的人工标注，以及经过人工验证的自动标注。接着，研究利用大语言模型过参数化的嵌入空间检测一个“触发子空间”，用于识别能够促成剧情转折的对话片段。当用户输入与该子空间对齐时，系统会明确提示角色扮演智能体推动剧情发展。在评估方面，作者模拟用户与角色扮演智能体之间的互动，并跟踪对话持续时间——即用户退出前的对话轮数——以及用户在不同阶段的唤醒水平。实验表明，该方法提升了角色扮演智能体把握剧情发展时机的能力；更重要的是，它显著增加了对话轮数，并持续维持更高的用户唤醒水平，从而验证了用户能够获得更具沉浸感的互动体验。",
+            "abstractEn": "Role-playing agents (RPAs) are garnering increasing interests as a novel form of conversational AI. While previous research has predominantly concentrated on their ability to portray specified characters, we argue from a user-centered perspective that RPAs’ capability to advance the plot requires substantial improvements to deliver more engaging interaction. To bridge this gap, we propose RolePlot, a role-playing framework specifically designed to evaluate and enhance the plot-progression capabilities of RPAs. RolePlot begins by constructing a plot-progression dataset extended from human-written literary scripts and specially designed synthetic data, followed by narrative theory-driven manual annotation and automated labeling validated through human verification. We then exploit the over-parameterized embedding space of LLMs to detect a “trigger subspace” that identifies dialogue segments catalyzing plot transitions. When user’s inputs align with this subspace, we explicitly prompt RPAs to advance the plot. For evaluation, we simulate User-RPA interactions and track both the conversation longevity (measured in dialogue turns before disengagement) and users’ arousal levels across different stages. Empirically, our method improves RPAs’ capability to time plot developments, and more importantly, yielding a significant increase in conversation turns and sustained higher arousal levels, thereby confirming that users experience more immersive engagements."
+          }
         },
         {
           "year": 2025,
@@ -454,7 +569,12 @@
             "Retrieval",
             "Dataset"
           ],
-          "description": "Uses retrieval for memories and knowledge boundaries."
+          "description": "Uses retrieval for memories and knowledge boundaries.",
+          "detailId": "2025.findings-emnlp.288",
+          "details": {
+            "abstractZh": "近期面向通用领域的角色扮演智能体（RPAs）已经能够在广泛的日常任务中保持人物特征，而不再局限于特定场景下的闲聊。然而，现有工作缺少对人物内部属性复现的考虑，例如细粒度记忆；同时也未充分考虑与每个角色的知识边界对齐，导致通用领域中的个性化程度下降，并更容易产生角色幻觉。为解决这些问题，作者从语境效应理论中获得启发，提出基于检索的 TailorRPA 框架。该框架获取量身定制的通用领域指令，以改善细粒度记忆的整合，并加入通用领域保护性问题，帮助塑造每个角色的知识边界，从而缓解角色幻觉。基于该框架，作者开发角色扮演数据集 TailorGen，其中同时包含角色专属指令和通用领域指令。实验验证了 TailorRPA 相比基线方法在激发通用领域角色扮演能力和缓解角色幻觉方面的优越性；研究还通过实验证明当前先进闭源模型中同样存在角色幻觉，进一步说明了该工作的必要性。",
+            "abstractEn": "Recent advancements of general domain oriented Role-playing Agents (RPAs) have enabled the agents to maintain character properties in a wide spectrum of daily tasks beyond mere scenario based chit-chatting. Nonetheless, current works lacks consideration of replicating internal properties of characters like fine-grained memories, and failed to take account of aligning with the knowledge boundary of each character, resulting in degraded personalization and proneness to character hallucination in general domain. To address these problems, we draw inspirations from the context effect theory and propose a retrieval-based framework TailorRPA to harvest tailored general domain instructions to improve integration of fine-grained memories and incorporate general-domain protective queries to help shape the character-wise knowledge boundary, alleviating character hallucination. Based on the framework, we developed a role-playing dataset TailorGen, comprising both role-specific and general-domain instructions. Through empirical experiments, we proved the superiority of TailorRPA in eliciting general domain role-playing capabilities and alleviating character hallucination compared to baseline methods, and explored the existence of character hallucination in state-of-the-art proprietary models through empirical experiments, underlining the importance of our work."
+          }
         },
         {
           "year": 2025,
@@ -471,7 +591,12 @@
           "tags": [
             "Reasoning"
           ],
-          "description": "Improves role-playing with role-aware reasoning traces."
+          "description": "Improves role-playing with role-aware reasoning traces.",
+          "detailId": "neurips-2025-thinking-in-character",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）的发展推动了人们对角色扮演智能体（RPAs）的广泛关注，这类智能体可用于情感陪伴和虚拟互动等应用。然而，近期的角色扮演智能体通常基于显式对话数据构建，缺乏深入且类似人类的内在思考过程，因而只能呈现较为表层的知识与风格。尽管可以使用大型推理模型（LRMs）模拟角色思考，但直接应用此类模型会受到注意力转移——即角色扮演智能体忘记自身角色——以及风格漂移——即推理过于正式、僵化，而非与角色保持一致——的阻碍。为解决这些问题，本文提出一种新的 Role-Aware Reasoning（RAR）方法，其中包含两个重要阶段：Role Identity Activation（RIA）和 Reasoning Style Optimization（RSO）。RIA 在推理过程中利用角色档案对模型进行显式引导，以抵消注意力转移；随后，RSO 通过大型推理模型蒸馏，使推理风格与角色和场景保持一致，从而缓解风格漂移。大量实验表明，所提出的 RAR 通过有效解决注意力转移和风格漂移问题，显著提升了角色扮演智能体的表现。代码已公开于：https://github.com/Toyhom/thinking_in_character。",
+            "abstractEn": "The advancement of Large Language Models (LLMs) has spurred significant interest in Role-Playing Agents (RPAs) for applications such as emotional companionship and virtual interaction. However, recent RPAs are often built on explicit dialogue data, lacking deep, human-like internal thought processes, resulting in superficial knowledge and style expression. While Large Reasoning Models (LRMs) can be employed to simulate character thought, their direct application is hindered by attention diversion (i.e., RPAs forget their role) and style drift (i.e., overly formal and rigid reasoning rather than character-consistent reasoning). To address these challenges, this paper introduces a novel Role-Aware Reasoning (RAR) method, which consists of two important stages: Role Identity Activation (RIA) and Reasoning Style Optimization (RSO). RIA explicitly guides the model with character profiles during reasoning to counteract attention diversion, and then RSO aligns reasoning style with the character and scene via LRM distillation to mitigate style drift. Extensive experiments demonstrate that the proposed RAR significantly enhances the performance of RPAs by effectively addressing attention diversion and style drift. Our code is publicly available at https://github.com/Toyhom/thinking_in_character."
+          }
         },
         {
           "year": 2025,
@@ -490,7 +615,12 @@
             "Dataset",
             "Evaluation"
           ],
-          "description": "Develops multimodal role-playing agents with a personalized multimodal dataset and specialized evaluation framework."
+          "description": "Develops multimodal role-playing agents with a personalized multimodal dataset and specialized evaluation framework.",
+          "detailId": "iclr-2025-mmrole",
+          "details": {
+            "abstractZh": "近年来，角色扮演智能体（RPAs）因其提供情感价值和促进社会学研究的潜力而受到越来越多的关注。然而，现有研究主要局限于文本模态，无法模拟人类的多模态感知能力。为弥补这一空白，本文提出多模态角色扮演智能体（MRPAs）的概念，并提出用于开发和评估此类智能体的综合框架 MMRole，其中包括个性化多模态数据集和稳健的评估方法。具体而言，作者构建了大规模、高质量的 MMRole-Data 数据集，其中包含 85 个角色、11K 张图像以及 14K 段单轮或多轮对话。此外，本文提出稳健的评估方法 MMRole-Eval，覆盖三个维度的八项指标，并设计奖励模型，利用构建的真实标注数据对多模态角色扮演智能体进行评分和比较。作者还开发了首个专用多模态角色扮演智能体 MMRole-Agent。大量评估结果表明，MMRole-Agent 的性能得到提升，同时揭示了开发多模态角色扮演智能体时面临的主要挑战，强调需要增强多模态理解和角色扮演一致性。数据、代码和模型均可在以下地址获取：https://github.com/YanqiDai/MMRole。",
+            "abstractEn": "Recently, Role-Playing Agents (RPAs) have garnered increasing attention for their potential to deliver emotional value and facilitate sociological research. However, existing studies are primarily confined to the textual modality, unable to simulate humans' multimodal perceptual capabilities. To bridge this gap, we introduce the concept of Multimodal Role-Playing Agents (MRPAs), and propose a comprehensive framework, MMRole, for their development and evaluation, which comprises a personalized multimodal dataset and a robust evaluation approach. Specifically, we construct a large-scale, high-quality dataset, MMRole-Data, consisting of 85 characters, 11K images, and 14K single or multi-turn dialogues. Additionally, we present a robust evaluation approach, MMRole-Eval, encompassing eight metrics across three dimensions, where a reward model is designed to score MRPAs with the constructed ground-truth data for comparison. Moreover, we develop the first specialized MRPA, MMRole-Agent. Extensive evaluation results demonstrate the improved performance of MMRole-Agent and highlight the primary challenges in developing MRPAs, emphasizing the need for enhanced multimodal understanding and role-playing consistency. The data, code, and models are all available at https://github.com/YanqiDai/MMRole."
+          }
         },
         {
           "year": 2025,
@@ -504,7 +634,12 @@
           "tags": [
             "Multi-objective"
           ],
-          "description": "Aligns role-playing agents with multi-objective rewards."
+          "description": "Aligns role-playing agents with multi-objective rewards.",
+          "detailId": "2512.09756",
+          "details": {
+            "abstractZh": "角色扮演智能体（RPAs）需要平衡多个目标，例如指令遵循、人物一致性和风格忠实度，而这些目标在不同维度上并不总是完全一致。以往工作主要依赖监督微调或使用标量化奖励的强化学习，但这些方法并未明确处理优化过程中多个奖励维度之间的协调。本文提出 MOA（Multi-Objective Alignment），一个支持通用角色扮演智能体进行多维、细粒度评分准则优化的强化学习框架。MOA 引入一种新的多目标优化策略，同时在多个细粒度评分准则上进行训练，以提升优化效果。此外，为同时改善输出多样性和生成质量，作者采用带有思考增强的 rollout 和离策略引导。PersonaGym 和 RoleMRC 上的实验表明，与监督学习和标准强化学习基线相比，MOA 持续提升多维角色扮演表现。在相同评估方案下，经过 MOA 训练的 8B 模型在多个评估维度上取得了可与强闭源模型竞争的表现。这些结果表明，MOA 为训练能力更强的通用角色扮演智能体提供了一个实用框架。",
+            "abstractEn": "Role-playing agents (RPAs) require balancing multiple objectives, such as instruction following, persona consistency, and stylistic fidelity, which are not always perfectly aligned across different dimensions. While prior work has primarily relied on supervised fine-tuning or reinforcement learning with scalarized rewards, these approaches do not explicitly address the coordination of multiple reward dimensions during optimization. We present MOA (Multi-Objective Alignment), a reinforcement-learning framework that enables multi-dimensional, fine-grained rubric optimization for general RPAs. MOA introduces a novel multi-objective optimization strategy that trains simultaneously on multiple fine-grained rubrics to boost optimization performance. Additionally, to improve both output diversity and generation quality, we employ thought-augmented rollouts with off-policy guidance. Experiments on PersonaGym and RoleMRC show that MOA consistently improves multi-dimensional role-playing performance over supervised and standard RL baselines. Under identical evaluation protocols, an 8B model trained with MOA reaches performance competitive with strong closed-source models across multiple evaluation dimensions. These results suggest that MOA provides a practical framework for training more capable general-purpose role-playing agents."
+          }
         },
         {
           "year": 2025,
@@ -521,7 +656,12 @@
           "tags": [
             "Reward"
           ],
-          "description": "Improves role-awareness with verifiable role rewards."
+          "description": "Improves role-awareness with verifiable role rewards.",
+          "detailId": "2505.10218",
+          "details": {
+            "abstractZh": "角色扮演对话智能体（RPCAs）在保持角色一致性方面持续面临挑战。为解决这一问题，本文提出 RAIDEN-R1，一个结合 Verifiable Role-Awareness Reward（VRAR）的新型强化学习框架。该方法同时引入单项和多项挖掘策略，通过评估角色特定关键词来生成可量化奖励。此外，作者通过多个大语言模型协作，构建高质量、具备角色意识的思维链数据集，并开展实验以增强推理连贯性。RAIDEN 基准上的实验展示了 RAIDEN-R1 的优越性：14B-GRPO 模型在剧本知识和对话记忆指标上的准确率分别达到 88.04% 和 88.65%，在保持稳健性的同时超过基线模型。案例分析进一步表明，模型解决相互冲突的上下文线索以及维持第一人称叙事一致性的能力得到增强。该工作弥补了角色扮演对话智能体训练中奖励难以量化的空白，并为角色感知推理模式提供了新的认识，推动了此类智能体的发展。",
+            "abstractEn": "Role-playing conversational agents (RPCAs) face persistent challenges in maintaining role consistency. To address this, we propose RAIDEN-R1, a novel reinforcement learning framework that integrates Verifiable Role-Awareness Reward (VRAR). The method introduces both singular and multi-term mining strategies to generate quantifiable rewards by assessing role-specific keys. Additionally, we construct a high-quality, role-aware Chain-of-Thought dataset through multi-LLM collaboration, and implement experiments to enhance reasoning coherence. Experiments on the RAIDEN benchmark demonstrate RAIDEN-R1's superiority: our 14B-GRPO model achieves 88.04% and 88.65% accuracy on Script-Based Knowledge and Conversation Memory metrics, respectively, outperforming baseline models while maintaining robustness. Case analyses further reveal the model's enhanced ability to resolve conflicting contextual cues and sustain first-person narrative consistency. This work bridges the non-quantifiability gap in RPCA training and provides insights into role-aware reasoning patterns, advancing the development of RPCAs."
+          }
         },
         {
           "year": 2024,
@@ -535,7 +675,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Uses personality-indicative data for role-playing."
+          "description": "Uses personality-indicative data for role-playing.",
+          "detailId": "2024.findings-emnlp.853",
+          "details": {
+            "abstractZh": "角色扮演智能体（RPA）一直是大语言模型（LLMs）的热门应用领域，受到工业界和学术界的广泛关注。尽管现有角色扮演智能体能够较好地塑造人物的知识和语气，但它们在捕捉人物内心方面仍然面临挑战，对于小型角色扮演语言模型（RPLMs）尤其如此。本文提出使用能够体现人格的数据增强角色扮演语言模型。具体而言，作者利用心理量表中的问题，并从先进的角色扮演智能体中进行蒸馏，生成能够把握人物内心的对话。实验结果验证，使用该数据集训练的角色扮演语言模型在通用评估和人格相关评估中均展现出先进的角色扮演能力。",
+            "abstractEn": "Role-playing agents (RPA) have been a popular application area for large language models (LLMs), attracting significant interest from both industry and academia. While existing RPAs well portray the characters’ knowledge and tones, they face challenges in capturing their minds, especially for small role-playing language models (RPLMs). In this paper, we propose to enhance RPLMs via personality-indicative data. Specifically, we leverage questions from psychological scales and distill advanced RPAs to generate dialogues that grasp the minds of characters. Experimental results validate that RPLMs trained with our dataset exhibit advanced role-playing capabilities for both general and personality-related evaluations."
+          }
         },
         {
           "year": 2024,
@@ -552,7 +697,12 @@
           "tags": [
             "Dataset"
           ],
-          "description": "Customizes Chinese conversational characters."
+          "description": "Customizes Chinese conversational characters.",
+          "detailId": "2311.16832",
+          "details": {
+            "abstractZh": "本文提出 CharacterGLM，这是一系列基于 ChatGLM 构建的模型，参数规模从 6B 到 66B。CharacterGLM 面向基于角色的对话生成（CharacterDial），旨在让对话式人工智能系统具备角色定制能力，以满足人们内在的社交愿望和情感需求。在 CharacterGLM 的基础上，用户可以通过配置身份、兴趣、观点、经历、成就和社会关系等属性，以及语言特征、情绪表达和互动模式等行为，定制不同的人工智能角色或社会智能体。根据人工评测，CharacterGLM 优于包括 GPT 系列在内的大多数主流闭源大语言模型，尤其在一致性、拟人程度和互动吸引力方面表现突出。作者将发布 CharacterGLM 的 6B 版本和部分训练数据，以促进基于角色的对话生成方向的进一步研究。",
+            "abstractEn": "In this paper, we present CharacterGLM, a series of models built upon ChatGLM, with model sizes ranging from 6B to 66B parameters. Our CharacterGLM is designed for generating Character-based Dialogues (CharacterDial), which aims to equip a conversational AI system with character customization for satisfying people's inherent social desires and emotional needs. On top of CharacterGLM, we can customize various AI characters or social agents by configuring their attributes (identities, interests, viewpoints, experiences, achievements, social relationships, etc.) and behaviors (linguistic features, emotional expressions, interaction patterns, etc.). Our model outperforms most mainstream close-source large langauge models, including the GPT series, especially in terms of consistency, human-likeness, and engagement according to manual evaluations. We will release our 6B version of CharacterGLM and a subset of training data to facilitate further research development in the direction of character-based dialogue generation."
+          }
         },
         {
           "year": 2024,
@@ -570,7 +720,12 @@
             "Self-alignment",
             "Dataset"
           ],
-          "description": "Fine-tunes on self-generated role-play data."
+          "description": "Fine-tunes on self-generated role-play data.",
+          "detailId": "2401.12474",
+          "details": {
+            "abstractZh": "人们已经投入大量工作，通过模仿闭源模型来增强开源大语言模型（LLMs）的角色扮演能力。然而，本文认为，大语言模型本身就蕴含角色扮演能力，因为其海量训练语料中已经包含丰富的人物知识和潜在对话。因此，作者提出 Ditto，一种面向角色扮演的自对齐方法。Ditto 利用人物知识，引导具备指令遵循能力的大语言模型将角色扮演对话模拟为阅读理解的一种变体。该方法构建了一个包含 4,000 个角色的角色扮演训练集，按角色数量计算，其规模是当时已有数据集的十倍。随后，作者使用这一自行生成的数据集对大语言模型进行微调，以增强其角色扮演能力。在精心构建且可复现的角色扮演基准以及 MT-Bench 的角色扮演子集上进行评测时，不同参数规模的 Ditto 均能在多轮角色扮演对话中持续保持一致的角色身份，并提供准确的角色特定知识。值得注意的是，Ditto 优于所有开源角色扮演基线，表现可与先进的闭源聊天机器人相媲美。此外，本文还进行了角色扮演领域首个全面的交叉监督对齐实验。结果显示，大语言模型的内在能力限制了角色扮演中的知识范围，而角色扮演风格则很容易在较小模型的指导下习得。相关资源已开源：https://github.com/OFA-Sys/Ditto。",
+            "abstractEn": "Considerable efforts have been invested in augmenting the role-playing proficiency of open-source large language models (LLMs) by emulating proprietary counterparts. Nevertheless, we posit that LLMs inherently harbor role-play capabilities, owing to the extensive knowledge of characters and potential dialogues ingrained in their vast training corpora. Thus, in this study, we introduce Ditto, a self-alignment method for role-play. Ditto capitalizes on character knowledge, encouraging an instruction-following LLM to simulate role-play dialogues as a variant of reading comprehension. This method creates a role-play training set comprising 4,000 characters, surpassing the scale of currently available datasets by tenfold regarding the number of roles. Subsequently, we fine-tune the LLM using this self-generated dataset to augment its role-playing capabilities. Upon evaluating our meticulously constructed and reproducible role-play benchmark and the roleplay subset of MT-Bench, Ditto, in various parameter scales, consistently maintains a consistent role identity and provides accurate role-specific knowledge in multi-turn role-play conversations. Notably, it outperforms all open-source role-play baselines, showcasing performance levels comparable to advanced proprietary chatbots. Furthermore, we present the first comprehensive cross-supervision alignment experiment in the role-play domain, revealing that the intrinsic capabilities of LLMs confine the knowledge within role-play. Meanwhile, the role-play styles can be easily acquired with the guidance of smaller models. We open-source related resources at https://github.com/OFA-Sys/Ditto."
+          }
         },
         {
           "year": 2024,
@@ -587,7 +742,12 @@
           "tags": [
             "Dynamic LoRA"
           ],
-          "description": "Trains character-specific dynamic LoRA blocks on supervised role-playing dialogues."
+          "description": "Trains character-specific dynamic LoRA blocks on supervised role-playing dialogues.",
+          "detailId": "2402.13717",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）彻底改变了开放领域对话智能体，但在多角色角色扮演（MCRP）场景中仍然面临挑战。为解决这一问题，本文提出 Neeko，一个面向高效多角色模仿的创新框架。不同于现有方法，Neeko 采用动态低秩适配器（LoRA）策略，使其能够无缝适应不同角色。该框架将角色扮演过程分为智能体预训练、多角色扮演和角色增量学习三个阶段，从而有效处理已见角色和未见角色。这种动态方法与每个角色各自独立的 LoRA 模块相结合，增强了 Neeko 对人物独特属性、性格和说话方式的适应能力。因此，与大多数现有方法相比，Neeko 在多角色角色扮演任务中展现出更优表现，能够提供更具吸引力且更加多样的用户互动体验。代码和数据见：https://github.com/weiyifan1023/Neeko。",
+            "abstractEn": "Large Language Models (LLMs) have revolutionized open-domain dialogue agents but encounter challenges in multi-character role-playing (MCRP) scenarios. To address the issue, we present Neeko, an innovative framework designed for efficient multiple characters imitation. Unlike existing methods, Neeko employs a dynamic low-rank adapter (LoRA) strategy, enabling it to adapt seamlessly to diverse characters. Our framework breaks down the role-playing process into agent pre-training, multiple characters playing, and character incremental learning, effectively handling both seen and unseen roles. This dynamic approach, coupled with distinct LoRA blocks for each character, enhances Neeko's adaptability to unique attributes, personalities, and speaking patterns. As a result, Neeko demonstrates superior performance in MCRP over most existing methods, offering more engaging and versatile user interaction experiences. Code and data are available at https://github.com/weiyifan1023/Neeko."
+          }
         },
         {
           "year": 2024,
@@ -601,7 +761,12 @@
           "tags": [
             "Faithfulness"
           ],
-          "description": "Optimizes persona faithfulness with APC-based rewards."
+          "description": "Optimizes persona faithfulness with APC-based rewards.",
+          "detailId": "2405.07726",
+          "details": {
+            "abstractZh": "人物设定驱动的角色扮演（PRP）旨在构建能够严格遵循全部人物设定陈述并回答用户问题的人工智能角色。然而，现有的 PRP 忠实度标准仅限于粗粒度的、基于大语言模型的评分，缺少清晰的定义或形式化表达。本文率先探索将 PRP 忠实度量化为一种细粒度且可解释的标准，同时将其作为可靠的优化依据。该标准首先通过识别用户问题与人物陈述之间的相关性，将人物设定陈述划分为主动约束和被动约束。随后，作者依据以下原则纳入所有约束：人工智能角色的回答应当（a）被主动的相关约束所蕴含，并且（b）不与被动的无关约束发生矛盾。作者将这一原则在数学上转化为新的 Active-Passive-Constraint（APC）分数，即对每项约束的自然语言推断（NLI）分数进行相关性加权后求和。实际实现中，为提高效率，作者通过符号蒸馏从 GPT-4 得到小型判别器，构建 APC 评分系统。研究使用包含数十条陈述的示例人物设定，将 APC 分数与人工评测进行比较，结果显示二者高度相关。作者进一步将 APC 用作直接偏好优化（DPO）中的奖励系统，以构建更好的人工智能角色。实验对现有 PRP 技术进行了细粒度且可解释的比较，揭示了各自的优势和局限。研究还发现，基于 APC 的 DPO 是遵循全部约束时最具竞争力的方法之一，并且可以很好地与其他技术结合。最后，作者将实验扩展到包含数百条陈述的真实人物设定，得到了相同的结论。",
+            "abstractEn": "Persona-driven role-playing (PRP) aims to build AI characters that can respond to user queries by faithfully sticking with all persona statements. Unfortunately, existing faithfulness criteria for PRP are limited to coarse-grained LLM-based scoring without a clear definition or formulation. This paper presents a pioneering exploration to quantify PRP faithfulness as a fine-grained and explainable criterion, which also serves as a reliable reference for optimization. Our criterion first discriminates persona statements into active and passive constraints by identifying the query-statement relevance. Then, we incorporate all constraints following the principle that the AI character's response should be (a) entailed by active (relevant) constraints and (b) not contradicted by passive (irrelevant) constraints. We translate this principle mathematically into a novel Active-Passive-Constraint (APC) score, a constraint-wise sum of natural language inference (NLI) scores weighted by relevance scores. In practice, we build the APC scoring system by symbolically distilling small discriminators from GPT-4 for efficiency. We validate the quality of the APC score against human evaluation based on example personas with tens of statements, and the results show a high correlation. We further leverage it as a reward system in direct preference optimization (DPO) for better AI characters. Our experiments offer a fine-grained and explainable comparison between existing PRP techniques, revealing their advantages and limitations. We further find APC-based DPO to be one of the most competitive techniques for sticking with all constraints and can be well incorporated with other techniques. We then extend the scale of the experiments to real persons with hundreds of statements and reach a consistent conclusion."
+          }
         },
         {
           "year": 2023,
@@ -616,7 +781,12 @@
             "SFT"
           ],
           "tags": [],
-          "description": "Trains agents from profiles, experiences, and emotions."
+          "description": "Trains agents from profiles, experiences, and emotions.",
+          "detailId": "2310.10158",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）具有理解人类指令并生成高质量文本的强大能力，因此可以被用作智能体来模拟人类行为。这种能力促使作者进一步思考：大语言模型能否以比简单模仿人类行为更高级的形式模拟一个具体的人？因此，本文的目标是使用某个特定人物的档案、经历和情绪状态来训练智能体，而不是只使用有限的提示词调用 ChatGPT API。作者提出 Character-LLM，教会大语言模型扮演贝多芬、克利奥帕特拉女王和尤利乌斯·凯撒等具体人物。该方法着重将人物档案编辑为某个角色的经历，并使用这些经历训练模型，使其成为人物模拟体。为评估该方法的有效性，作者建立了一个测试环境，通过访谈经过训练的智能体，评估它们是否记住了自己所扮演的人物及其经历。实验结果揭示了一些有意义的现象，可为未来构建人类模拟体提供帮助。",
+            "abstractEn": "Large language models (LLMs) can be used to serve as agents to simulate human behaviors, given the powerful ability to understand human instructions and provide high-quality generated texts. Such ability stimulates us to wonder whether LLMs can simulate a person in a higher form than simple human behaviors. Therefore, we aim to train an agent with the profile, experience, and emotional states of a specific person instead of using limited prompts to instruct ChatGPT API. In this work, we introduce Character-LLM that teach LLMs to act as specific people such as Beethoven, Queen Cleopatra, Julius Caesar, etc. Our method focuses on editing profiles as experiences of a certain character and training models to be personal simulacra with these experiences. To assess the effectiveness of our approach, we build a test playground that interviews trained agents and evaluates whether the agents memorize their characters and experiences. Experimental results show interesting observations that help build future simulacra of humankind."
+          }
         }
       ]
     },
@@ -633,7 +803,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2512.17270",
+          "details": {
+            "abstractZh": "角色扮演模型（RPMs）被广泛用于现实应用，但在开放环境中部署时表现往往会下降。这种退化可归因于分布偏移，包括用户偏移、角色偏移和对话组合偏移。现有的 LLM-as-a-judge 等方法无法细致诊断这些偏移如何影响角色扮演模型的泛化，因此目前缺少能够刻画其泛化行为的形式化框架。为弥补这些空白，本文提出一种信息论指标——基于推理的有效互信息差（R-EMID），以可解释的方式衡量角色扮演模型的性能退化。作者还推导出 R-EMID 的上界，用于预测模型最坏情况下的泛化表现，并从理论上揭示不同偏移如何造成性能下降。此外，本文提出一个共同演化的强化学习框架，自适应地建模用户、角色和对话上下文之间的联系，从而更准确地估计对话回答的生成概率；该概率是计算 R-EMID 的关键。最后，作者使用 R-EMID 评估多种角色扮演模型的泛化性能，发现用户偏移在所有偏移中带来的风险最高，而强化学习是提升模型泛化能力最有效的方法。",
+            "abstractEn": "Role-playing models (RPMs) are widely used in real-world applications but underperform when deployed in the wild. This degradation can be attributed to distribution shifts, including user, character, and dialogue compositional shifts. Existing methods like LLM-as-a-judge fall short in providing a fine-grained diagnosis of how these shifts affect RPM generalization, and thus there lack formal frameworks to characterize RPM generalization behaviors. To bridge these gaps, we introduce an information-theoretic metric, named reasoning-based effective mutual information difference (R-EMID), to measure RPM performance degradation in an interpretable way. We also derive an upper bound on R-EMID to predict the worst-case generalization performance of RPMs and theoretically reveal how various shifts contribute to the RPM performance degradation. Moreover, we propose a co-evolving reinforcement learning framework to adaptively model the connection among user, character, and dialogue context and thus enhance the estimation of dialogue response generation probability, which is critical for calculating R-EMID. Finally, we evaluate the generalization performance of various RPMs using R-EMID, finding that user shift poses the highest risk among all shifts and reinforcement learning is the most effective approach for enhancing RPM generalization."
+          }
         },
         {
           "year": 2025,
@@ -643,7 +818,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-acl.537",
+          "details": {
+            "abstractZh": "角色扮演大语言模型的应用迅速扩展，也带来了对高精度角色模型的需求。本文使用 6 个基准、24 个模型和 3 种策略，比较零样本角色扮演、思维链角色扮演和推理优化模型。结果显示，思维链可能降低角色扮演表现，推理优化模型并不适合该任务，推理能力还会扰乱角色扮演的规模规律；作者据此提出角色感知思维链与强化学习两个未来方向。",
+            "abstractEn": "Abstract The application of role-playing large language models (LLMs) is rapidly expanding in both academic and commercial domains, driving an increasing demand for high-precision role-playing models. Simultaneously, the rapid advancement of reasoning techniques has continuously pushed the performance boundaries of LLMs. This intersection of practical role-playing demands and evolving reasoning capabilities raises an important research question: Can reasoning techniques enhance the role-playing capabilities of LLMs?” To address this, we conduct a comprehensive study using 6 role-playing benchmarks, 24 LLMs, and 3 distinct role-playing strategies, comparing the effectiveness of direct zero-shot role-playing, role-playing with Chain-of-Thought (CoT), and role-playing using reasoning-optimized LLMs. Our findings reveal that CoT may reduce role-playing performance, reasoning-optimized LLMs are unsuitable for role-playing, reasoning ability disrupts the role-playing scaling law, and large models still lack proficiency in advanced role-playing. Furthermore, based on extensive experimental results, we propose two promising future research directions: Role-aware Chain-of-Thought for improving role-playing LLMs and Reinforcement Learning for role-playing LLMs, aiming to enhance the adaptability, consistency, and effectiveness of role-playing LLMs for both research and real-world applications."
+          }
         },
         {
           "year": 2025,
@@ -653,7 +833,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-acl.1349",
+          "details": {
+            "abstractZh": "人物忠实度对连贯且有吸引力的人机互动至关重要，但大语言模型常产生脱离角色的回答。现有方法通常给整段回答一个总分，难以捕捉长文本中的细微偏差。本文提出原子级评估框架，以三项指标衡量单次生成内部及多次生成之间的人物对齐与一致性。实验表明，该框架能发现以往方法忽略的问题，并揭示任务结构和人物受欢迎程度如何影响模型的适应能力。",
+            "abstractEn": "Abstract Ensuring persona fidelity in large language models (LLMs) is essential for maintaining coherent and engaging human-AI interactions. However, LLMs often exhibit Out-of-Character (OOC) behavior, where generated responses deviate from an assigned persona, leading to inconsistencies that affect model reliability. Existing evaluation methods typically assign single scores to entire responses, struggling to capture subtle persona misalignment, particularly in long-form text generation. To address this limitation, we propose an atomic-level evaluation framework that quantifies persona fidelity at a finer granularity. Our three key metrics measure the degree of persona alignment and consistency within and across generations. Our approach enables a more precise and realistic assessment of persona fidelity by identifying subtle deviations that real users would encounter. Through our experiments, we demonstrate that our framework effectively detects persona inconsistencies that prior methods overlook. By analyzing persona fidelity across diverse tasks and personality types, we reveal how task structure and persona desirability influence model adaptability, highlighting challenges in maintaining consistent persona expression."
+          }
         },
         {
           "year": 2025,
@@ -663,7 +848,12 @@
           "resource": null,
           "trainingMethods": [],
           "tags": [],
-          "description": ""
+          "description": "",
+          "detailId": "2025.acl-long.879",
+          "details": {
+            "abstractZh": "为对话智能体加入人物信息能够改善生成的一致性与多样性，但如何适应对话对象的档案仍缺少研究。本文考察模型同时对齐自身与对方人物设定的能力、面对熟悉或陌生对象与主题时的稳健性，以及额外微调的影响。作者通过说话者识别任务、模型评审和人工评测系统地控制对话者信息。结果显示，提供对话者档案有助于识别目标说话者；模型能跨主题泛化，却难以适应陌生对话者，零样本模型还常直接复制人物经历。",
+            "abstractEn": "Abstract Endowing dialogue agents with persona information has proven to significantly improve the consistency and diversity of their generations. While much focus has been placed on aligning dialogues with provided personas, the adaptation to the interlocutor’s profile remains largely underexplored. In this work, we investigate three key aspects: (1) a model’s ability to align responses with both the provided persona and the interlocutor’s; (2) its robustness when dealing with familiar versus unfamiliar interlocutors and topics, and (3) the impact of additional fine-tuning on specific persona-based dialogues. We evaluate dialogues generated with diverse speaker pairings and topics, framing the evaluation as an author identification task and employing both LLM-as-a-judge and human evaluations. By systematically masking or disclosing information about interlocutor, we assess its impact on dialogue generation. Results show that access to the interlocutor’s persona improves the recognition of the target speaker, while masking it does the opposite. Although models generalise well across topics, they struggle with unfamiliar interlocutors. Finally, we found that in zero-shot settings, LLMs often copy biographical details, facilitating identification but trivialising the task."
+          }
         }
       ]
     },
@@ -686,7 +876,12 @@
             "Dataset",
             "Multimodal multi-character role-playing"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "tpami-2026-omnicharacter-plus",
+          "details": {
+            "abstractZh": "现有由大语言模型驱动的角色扮演智能体（RPAs）主要在静态、纯文本、双人对话环境中进行评估，无法充分反映现实人类互动中多名参与者和多模态交流所带来的复杂性。为弥补这一空白，本文提出 OmniCharacter++，首个在文本—语音联合环境中评估多角色互动的基准。具体而言，OmniCharacter++ 包含三项主要贡献：（1）一个大规模数据集，涵盖 10,287 个角色、118,017 段多轮对话和超过一百万条语音回答，涉及 8 个开放世界主题和 31 个子领域，覆盖多种多模态角色扮演场景；（2）一套综合评估体系，用于评测对话理解、生成质量和感知自然度；（3）UniCharacter-7B，一个使用该数据集训练的统一文本—语音模型，用于处理复杂的多角色动态，同时确保角色特定的声音忠实度和参与者之间的语义对齐。实验结果表明，UniCharacter-7B 在吸引力和一致性方面都能生成更加真实且连贯的角色扮演回答；实验同时说明，OmniCharacter++ 对当前最先进模型仍然构成显著挑战，并为未来研究提供了清晰方向。代码已公开于：https://github.com/zchoi/OmniCharacter-plus。",
+            "abstractEn": "Existing Role-Playing Agents (RPAs), powered by large language models, are predominantly evaluated on static, text-only, dyadic conversations, which inadequately reflect the complexity of realistic human interactions involving multiple interlocutors and multi-modal communication. To bridge this gap, we propose OmniCharacter++, the first benchmark for evaluating multi-character interactions in a joint text-speech context. Specifically, OmniCharacter++ contributes: (1) a large-scale dataset comprising 10,287 characters, 118,017 multi-turn dialogues, and over one million audio responses across 8 open-world topics and 31 subfields, covering diverse multi-modal role-playing scenarios; (2) a comprehensive evaluation suite for dialogue understanding, generation quality, and perceptual naturalness; and (3) UniCharacter-7B, a unified text-speech model trained on this dataset to manage complex multi-character dynamics, ensuring both role-specific vocal fidelity and cross-participant semantic alignment. Experimental results demonstrate that UniCharacter-7B achieves more realistic and consistent role-playing responses in terms of both attractiveness and consistency, while also highlighting that OmniCharacter++ poses substantial challenges for state-of-the-art models, charting a clear path for future research. The Code is publicly available at: https://github.com/zchoi/OmniCharacter-plus."
+          }
         },
         {
           "year": 2026,
@@ -702,7 +897,12 @@
             "Dataset",
             "Dynamic persona-level role-playing evaluation"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2026.findings-acl.471",
+          "details": {
+            "abstractZh": "大语言模型日益被用作互动式社会智能体，但在真实社会情境中维持连贯、真实的人物层级角色扮演仍然困难。PersonaArena 使用经过筛选的大规模用户生成社会内容构建细致的人物库，并在模拟社会环境中生成上下文丰富的多轮互动。框架采用多智能体辩论评审，以获得整体且较少偏差的评价。实验表明，PersonaArena 能严格评估并改善模型的角色扮演能力。",
+            "abstractEn": "Abstract Large language models (LLMs) increasingly serve as interactive social agents, yet their ability to maintain coherent and authentic persona-level role-playing remains limited, particularly in realistic social scenarios. Existing research predominantly focuses on character-level settings and relies on static evaluation formats, failing to capture the complexity of everyday social interactions. In this work, we present PersonaArena, a dynamic simulation framework for evaluating and improving persona-level role-playing in LLMs. PersonaArena leverages a large, filtered corpus of user-generated social content to construct a nuanced persona bank, and elicits multi-turn, context-rich interactions within simulated social environments. Our framework features a multi-agent debating judge for holistic and unbiased assessment. Through extensive experiments, we demonstrate that PersonaArena enables rigorous evaluation and enhancement of LLMs’ role-playing capabilities, advancing the development of more authentic and socially adept AI agents. Our codes and long appendix are available at https://anonymous.4open.science/r/PersonaArena-B323/."
+          }
         },
         {
           "year": 2026,
@@ -718,7 +918,12 @@
             "Dataset",
             "Role conflict"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2509.25897",
+          "details": {
+            "abstractZh": "人们经常面临多个社会角色要求彼此冲突的困境。RoleConflictBench 用情境紧迫性作为客观决策约束，评估大语言模型在角色冲突中的上下文敏感性。数据构建流程生成了五个社会领域、65 种角色的 13,000 多个真实场景，并系统改变竞争情境的紧迫程度。对 10 个模型的分析显示，模型往往不依据动态情境作答，而更多受到其对特定社会角色的既有偏好支配。",
+            "abstractEn": "People often encounter role conflicts -- social dilemmas where the expectations of multiple roles clash and cannot be simultaneously fulfilled. As large language models (LLMs) increasingly navigate these social dynamics, a critical research question emerges. When faced with such dilemmas, do LLMs prioritize dynamic contextual cues or the learned preferences? To address this, we introduce RoleConflictBench, a novel benchmark designed to measure the contextual sensitivity of LLMs in role conflict scenarios. To enable objective evaluation within this subjective domain, we employ situational urgency as a constraint for decision-making. We construct the dataset through a three-stage pipeline that generates over 13,000 realistic scenarios across 65 roles in five social domains by systematically varying the urgency of competing situations. This controlled setup enables us to quantitatively measure contextual sensitivity, determining whether model decisions align with the situational contexts or are overridden by the learned role preferences. Our analysis of 10 LLMs reveals that models substantially deviate from this objective baseline. Instead of responding to dynamic contextual cues, their decisions are predominantly governed by the preferences toward specific social roles."
+          }
         },
         {
           "year": 2026,
@@ -731,7 +936,12 @@
             "Dataset",
             "Strategic memory use"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2604.26243",
+          "details": {
+            "abstractZh": "要让虚拟角色实现真实、类似人类的对话，不仅需要简单地记忆和回想过去事件，还需要有策略地使用记忆，以满足事实需求和社会互动需求。当前与记忆使用相关的基准——例如记忆增强生成和长期对话基准等——忽视了这一细微差别，主要将记忆视为静态的事实存储库，而不是一种需要在对话中有策略地调用的动态资源。为弥补这一空白，本文设计 StratMem-Bench，一个用于评估以角色为中心的对话中策略性记忆使用的新基准。该数据集包含 657 个实例，虚拟角色需要处理由必要记忆、支持性记忆和无关记忆组成的异构记忆池。作者还提出一个包含多种评估指标的框架，包括严格记忆遵循度、记忆整合质量、主动丰富分数和条件无关率，用于评测虚拟角色的策略性记忆使用能力。在 StratMem-Bench 上，以当前先进大语言模型作为虚拟角色的实验表明，所有模型都能较好地区分必要记忆与无关记忆，但当支持性记忆被纳入决策过程后，模型的表现会明显下降。",
+            "abstractEn": "Achieving realistic human-like conversation for virtual characters requires not only a simple memorization and recall of past events, but also the strategic utilization of memory to meet factual needs and social engagement. Current memory utilization relevant (e.g., memory-augmented generation, long-term dialogue, and etc.) benchmarks overlook this nuance, treating memory primarily as a static repository of facts rather than a dynamic resource to be strategically deployed in dialogues. To address this gap, we design StratMem-Bench, a new benchmark to evaluate strategic memory use in character-centric dialogues. This dataset comprises 657 instances where virtual characters must navigate heterogeneous memory pools containing required, supportive, and irrelevant memories. We also propose a framework with different evaluation metrics including Strict Memory Compliance, Memory Integration Quality, Proactive Enrichment Score and Conditional Irrelevance Rate, to evaluate strategic memory use capabilities of virtual characters. Experiments on StratMem-Bench which leverage the state-of-the-art large language models as virtual characters show that all models perform well at distinguishing between required and irrelevant memories, but struggle once supportive memories are introduced into the decision process."
+          }
         },
         {
           "year": 2026,
@@ -747,7 +957,12 @@
             "Dataset",
             "Temporal character evolution"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2606.05553",
+          "details": {
+            "abstractZh": "角色扮演语言智能体应随故事进展呈现不断变化的价值观与行为，而不是维持固定人物。ArcANE 覆盖 17 部小说和 80 个主要角色，以心理轴将叙事切分为人物弧阶段，并在不同阶段询问相同场景，包括原作内外的情境。在六个模型和六种上下文设置中，提供人物弧始终优于其他策略，对原作未涉及的场景优势最大；基于同一数据微调得到的 ArcANE-8B/32B 进一步扩大了这一优势。",
+            "abstractEn": "Role-playing language agents (RPLAs) should play characters whose values and behavior evolve as the story progresses, not maintain a fixed persona. Existing benchmarks measure factual recall at a given chapter, not whether responses align with the character's psychological trajectory, especially in scenarios the source text never explores. We introduce ArcANE (Arc-Aware Narrative Evaluation), an automatically constructed benchmark spanning 17 novels and 80 principal characters. A Character Arc segments the narrative into phases along a psychological axis, and each probe poses the same scenario across phases, spanning both situations within the source text and situations beyond it. Across six models and six context modes, conditioning on the Character Arc tops every other context strategy on every model, and the gap is largest on scenarios outside the source text where retrieval has nothing to find. We further fine-tune open-weight models on the same data to obtain ArcANE-8B/32B, which widen the Arc advantage even more on scenarios outside the source text."
+          }
         },
         {
           "year": 2025,
@@ -760,7 +975,12 @@
             "Dataset",
             "Persona-driven decision making"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-emnlp.813",
+          "details": {
+            "abstractZh": "大语言模型（LLMs）能否模拟人类作出重要决策？近期研究揭示了使用大语言模型开发角色扮演语言智能体（RPLAs）的潜力，这些智能体主要模仿不同人物的知识和语气。然而，模仿人物进行决策需要对人物设定有更加细致的理解。本文对大语言模型在人物设定驱动决策方面的能力进行基准评测。具体而言，作者研究大语言模型能否根据高质量小说中的前序故事预测人物的选择。研究利用文学专家撰写的人物分析，构建 LIFECHOICE 数据集，其中包含来自 470 本书、涉及 2,512 个角色的决策节点。随后，作者使用多种大语言模型和角色扮演语言智能体方法，在 LIFECHOICE 上开展全面实验。结果表明，当前最先进的大语言模型在该任务中展现出具有前景的能力，但仍有很大的提升空间。因此，作者进一步提出 CHARMAP 方法，通过基于人物设定的记忆检索，显著提升角色扮演语言智能体在该任务上的表现。",
+            "abstractEn": "Can Large Language Models (LLMs) simulate humans in making important decisions? Recent research has unveiled the potential of using LLMs to develop role-playing language agents (RPLAs), mimicking mainly the knowledge and tones of various characters. However, imitative decision-making necessitates a more nuanced understanding of personas. In this paper, we benchmark the ability of LLMs in persona-driven decision-making. Specifically, we investigate whether LLMs can predict characters’ decisions provided by the preceding stories in high-quality novels. Leveraging character analyses written by literary experts, we construct a dataset LIFECHOICE comprising 2,512 characters’ decision points from 470 books. Then, we conduct comprehensive experiments on LIFECHOICE with various LLMs and RPLA methodologies. The results demonstrate that state-of-the-art LLMs exhibit promising capabilities in this task, yet substantial room for improvement remains. Hence, we further propose the CHARMAP method, which adopts persona-based memory retrieval and significantly advances RPLAs on this task."
+          }
         },
         {
           "year": 2025,
@@ -776,7 +996,12 @@
             "Dataset",
             "Character customization"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2412.11912",
+          "details": {
+            "abstractZh": "CharacterBench 是一个大规模双语生成式人物定制基准，包含 22,859 条人工标注样本、3,956 个角色和 25 个细分类别。作者从六个方面定义 11 个维度，并依据人物特征是否会出现在每次回答中区分稀疏与密集维度；针对每个维度设计专门问题以提高评测效率。CharacterJudge 提供低成本、稳定的自动评价，实验显示其优于 GPT-4 等评审模型，并证明该基准可用于优化人物定制能力。",
+            "abstractEn": "Character-based dialogue (aka role-playing) enables users to freely customize characters for interaction, which often relies on LLMs, raising the need to evaluate LLMs' character customization capability. However, existing benchmarks fail to ensure a robust evaluation as they often only involve a single character category or evaluate limited dimensions. Moreover, the sparsity of character features in responses makes feature-focused generative evaluation both ineffective and inefficient. To address these issues, we propose CharacterBench, the largest bilingual generative benchmark, with 22,859 human-annotated samples covering 3,956 characters from 25 detailed character categories. We define 11 dimensions of 6 aspects, classified as sparse and dense dimensions based on whether character features evaluated by specific dimensions manifest in each response. We enable effective and efficient evaluation by crafting tailored queries for each dimension to induce characters' responses related to specific dimensions. Further, we develop CharacterJudge model for cost-effective and stable evaluations. Experiments show its superiority over SOTA automatic judges (e.g., GPT-4) and our benchmark's potential to optimize LLMs' character customization. Our repository is at https://github.com/thu-coai/CharacterBench."
+          }
         },
         {
           "year": 2025,
@@ -792,7 +1017,12 @@
             "Dataset",
             "Text-based virtual worlds"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.naacl-long.323",
+          "details": {
+            "abstractZh": "CharacterBox 是一个文本虚拟世界模拟沙箱，用于生成情境化、细粒度的角色行为轨迹，从而更全面地评估开放叙事中的角色忠实度。系统包含依据心理与行为科学行动的角色智能体，以及协调角色互动和环境变化的叙述者智能体。作者还提出两种基于轨迹的性能增强方法，并微调 CharacterNR 与 CharacterRM 两个小模型替代 GPT API，在降低成本的同时保持竞争力。",
+            "abstractEn": "Abstract Role-playing is a crucial capability of Large Language Models (LLMs), enabling a wide range of practical applications, including intelligent non-player characters, digital twins, and emotional companions. Evaluating this capability in LLMs is challenging due to the complex dynamics involved in role-playing, such as maintaining character fidelity throughout a storyline and navigating open-ended narratives without a definitive ground truth. Current evaluation methods, which primarily focus on question-answering or conversational snapshots, fall short of adequately capturing the nuanced character traits and behaviors essential for authentic role-playing. In this paper, we propose CharacterBox, which is a simulation sandbox designed to generate situational fine-grained character behavior trajectories. These behavior trajectories enable a more comprehensive and in-depth evaluation of role-playing capabilities. CharacterBox consists of two main components: the character agent and the narrator agent. The character agent, grounded in psychological and behavioral science, exhibits human-like behaviors, while the narrator agent coordinates interactions between character agents and environmental changes. Additionally, we introduce two trajectory-based methods that leverage CharacterBox to enhance LLM performance. To reduce costs and facilitate the adoption of CharacterBox by public communities, we fine-tune two smaller models, CharacterNR and CharacterRM, as substitutes for GPT API calls, and demonstrate their competitive performance compared to advanced GPT APIs. The code is available at https://github.com/Paitesanshi/CharacterBox."
+          }
         },
         {
           "year": 2025,
@@ -808,7 +1038,12 @@
             "Dataset",
             "Persona-agent evaluation"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-emnlp.368",
+          "details": {
+            "abstractZh": "PersonaGym 是首个面向人物智能体的动态评估框架，PersonaScore 则是基于决策理论、与人工判断对齐的自动指标。作者对 10 个主流模型、200 种人物设定和 10,000 个问题进行评测，发现人物忠实度仍有很大提升空间；例如 GPT-4.1 与 LLaMA-3-8B 的 PersonaScore 完全相同。结果表明，扩大模型规模或复杂度并不必然增强人物智能体能力，需要算法和架构创新。",
+            "abstractEn": "Abstract Persona agents, which are LLM agents conditioned to act according to an assigned persona, enable contextually rich and user-aligned interactions across domains like education and healthcare. However, evaluating how faithfully these agents adhere to their personas remains a significant challenge, particularly in free-form settings that demand consistency across diverse, persona-relevant environments. We introduce PersonaGym, the first dynamic evaluation framework for persona agents, and PersonaScore, a human-aligned automatic metric grounded in decision theory that enables comprehensive large-scale evaluation. Our evaluation of 10 leading LLMs across 200 personas and 10,000 questions reveals significant advancement opportunities. For example, GPT-4.1 had the exact same PersonaScore as LLaMA-3-8b despite being a more recent and advanced closed-source model. Importantly, increased model size and complexity do not necessarily enhance persona agent capabilities, underscoring the need for algorithmic and architectural innovation toward faithful, performant persona agents."
+          }
         },
         {
           "year": 2025,
@@ -824,7 +1059,12 @@
             "Dataset",
             "Character knowledge errors"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.emnlp-main.1689",
+          "details": {
+            "abstractZh": "真实人物知识是构建高质量角色智能体的关键，但现有研究较少评估模型识别人物已知知识错误与未知知识错误的能力。RoleKE-Bench 专门评测这两类错误，结果显示即使最新模型也难以有效发现，尤其是涉及熟悉知识时。作者比较多种推理策略，并提出基于智能体的 Self-Recollection and Self-Doubt（S2RD）方法，探索提升错误检测能力的可能性。",
+            "abstractEn": "Abstract Large language model (LLM) role-playing has gained widespread attention. Authentic character knowledge is crucial for constructing realistic LLM role-playing agents. However, existing works usually overlook the exploration of LLMs’ ability to detect characters’ known knowledge errors (KKE) and unknown knowledge errors (UKE) while playing roles, which would lead to low-quality automatic construction of character trainable corpus. In this paper, we propose RoleKE-Bench to evaluate LLMs’ ability to detect errors in KKE and UKE. The results indicate that even the latest LLMs struggle to detect these two types of errors effectively, especially when it comes to familiar knowledge. We experimented with various reasoning strategies and propose an agent-based reasoning method, Self-Recollection and Self-Doubt (S 2 RD), to explore further the potential for improving error detection capabilities."
+          }
         },
         {
           "year": 2025,
@@ -837,7 +1077,12 @@
             "Dataset",
             "Multi-turn user-centric role-playing"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-emnlp.730",
+          "details": {
+            "abstractZh": "RMTBench 是一个以用户为中心的双语多轮角色扮演基准，包含 80 个不同角色和 8,000 多轮对话，既覆盖具有详细背景的定制角色，也覆盖由简单特征定义的抽象角色。该基准依据明确的用户动机而非角色描述构建对话，并设计真实的多轮模拟与针对用户意图的评估维度。它将评测重点从角色背景转向用户意图是否得到满足，缩小了学术评测与实际部署之间的差距。",
+            "abstractEn": "Abstract Recent advancements in Large Language Models (LLMs) have shown outstanding potential for role-playing applications. Evaluating these capabilities is becoming crucial yet remains challenging. Existing benchmarks mostly adopt a character-centric approach, simplify user-character interactions to isolated Q&A tasks, and fail to reflect real-world applications. To address this limitation, we introduce RMTBench, a comprehensive user-centric bilingual role-playing benchmark featuring 80 diverse characters and over 8,000 dialogue rounds. RMTBench includes custom characters with detailed backgrounds and abstract characters defined by simple traits, enabling evaluation across various user scenarios. Our benchmark constructs dialogues based on explicit user motivations rather than character descriptions, ensuring alignment with practical user applications. Furthermore, we construct an authentic multi-turn dialogue simulation mechanism. With carefully selected evaluation dimensions and LLM-based scoring, this mechanism captures the complex intention of conversations between the user and the character. By shifting focus from character background to user intention fulfillment, RMTBench bridges the gap between academic evaluation and practical deployment requirements, offering a more effective framework for assessing role-playing capabilities in LLMs. All code and datasets will be released soon."
+          }
         },
         {
           "year": 2025,
@@ -853,7 +1098,12 @@
             "Dataset",
             "Role-playing instruction following"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2025.findings-acl.1082",
+          "details": {
+            "abstractZh": "RoleMRC 联合评估角色扮演与指令遵循，包括理想角色与人类的多轮自由对话或文章讨论、根据文本可回答性和角色能力进行回答或拒绝，以及嵌套、多轮、带优先级的复杂指令。最终数据包含 10.2K 人物档案元池、37.9K 条合成指令和 1.4K 个测试样本。跨数据集实验显示，使用 RoleMRC 微调能增强指令遵循，同时不损害通用角色扮演和推理能力。",
+            "abstractEn": "Abstract Role-playing is important for Large Language Models (LLMs) to follow diverse instructions while maintaining role identity and the role’s pre-defined ability limits. Existing role-playing datasets mostly contribute to controlling role style and knowledge boundaries, but overlook role-playing in instruction-following scenarios. We introduce a fine-grained role-playing and instruction-following composite benchmark, named RoleMRC, including: (1) Multi-turn dialogues between ideal roles and humans, including free chats or discussions upon given passages; (2) Role-playing machine reading comprehension, involving response, refusal, and attempts according to passage answerability and role ability; (3) More complex scenarios with nested, multi-turn and prioritized instructions. The final RoleMRC features a 10.2k role profile meta-pool, 37.9k well-synthesized role-playing instructions, and 1.4k testing samples. We develop a pipeline to quantitatively evaluate the fine-grained role-playing and instruction-following capabilities of several mainstream LLMs, as well as models that are fine-tuned on our data. Moreover, cross-evaluation on external role-playing datasets confirms that models fine-tuned on RoleMRC enhances instruction-following without compromising general role-playing and reasoning capabilities. We also probe the neural-level activation maps of different capabilities over post-tuned LLMs. Access to our RoleMRC, RoleMRC-mix and Codes: https://github.com/LuJunru/RoleMRC."
+          }
         },
         {
           "year": 2024,
@@ -869,7 +1119,12 @@
             "Dataset",
             "Chinese role-playing evaluation"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2024.acl-long.638",
+          "details": {
+            "abstractZh": "CharacterEval 是用于全面评估中文角色扮演对话智能体的基准及高质量数据集，包含 77 个来自中文小说和剧本的角色、1,785 段多轮对话和 11,376 个样本。数据先由 GPT-4 提取，再经严格人工质检，并结合百度百科中的详细人物档案。基准从四个维度设置 13 项指标，CharacterRM 奖励模型与人工判断的相关性高于 GPT-4；实验还显示中文模型在中文角色对话中比 GPT-4 更具潜力。",
+            "abstractEn": "Abstract Recently, the advent of large language models (LLMs) has revolutionized generative agents. Among them, Role-Playing Conversational Agents (RPCAs) attract considerable attention due to their ability to emotionally engage users. However, the absence of a comprehensive benchmark impedes progress in this field. To bridge this gap, we introduce CharacterEval , a Chinese benchmark for comprehensive RPCA assessment, complemented by a tailored high-quality dataset. The dataset comprises 1,785 multi-turn role-playing dialogues, encompassing 11,376 examples and featuring 77 characters derived from Chinese novels and scripts. It was carefully constructed, beginning with initial dialogue extraction via GPT-4, followed by rigorous human-led quality control, and enhanced with in-depth character profiles sourced from Baidu Baike. CharacterEval employs a multifaceted evaluation approach, encompassing thirteen targeted metrics on four dimensions. To facilitate the convenient evaluation for these subjective metrics in CharacterEval , we further developed CharacterRM, a role-playing reward model based on human annotations, which has a higher correlation with human judgment compared to GPT-4. Comprehensive experiments on CharacterEval demonstrate that Chinese LLMs exhibit more promising capabilities than GPT-4 in Chinese role-playing conversation."
+          }
         },
         {
           "year": 2024,
@@ -885,7 +1140,12 @@
             "Dataset",
             "Character profiling"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2024.emnlp-main.456",
+          "details": {
+            "abstractZh": "本文通过人物画像任务评估大语言模型理解虚构角色的能力，即根据作品材料总结人物档案。作者构建由文学专家提供的 CROSS 数据集，并通过与参考档案比较以及下游任务适用性评估生成结果。覆盖多种摘要方法和模型的实验取得积极结果，验证了大语言模型对人物的细致理解能力，也为角色智能体开发中常用但研究不足的人物画像实践提供了系统评价。",
+            "abstractEn": "Abstract Large language models (LLMs) have demonstrated impressive performance and spurred numerous AI applications, in which role-playing agents (RPAs) are particularly popular, especially for fictional characters. The prerequisite for these RPAs lies in the capability of LLMs to understand characters from fictional works. Previous efforts have evaluated this capability via basic classification tasks or characteristic imitation, failing to capture the nuanced character understanding with LLMs. In this paper, we propose evaluating LLMs’ character understanding capability via the character profiling task, i.e., summarizing character profiles from corresponding materials, a widely adopted yet understudied practice for RPA development. Specifically, we construct the CROSS dataset from literature experts and assess the generated profiles by comparing them with ground truth references and evaluating their applicability in downstream tasks. Our experiments, which cover various summarization methods and LLMs, have yielded promising results. These results strongly validate the character understanding capability of LLMs. Resources are available at https://github.com/Joanna0123/character_profiling."
+          }
         },
         {
           "year": 2024,
@@ -901,7 +1161,12 @@
             "Dataset",
             "Personality fidelity"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2024.acl-long.102",
+          "details": {
+            "abstractZh": "现有角色忠实度评测主要关注人物知识和语言模式。InCharacter 从心理量表出发，通过访谈角色智能体进行人格测试，克服以往让智能体自我报告的缺陷。实验覆盖多类角色智能体和大语言模型、32 个角色及 14 种常用心理量表，验证了该方法衡量人格的有效性；评测显示先进角色智能体与人类感知的人物性格高度一致，准确率最高达到 80.7%。",
+            "abstractEn": "Abstract Role-playing agents (RPAs), powered by large language models, have emerged as a flourishing field of applications. However, a key challenge lies in assessing whether RPAs accurately reproduce the personas of target characters, namely their character fidelity. Existing methods mainly focus on the knowledge and linguistic patterns of characters. This paper, instead, introduces a novel perspective to evaluate the personality fidelity of RPAs with psychological scales. Overcoming drawbacks of previous self-report assessments on RPAs, we propose InCharacter, namely Interviewing Character agents for personality tests. Experiments include various types of RPAs and LLMs, covering 32 distinct characters on 14 widely used psychological scales. The results validate the effectiveness of InCharacter in measuring RPA personalities. Then, with InCharacter, we show that state-of-the-art RPAs exhibit personalities highly aligned with the human-perceived personalities of the characters, achieving an accuracy up to 80.7%."
+          }
         },
         {
           "year": 2024,
@@ -917,7 +1182,12 @@
             "Dataset",
             "Character hallucination"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2024.findings-emnlp.846",
+          "details": {
+            "abstractZh": "大语言模型的参数化世界知识会使虚构角色脱离人物设定，并对其知识范围之外的内容产生幻觉。本文构建包含 2,000 多个角色和 72,000 次访谈的数据集，其中含 18,000 个对抗问题，并提出 RoleFact：利用预校准置信度阈值调节参数知识影响。实验中，该方法将对抗问题回答的事实精确率提高 18%，并使时间敏感访谈中的时间幻觉减少 44%。",
+            "abstractEn": "Abstract Role-playing has wide-ranging applications in customer support, embodied agents, and computational social science. The influence of parametric world knowledge of large language models (LLMs) often causes role-playing characters to act out of character and to hallucinate about things outside the scope of their knowledge. In this work, we focus on the evaluation and mitigation of hallucination in fictional character role-play. We introduce a dataset with over 2,000 characters and 72,000 interviews, including 18,000 adversarial questions. We propose RoleFact, a role-playing method that mitigates hallucination by modulating the influence of parametric knowledge using a pre-calibrated confidence threshold. Experiments show that the proposed method improves the factual precision of generated responses by 18% for adversarial questions with a 44% reduction in temporal hallucination for time-sensitive interviews. The code and the dataset are available at https://github.com/NafisSadeq/rolefact.git ."
+          }
         },
         {
           "year": 2024,
@@ -933,7 +1203,12 @@
             "Dataset",
             "Role-playing ability"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2310.00746",
+          "details": {
+            "abstractZh": "RoleLLM 是用于评测、激发和增强大语言模型角色扮演能力的框架，包含 100 个角色的档案构建、用于提取角色知识的 Context-Instruct、使用 GPT 模仿说话风格的 RoleGPT，以及面向开源模型微调和角色定制的 RoCIT。由此构建的 RoleBench 含 168,093 个样本，是首个系统、细粒度的人物级角色扮演基准。RoCIT 训练得到英文 RoleLLaMA 和中文 RoleGLM，表现可与使用 GPT-4 的 RoleGPT 相比。",
+            "abstractEn": "The advent of Large Language Models (LLMs) has paved the way for complex tasks such as role-playing, which enhances user interactions by enabling models to imitate various characters. However, the closed-source nature of state-of-the-art LLMs and their general-purpose training limit role-playing optimization. In this paper, we introduce RoleLLM, a framework to benchmark, elicit, and enhance role-playing abilities in LLMs. RoleLLM comprises four stages: (1) Role Profile Construction for 100 roles; (2) Context-Based Instruction Generation (Context-Instruct) for role-specific knowledge extraction; (3) Role Prompting using GPT (RoleGPT) for speaking style imitation; and (4) Role-Conditioned Instruction Tuning (RoCIT) for fine-tuning open-source models along with role customization. By Context-Instruct and RoleGPT, we create RoleBench, the first systematic and fine-grained character-level benchmark dataset for role-playing with 168,093 samples. Moreover, RoCIT on RoleBench yields RoleLLaMA (English) and RoleGLM (Chinese), significantly enhancing role-playing abilities and even achieving comparable results with RoleGPT (using GPT-4)."
+          }
         },
         {
           "year": 2024,
@@ -949,7 +1224,12 @@
             "Dataset",
             "Point-in-time hallucination"
           ],
-          "description": ""
+          "description": "",
+          "detailId": "2024.findings-acl.197",
+          "details": {
+            "abstractZh": "时间点角色扮演要求智能体处于叙事进程中的特定时刻，以增强沉浸感、避免剧透并支持粉丝互动。TimeChara 包含自动生成的 10,895 个实例，用于评估模型是否表现出违背角色身份和历史时间线的知识。结果揭示 GPT-4o 等先进模型仍有明显时间点幻觉。Narrative-Experts 将推理步骤分解并使用叙事专家加以缓解，但该问题仍需进一步研究。",
+            "abstractEn": "Abstract While Large Language Models (LLMs) can serve as agents to simulate human behaviors (i.e., role-playing agents), we emphasize the importance of point-in-time role-playing. This situates characters at specific moments in the narrative progression for three main reasons: (i) enhancing users’ narrative immersion, (ii) avoiding spoilers, and (iii) fostering engagement in fandom role-playing. To accurately represent characters at specific time points, agents must avoid character hallucination, where they display knowledge that contradicts their characters’ identities and historical timelines. We introduce TimeChara, a new benchmark designed to evaluate point-in-time character hallucination in role-playing LLMs. Comprising 10,895 instances generated through an automated pipeline, this benchmark reveals significant hallucination issues in current state-of-the-art LLMs (e.g., GPT-4o). To counter this challenge, we propose Narrative-Experts, a method that decomposes the reasoning steps and utilizes narrative experts to reduce point-in-time character hallucinations effectively. Still, our findings with TimeChara highlight the ongoing challenges of point-in-time character hallucination, calling for further study."
+          }
         }
       ]
     },
@@ -973,7 +1253,12 @@
           "tags": [
             "Multi-agent simulation"
           ],
-          "description": "Builds novel-based agent societies for interactive story generation without parameter training."
+          "description": "Builds novel-based agent societies for interactive story generation without parameter training.",
+          "detailId": "2504.14538",
+          "details": {
+            "abstractZh": "BookWorld 是从小说构建并模拟多智能体社会的综合系统，面向已有虚构世界与人物，而非从零设计智能体。系统考虑动态且多样的人物、虚构世界观、地理约束与变化等复杂因素，可用于故事生成、互动游戏和社会模拟。实验表明，BookWorld 在忠于原作的同时能生成富有创意的高质量故事，以 75.36% 的胜率超过以往方法。",
+            "abstractEn": "Recent advances in large language models (LLMs) have enabled social simulation through multi-agent systems. Prior efforts focus on agent societies created from scratch, assigning agents with newly defined personas. However, simulating established fictional worlds and characters remain largely underexplored, despite its significant practical value. In this paper, we introduce BookWorld, a comprehensive system for constructing and simulating book-based multi-agent societies. BookWorld's design covers comprehensive real-world intricacies, including diverse and dynamic characters, fictional worldviews, geographical constraints and changes, e.t.c. BookWorld enables diverse applications including story generation, interactive games and social simulation, offering novel ways to extend and explore beloved fictional works. Through extensive experiments, we demonstrate that BookWorld generates creative, high-quality stories while maintaining fidelity to the source books, surpassing previous methods with a win rate of 75.36%. The code of this paper can be found at the project page: https://bookworld2025.github.io/."
+          }
         },
         {
           "year": 2024,
@@ -990,7 +1275,12 @@
           "tags": [
             "Interactive drama"
           ],
-          "description": "Builds drama LLMs for controllable interactive storytelling."
+          "description": "Builds drama LLMs for controllable interactive storytelling.",
+          "detailId": "2024.findings-acl.196",
+          "details": {
+            "abstractZh": "本文提出基于大语言模型的互动戏剧，让用户进入具有预定故事线的传统戏剧并与人物和场景互动。作者以情节、人物、思想、语言、场面和互动六项要素定义这一新艺术形式，并研究驱动演出过程的戏剧大模型完整流程。Narrative Chain 细致控制剧情推进，Auto-Drama 从任意故事合成剧本，Sparse Instruction Tuning 支持复杂指令遵循；研究还人工制作《名侦探柯南》《哈利·波特》和《罗密欧与朱丽叶》三个剧本并设计五维评估准则。",
+            "abstractEn": "Abstract Drama is a form of storytelling inspired by human creativity, proceeding with a predefined storyline, carrying emotions and thoughts. This paper introduces LLM-based interactive drama, which endows traditional drama with an unprecedented immersion, where a person is allowed to walk into it and interact with the characters and scenes. We define this new artistic genre by 6 essential elements—plot, character, thought, diction, spectacle and interaction—and study the entire pipeline to forge a backbone drama LLM to drive the playing process, which is challenged by limited drama resources, uncontrollable narrative development, and complicated instruction following. We propose Narrative Chain to offer finer control over the narrative progression during interaction with players;Auto-Drama to synthesize drama scripts given arbitrary stories;Sparse Instruction Tuning to allow the model to follow sophisticated instructions. We manually craft 3 scripts, Detective Conan, Harry Potter, Romeo and Juliet, and design a 5-dimension principle to evaluate the drama LLM comprehensively."
+          }
         }
       ]
     }
