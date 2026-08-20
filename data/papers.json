@@ -51,6 +51,27 @@
       "entries": [
         {
           "year": 2026,
+          "title": "DREAM: LLM-based Dynamic Role-playing via Event-Aware Memory Graph",
+          "paperUrl": "https://arxiv.org/abs/2608.05170",
+          "venue": "KDD 2026",
+          "resource": null,
+          "trainingMethods": [
+            "Training-free"
+          ],
+          "tags": [
+            "Memory",
+            "Graph",
+            "Dataset"
+          ],
+          "description": "Organizes character experiences into a temporally ordered and causally linked event-aware memory graph.",
+          "detailId": "2608.05170",
+          "details": {
+            "abstractZh": "角色扮演智能体（RPAs）已成为大语言模型的一项重要应用，能够实现沉浸式且高保真的角色模拟。准确扮演已有角色不仅需要模仿其表达风格，还要求行为推理在时间上保持一致，并具有因果依据。然而，现有角色扮演智能体主要依赖静态角色描述和非结构化记忆，这限制了它们维持长期叙事一致性和人格连贯性的能力。本文提出 DREAM，这是一种受激活事件—信念—后果（Activating Event-Belief-Consequence，ABC）认知模型启发的角色扮演智能体结构化记忆框架。DREAM 将非结构化文学文本转换为事件感知记忆图（Event-aware Memory Graph，EMG），把角色经历组织成按时间排序且具有因果联系的事件图。这种表示能够构建动态的双粒度角色档案，同时捕捉稳定的人格特质和由事件驱动的行为演化。本文进一步提出时间因果记忆（Temporal Causal Memory，TCM）基准，用于评估时间一致性和长距离因果叙事连贯性。DREAM 在 CoSER、LIFECHOICE 和 TCM 上均取得了最先进的性能，超过多个强基线。该方法证明了结构化记忆在提升角色扮演智能体可解释性和一致性方面的有效性。",
+            "abstractEn": "Role-playing agents (RPAs) have emerged as a key application of large language models, enabling immersive and high-fidelity character simulation. Accurate role-playing of established characters requires not only stylistic imitation but also temporally consistent and causally grounded behavioral reasoning. However, existing RPAs primarily rely on static character descriptions and unstructured memory, limiting their ability to maintain long-term narrative and personality coherence. We introduce DREAM, a structured memory framework for role-playing agents inspired by the Activating Event-Belief-Consequence (ABC) cognitive model. DREAM transforms unstructured literary text into an Event-aware Memory Graph (EMG) that organizes character experiences into temporally ordered and causally linked event graph. This representation enables the construction of dynamic, dual-granularity character profiles that capture both stable personality traits and event-driven behavioral evolution. We further propose the Temporal Causal Memory (TCM) benchmark to evaluate temporal consistency and long-range causal narrative coherence. DREAM achieves state-of-the-art performance across CoSER, LIFECHOICE, and TCM, outperforming multiple strong baselines. Our approach demonstrates the effectiveness of structured memory in enhancing the interpretability and consistency of role-playing agents."
+          }
+        },
+        {
+          "year": 2026,
           "title": "AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing",
           "paperUrl": "https://arxiv.org/abs/2601.11007",
           "venue": "ACL Findings 2026",
