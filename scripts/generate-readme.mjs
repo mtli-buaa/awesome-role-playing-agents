@@ -20,6 +20,16 @@ function link(label, url) {
   return url ? `[${escapeCell(label)}](${url})` : escapeCell(label);
 }
 
+function isPreprint(entry) {
+  return entry.venue.startsWith("arXiv ");
+}
+
+function comparePublicationOrder(a, b) {
+  return b.year - a.year
+    || Number(isPreprint(a)) - Number(isPreprint(b))
+    || b.publicationDate.localeCompare(a.publicationDate);
+}
+
 function validate(data) {
   if (data.schemaVersion !== 1) fail("Unsupported papers.json schema version.");
   if (!Array.isArray(data.sections) || !data.sections.length) fail("papers.json has no sections.");
@@ -41,7 +51,19 @@ function validate(data) {
     sectionIds.add(section.id);
     if (!Array.isArray(section.entries)) fail(`Section ${section.name} has no entries array.`);
 
+    let previousEntry;
     for (const entry of section.entries) {
+      const date = entry.publicationDate;
+      const datePattern = isPreprint(entry)
+        ? /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/
+        : /^\d{4}-(0[1-9]|1[0-2])$/;
+      if (typeof date !== "string" || !datePattern.test(date) || !date.startsWith(`${entry.year}-`)) {
+        fail(`Invalid publicationDate for: ${entry.title}.`);
+      }
+      if (previousEntry && comparePublicationOrder(previousEntry, entry) > 0) {
+        fail(`Order ${section.name} by publication date: ${entry.title} precedes ${previousEntry.title}.`);
+      }
+      previousEntry = entry;
       if (!Number.isInteger(entry.year) || !entry.title || !entry.paperUrl || !entry.venue) {
         fail(`Missing required paper data in ${section.name}: ${entry.title || "untitled entry"}.`);
       }

@@ -7,7 +7,7 @@ A curated collection of selected papers, datasets, benchmarks, and resources on 
 
 This repository focuses on representative and high-quality works rather than an exhaustive list.
 
-**Ordering.** Entries are sorted by year in descending order. Within the same year, peer-reviewed publications are listed before arXiv preprints, and entries within each group are ordered by publication date in descending order.
+**Ordering.** Entries are sorted by year in descending order. Within the same year, peer-reviewed publications are listed before arXiv preprints, and entries within each group are ordered from newest to oldest. Set `publicationDate` in `data/papers.json` to the formal publication month (`YYYY-MM`) or, for arXiv-only papers, the first submission date (`YYYY-MM-DD`). Entries with the same date keep their relative order.
 
 Paper metadata is maintained in [`data/papers.json`](data/papers.json). After editing it, run `node scripts/generate-readme.mjs` to update this README.
 
