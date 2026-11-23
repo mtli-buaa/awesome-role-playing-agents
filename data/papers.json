@@ -245,6 +245,27 @@
         },
         {
           "year": 2026,
+          "title": "Beyond Static Persona Consistency: Dynamic Persona Coherence in LLM Role-Playing",
+          "paperUrl": "https://aclanthology.org/2026.acl-long.1336/",
+          "venue": "ACL 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/lululu896/DPC"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Psychological state modeling",
+            "Persona consistency"
+          ],
+          "description": "Models personality and emotional changes at three timescales and corrects persona drift during role-playing.",
+          "detailId": "2026.acl-long.1336",
+          "details": {
+            "abstractZh": "本文提出动态人设连贯性框架，将角色核心身份的稳定性与基于对话历史的心理变化分开建模。框架用长期身份、中期意义与压力积累、短期情绪三个时间尺度描述角色状态，并结合自动评估、案例库和轨迹修正来检测及纠正人设漂移。",
+            "abstractEn": "The paper models stable character identity and context-dependent psychological change at three timescales. A closed-loop system uses a consistency critic, a case repository, and a trajectory corrector to detect and repair persona drift during role-playing."
+          }
+        },
+        {
+          "year": 2026,
           "title": "KuaiRP Series Role-playing Models Technical Report",
           "paperUrl": "https://arxiv.org/abs/2609.11127",
           "venue": "arXiv 2026",
