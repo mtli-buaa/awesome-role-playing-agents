@@ -66,6 +66,29 @@
       "entries": [
         {
           "year": 2026,
+          "title": "EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.1366/",
+          "venue": "EMNLP Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/HKUST-KnowComp/EvolvingWorld"
+          },
+          "trainingMethods": [
+            "SFT"
+          ],
+          "tags": [
+            "World model",
+            "Dataset"
+          ],
+          "description": "Co-evolves open-schema character profiles and world states for long-horizon literary role-playing.",
+          "detailId": "2607.17250",
+          "details": {
+            "abstractZh": "本文提出 EvolvingWorld，这是一个面向互动文学世界中角色与世界共同演化的框架和基准。现有系统要么将互动文学模拟视为静态的人物模仿，要么将其视为孤立的场景生成，因而无法捕捉角色和世界如何随时间共同演变。为解决这一问题，EvolvingWorld 将文学模拟建模为一个长时间跨度的过程，其中角色持续互动、场景不断推进，角色状态与世界状态也会被持续更新。不同于依赖固定模式的以往系统，EvolvingWorld 采用开放模式框架，以支持多种文学世界中的模拟。该框架由两个相互耦合的模块组成：Character Agent 负责多角色扮演和人物档案的持续演化；基于大语言模型的 World Model 则负责维护全局状态、地点与实体层级状态，并推动场景发展。基于这一架构，作者定义了 7 项可训练任务，涵盖场景初始化、互动生成和状态更新。研究从 57 本书中构建数据集，生成 138,596 条监督训练样本和 222 个测试快照。此外，作者提出一种轨迹级的 LLM-as-Judge 评估方案，覆盖 10 个维度和 20 项指标。实验表明，EvolvingWorld 能够有效维持角色与世界持续且连贯的发展，从而改善长时间跨度的模拟。",
+            "abstractEn": "This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds. Existing systems either treat interactive literary simulation as static persona imitation or isolated scene generation, failing to capture how characters and worlds evolve together over time. To address this, EvolvingWorld models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated. Unlike prior systems relying on fixed schemas, EvolvingWorld adopts an open-schema framework to support simulation across diverse literary worlds. The framework consists of two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression. Based on this architecture, we formulate 7 trainable tasks for scene initialization, interaction generation, and state update. We construct a dataset from 57 books, producing 138,596 supervised training samples and 222 snapshots for testing. Furthermore, we introduce a trajectory-level LLM-as-Judge evaluation protocol spanning 10 dimensions and 20 metrics. Experiments show that EvolvingWorld can improve long-horizon simulation by effectively maintaining persistent, coherent character and world development."
+          }
+        },
+        {
+          "year": 2026,
           "title": "From Facts to Insights: A Persona-Driven Dual Memory Framework and Dataset for Role-Playing Agents",
           "paperUrl": "https://aclanthology.org/2026.findings-emnlp.270/",
           "venue": "EMNLP Findings 2026",
@@ -152,6 +175,25 @@
           "details": {
             "abstractZh": "角色扮演智能体（RPAs）已成为大语言模型的一项重要应用，能够实现沉浸式且高保真的角色模拟。准确扮演已有角色不仅需要模仿其表达风格，还要求行为推理在时间上保持一致，并具有因果依据。然而，现有角色扮演智能体主要依赖静态角色描述和非结构化记忆，这限制了它们维持长期叙事一致性和人格连贯性的能力。本文提出 DREAM，这是一种受激活事件—信念—后果（Activating Event-Belief-Consequence，ABC）认知模型启发的角色扮演智能体结构化记忆框架。DREAM 将非结构化文学文本转换为事件感知记忆图（Event-aware Memory Graph，EMG），把角色经历组织成按时间排序且具有因果联系的事件图。这种表示能够构建动态的双粒度角色档案，同时捕捉稳定的人格特质和由事件驱动的行为演化。本文进一步提出时间因果记忆（Temporal Causal Memory，TCM）基准，用于评估时间一致性和长距离因果叙事连贯性。DREAM 在 CoSER、LIFECHOICE 和 TCM 上均取得了最先进的性能，超过多个强基线。该方法证明了结构化记忆在提升角色扮演智能体可解释性和一致性方面的有效性。",
             "abstractEn": "Role-playing agents (RPAs) have emerged as a key application of large language models, enabling immersive and high-fidelity character simulation. Accurate role-playing of established characters requires not only stylistic imitation but also temporally consistent and causally grounded behavioral reasoning. However, existing RPAs primarily rely on static character descriptions and unstructured memory, limiting their ability to maintain long-term narrative and personality coherence. We introduce DREAM, a structured memory framework for role-playing agents inspired by the Activating Event-Belief-Consequence (ABC) cognitive model. DREAM transforms unstructured literary text into an Event-aware Memory Graph (EMG) that organizes character experiences into temporally ordered and causally linked event graph. This representation enables the construction of dynamic, dual-granularity character profiles that capture both stable personality traits and event-driven behavioral evolution. We further propose the Temporal Causal Memory (TCM) benchmark to evaluate temporal consistency and long-range causal narrative coherence. DREAM achieves state-of-the-art performance across CoSER, LIFECHOICE, and TCM, outperforming multiple strong baselines. Our approach demonstrates the effectiveness of structured memory in enhancing the interpretability and consistency of role-playing agents."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "MOA: Multi-Objective Alignment for Role-Playing Agents",
+          "paperUrl": "https://aclanthology.org/2026.acl-long.531/",
+          "venue": "ACL 2026",
+          "resource": null,
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Multi-objective"
+          ],
+          "description": "Aligns role-playing agents with multi-objective rewards.",
+          "detailId": "2512.09756",
+          "details": {
+            "abstractZh": "角色扮演智能体（RPAs）需要平衡多个目标，例如指令遵循、人物一致性和风格忠实度，而这些目标在不同维度上并不总是完全一致。以往工作主要依赖监督微调或使用标量化奖励的强化学习，但这些方法并未明确处理优化过程中多个奖励维度之间的协调。本文提出 MOA（Multi-Objective Alignment），一个支持通用角色扮演智能体进行多维、细粒度评分准则优化的强化学习框架。MOA 引入一种新的多目标优化策略，同时在多个细粒度评分准则上进行训练，以提升优化效果。此外，为同时改善输出多样性和生成质量，作者采用带有思考增强的 rollout 和离策略引导。PersonaGym 和 RoleMRC 上的实验表明，与监督学习和标准强化学习基线相比，MOA 持续提升多维角色扮演表现。在相同评估方案下，经过 MOA 训练的 8B 模型在多个评估维度上取得了可与强闭源模型竞争的表现。这些结果表明，MOA 为训练能力更强的通用角色扮演智能体提供了一个实用框架。",
+            "abstractEn": "Role-playing agents (RPAs) require balancing multiple objectives, such as instruction following, persona consistency, and stylistic fidelity, which are not always perfectly aligned across different dimensions. While prior work has primarily relied on supervised fine-tuning or reinforcement learning with scalarized rewards, these approaches do not explicitly address the coordination of multiple reward dimensions during optimization. We present MOA (Multi-Objective Alignment), a reinforcement-learning framework that enables multi-dimensional, fine-grained rubric optimization for general RPAs. MOA introduces a novel multi-objective optimization strategy that trains simultaneously on multiple fine-grained rubrics to boost optimization performance. Additionally, to improve both output diversity and generation quality, we employ thought-augmented rollouts with off-policy guidance. Experiments on PersonaGym and RoleMRC show that MOA consistently improves multi-dimensional role-playing performance over supervised and standard RL baselines. Under identical evaluation protocols, an 8B model trained with MOA reaches performance competitive with strong closed-source models across multiple evaluation dimensions. These results suggest that MOA provides a practical framework for training more capable general-purpose role-playing agents."
           }
         },
         {
@@ -406,29 +448,6 @@
           "details": {
             "abstractZh": "本文介绍 KuaiRP 系列角色扮演模型的完整技术方案。作者希望专用角色扮演模型实现四个核心目标：简化提示工程、提供高度稳定的输出质量、内置领域世界知识，以及以较小参数规模实现高效部署。然而，有效注入深层领域知识通常会导致模型通用智能体能力出现严重的灾难性遗忘。为解决这一权衡问题，本文提出一套多阶段训练流程。首先，作者设计了标准化角色模板，并基于用户行为模拟和反向角色档案过滤构建监督微调（SFT）数据流程。随后，在强化学习（RL）阶段采用基于规则的复合奖励函数，以消除长度膨胀和重复生成等常见性能退化现象。最后，为恢复在 SFT 和 RL 阶段受损的通用能力，本文提出一种新的自蒸馏范式：采用配备累积散度衰减（Cumulative-Divergence Decay，CDD）的两阶段在线策略蒸馏（On-Policy Distillation，OPD）。该方法以领域适配后的模型作为教师，以原始基础模型作为学生，从而有效平衡深层领域知识注入与通用智能体能力保持。实验结果表明，KuaiRP 模型不仅在目标领域的角色扮演忠实度上达到当前最先进的闭源模型水平，而且成功恢复了通用智能体能力，同时维持极低的部署成本。",
             "abstractEn": "This paper introduces the complete technical solution for the KuaiRP series of role-playing models. We aim to achieve four core objectives for a dedicated role-playing model: simplified prompt engineering, highly stable output quality, built-in domain world knowledge, and high-efficiency deployment with a small parameter size. However, effectively injecting deep domain knowledge often leads to a severe catastrophic forgetting of the model's general agent capabilities. To overcome this trade-off, we propose a multi-stage training pipeline. First, we design a standardized character template and construct an SFT data pipeline based on user behavior simulation and reverse profile filtering. Next, we utilize a rule-based composite reward function during the Reinforcement Learning (RL) phase to eliminate common degradation phenomena like length expansion and repetitive generation. Finally, to recover the general capabilities compromised during SFT and RL, we propose a novel self-distillation paradigm using Two-stage On-Policy Distillation (OPD) equipped with Cumulative-Divergence Decay (CDD). By using the domain-adapted model as the teacher and the original base model as the student, we effectively balance deep domain knowledge injection with the preservation of general agent capabilities. Experimental results demonstrate that the KuaiRP models not only match the current state-of-the-art proprietary models in role-playing fidelity within our target domains, but also successfully recover general agent capabilities, maintaining extremely low deployment costs."
-          }
-        },
-        {
-          "year": 2026,
-          "title": "EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World",
-          "paperUrl": "https://arxiv.org/abs/2607.17250",
-          "venue": "arXiv 2026",
-          "resource": {
-            "label": "Code",
-            "url": "https://github.com/HKUST-KnowComp/EvolvingWorld"
-          },
-          "trainingMethods": [
-            "SFT"
-          ],
-          "tags": [
-            "World model",
-            "Dataset"
-          ],
-          "description": "Co-evolves open-schema character profiles and world states for long-horizon literary role-playing.",
-          "detailId": "2607.17250",
-          "details": {
-            "abstractZh": "本文提出 EvolvingWorld，这是一个面向互动文学世界中角色与世界共同演化的框架和基准。现有系统要么将互动文学模拟视为静态的人物模仿，要么将其视为孤立的场景生成，因而无法捕捉角色和世界如何随时间共同演变。为解决这一问题，EvolvingWorld 将文学模拟建模为一个长时间跨度的过程，其中角色持续互动、场景不断推进，角色状态与世界状态也会被持续更新。不同于依赖固定模式的以往系统，EvolvingWorld 采用开放模式框架，以支持多种文学世界中的模拟。该框架由两个相互耦合的模块组成：Character Agent 负责多角色扮演和人物档案的持续演化；基于大语言模型的 World Model 则负责维护全局状态、地点与实体层级状态，并推动场景发展。基于这一架构，作者定义了 7 项可训练任务，涵盖场景初始化、互动生成和状态更新。研究从 57 本书中构建数据集，生成 138,596 条监督训练样本和 222 个测试快照。此外，作者提出一种轨迹级的 LLM-as-Judge 评估方案，覆盖 10 个维度和 20 项指标。实验表明，EvolvingWorld 能够有效维持角色与世界持续且连贯的发展，从而改善长时间跨度的模拟。",
-            "abstractEn": "This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds. Existing systems either treat interactive literary simulation as static persona imitation or isolated scene generation, failing to capture how characters and worlds evolve together over time. To address this, EvolvingWorld models literary simulation as a long-horizon process where characters interact, scenes progress, and character and world states are persistently updated. Unlike prior systems relying on fixed schemas, EvolvingWorld adopts an open-schema framework to support simulation across diverse literary worlds. The framework consists of two coupled modules: a Character Agent for multi-character role-play and persistent profile evolution, and an LLM-based World Model for global and location/entity-level state maintenance and scene progression. Based on this architecture, we formulate 7 trainable tasks for scene initialization, interaction generation, and state update. We construct a dataset from 57 books, producing 138,596 supervised training samples and 222 snapshots for testing. Furthermore, we introduce a trajectory-level LLM-as-Judge evaluation protocol spanning 10 dimensions and 20 metrics. Experiments show that EvolvingWorld can improve long-horizon simulation by effectively maintaining persistent, coherent character and world development."
           }
         },
         {
@@ -782,25 +801,6 @@
           "details": {
             "abstractZh": "近年来，角色扮演智能体（RPAs）因其提供情感价值和促进社会学研究的潜力而受到越来越多的关注。然而，现有研究主要局限于文本模态，无法模拟人类的多模态感知能力。为弥补这一空白，本文提出多模态角色扮演智能体（MRPAs）的概念，并提出用于开发和评估此类智能体的综合框架 MMRole，其中包括个性化多模态数据集和稳健的评估方法。具体而言，作者构建了大规模、高质量的 MMRole-Data 数据集，其中包含 85 个角色、11K 张图像以及 14K 段单轮或多轮对话。此外，本文提出稳健的评估方法 MMRole-Eval，覆盖三个维度的八项指标，并设计奖励模型，利用构建的真实标注数据对多模态角色扮演智能体进行评分和比较。作者还开发了首个专用多模态角色扮演智能体 MMRole-Agent。大量评估结果表明，MMRole-Agent 的性能得到提升，同时揭示了开发多模态角色扮演智能体时面临的主要挑战，强调需要增强多模态理解和角色扮演一致性。数据、代码和模型均可在以下地址获取：https://github.com/YanqiDai/MMRole。",
             "abstractEn": "Recently, Role-Playing Agents (RPAs) have garnered increasing attention for their potential to deliver emotional value and facilitate sociological research. However, existing studies are primarily confined to the textual modality, unable to simulate humans' multimodal perceptual capabilities. To bridge this gap, we introduce the concept of Multimodal Role-Playing Agents (MRPAs), and propose a comprehensive framework, MMRole, for their development and evaluation, which comprises a personalized multimodal dataset and a robust evaluation approach. Specifically, we construct a large-scale, high-quality dataset, MMRole-Data, consisting of 85 characters, 11K images, and 14K single or multi-turn dialogues. Additionally, we present a robust evaluation approach, MMRole-Eval, encompassing eight metrics across three dimensions, where a reward model is designed to score MRPAs with the constructed ground-truth data for comparison. Moreover, we develop the first specialized MRPA, MMRole-Agent. Extensive evaluation results demonstrate the improved performance of MMRole-Agent and highlight the primary challenges in developing MRPAs, emphasizing the need for enhanced multimodal understanding and role-playing consistency. The data, code, and models are all available at https://github.com/YanqiDai/MMRole."
-          }
-        },
-        {
-          "year": 2025,
-          "title": "MOA: Multi-Objective Alignment for Role-Playing Agents",
-          "paperUrl": "https://arxiv.org/abs/2512.09756",
-          "venue": "arXiv 2025",
-          "resource": null,
-          "trainingMethods": [
-            "RL"
-          ],
-          "tags": [
-            "Multi-objective"
-          ],
-          "description": "Aligns role-playing agents with multi-objective rewards.",
-          "detailId": "2512.09756",
-          "details": {
-            "abstractZh": "角色扮演智能体（RPAs）需要平衡多个目标，例如指令遵循、人物一致性和风格忠实度，而这些目标在不同维度上并不总是完全一致。以往工作主要依赖监督微调或使用标量化奖励的强化学习，但这些方法并未明确处理优化过程中多个奖励维度之间的协调。本文提出 MOA（Multi-Objective Alignment），一个支持通用角色扮演智能体进行多维、细粒度评分准则优化的强化学习框架。MOA 引入一种新的多目标优化策略，同时在多个细粒度评分准则上进行训练，以提升优化效果。此外，为同时改善输出多样性和生成质量，作者采用带有思考增强的 rollout 和离策略引导。PersonaGym 和 RoleMRC 上的实验表明，与监督学习和标准强化学习基线相比，MOA 持续提升多维角色扮演表现。在相同评估方案下，经过 MOA 训练的 8B 模型在多个评估维度上取得了可与强闭源模型竞争的表现。这些结果表明，MOA 为训练能力更强的通用角色扮演智能体提供了一个实用框架。",
-            "abstractEn": "Role-playing agents (RPAs) require balancing multiple objectives, such as instruction following, persona consistency, and stylistic fidelity, which are not always perfectly aligned across different dimensions. While prior work has primarily relied on supervised fine-tuning or reinforcement learning with scalarized rewards, these approaches do not explicitly address the coordination of multiple reward dimensions during optimization. We present MOA (Multi-Objective Alignment), a reinforcement-learning framework that enables multi-dimensional, fine-grained rubric optimization for general RPAs. MOA introduces a novel multi-objective optimization strategy that trains simultaneously on multiple fine-grained rubrics to boost optimization performance. Additionally, to improve both output diversity and generation quality, we employ thought-augmented rollouts with off-policy guidance. Experiments on PersonaGym and RoleMRC show that MOA consistently improves multi-dimensional role-playing performance over supervised and standard RL baselines. Under identical evaluation protocols, an 8B model trained with MOA reaches performance competitive with strong closed-source models across multiple evaluation dimensions. These results suggest that MOA provides a practical framework for training more capable general-purpose role-playing agents."
           }
         },
         {
