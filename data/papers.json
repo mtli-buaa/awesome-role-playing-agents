@@ -13,6 +13,21 @@
       "kind": "overview",
       "entries": [
         {
+          "year": 2026,
+          "title": "Role Consistency in Role-Playing Agents: A Survey of Evaluation, Memory, Reasoning, Alignment, and Safety",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.625/",
+          "venue": "EMNLP Findings 2026",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [],
+          "description": "Surveys evaluation, memory, reasoning, alignment, and safety for maintaining coherent roles over time.",
+          "detailId": "2026.findings-emnlp.625",
+          "details": {
+            "abstractZh": "综述角色扮演智能体如何在多轮互动中保持身份、角色知识、表达风格、价值观和行为逻辑，覆盖评测、记忆、推理、对齐与安全。",
+            "abstractEn": "Surveys evaluation, memory, reasoning, alignment, and safety for maintaining coherent roles over time."
+          }
+        },
+        {
           "year": 2024,
           "title": "From Persona to Personalization: A Survey on Role-Playing Language Agents",
           "paperUrl": "https://arxiv.org/abs/2404.18231",
@@ -51,6 +66,75 @@
       "entries": [
         {
           "year": 2026,
+          "title": "From Facts to Insights: A Persona-Driven Dual Memory Framework and Dataset for Role-Playing Agents",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.270/",
+          "venue": "EMNLP Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/role2026/rolememo"
+          },
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Memory framework",
+            "Dataset"
+          ],
+          "description": "Decouples factual cognition and persona-conditioned insight for long-term persona fidelity.",
+          "detailId": "2605.25693",
+          "details": {
+            "abstractZh": "尽管角色扮演智能体在短期互动中表现出色，但长期对话会超出上下文窗口的承载能力，因此需要引入外部记忆框架。当前系统通常依赖与人物设定无关的摘要，只记录事实而不进行人物特定的解释，因而容易生成通用化回答，损害人物忠实度。为弥补这一空白，本文提出 RoleMemo 数据集，其中包含四项推理任务；模型必须从人物设定的视角解释事实片段，才能得出正确答案。RoleMemo 上的评测揭示了人物设定无关型框架的关键局限。基于此，作者提出 DualMem，将记忆解耦为两条信息流：事实认知和人物设定条件化洞察。该框架通过监督微调（SFT）和强化学习（RL）进行训练，其 4B 参数模型在维持长期人物忠实度方面，优于由 DeepSeek-V3.2 驱动的零样本、人物设定无关型框架。相关资源可在以下地址获取：https://github.com/role2026/rolememo。",
+            "abstractEn": "While role-playing agents excel in short-term interactions, long-term conversations overwhelm context windows, motivating external memory frameworks. Current systems typically rely on persona-agnostic summarization, which records facts without persona-specific interpretation, yielding generic responses that compromise persona fidelity. To bridge this gap, we introduce RoleMemo, a dataset featuring four reasoning tasks where the factual fragments must be interpreted through the persona to reach the correct answer. Evaluation on RoleMemo exposes critical limitations of persona-agnostic frameworks. We thus propose DualMem, which decouples memory into two streams: factual cognition and persona-conditioned insight. Trained through Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL), our framework with a 4B-parameter model outperforms zero-shot persona-agnostic frameworks powered by DeepSeek-V3.2 for sustained persona fidelity. Our resources are available at https://github.com/role2026/rolememo."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "Reward-Decomposed Reinforcement Learning for Immersive Video Role-Playing",
+          "paperUrl": "https://aclanthology.org/2026.emnlp-main.346/",
+          "venue": "EMNLP 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/ebm-rl/RP-See-Think-Speak-RL"
+          },
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Multimodal role-playing",
+            "Dataset"
+          ],
+          "description": "Separates visual perception, reasoning, and dialogue generation with decomposed rewards for video-grounded role-playing.",
+          "detailId": "2026.emnlp-main.346",
+          "details": {
+            "abstractZh": "提出视频角色扮演框架，将场景感知、推理和台词生成分开优化，让角色回应视频中的氛围和互动变化，并发布相应数据集。",
+            "abstractEn": "Separates visual perception, reasoning, and dialogue generation with decomposed rewards for video-grounded role-playing."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "LSH-RL: Long-Short Horizon Reinforcement Learning for Persona-Level Role-Playing Agents",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.1619/",
+          "venue": "EMNLP Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Shiwenlong-source/LSH-RL"
+          },
+          "trainingMethods": [
+            "RL"
+          ],
+          "tags": [
+            "Persona consistency"
+          ],
+          "description": "Combines long- and short-horizon rewards for persona fidelity and turn-level interaction quality.",
+          "detailId": "2026.findings-emnlp.1619",
+          "details": {
+            "abstractZh": "联合长程与短程强化学习信号，在多轮对话中兼顾人设忠实度、自然互动和场景推进。",
+            "abstractEn": "Combines long- and short-horizon rewards for persona fidelity and turn-level interaction quality."
+          }
+        },
+        {
+          "year": 2026,
           "title": "DREAM: LLM-based Dynamic Role-playing via Event-Aware Memory Graph",
           "paperUrl": "https://arxiv.org/abs/2608.05170",
           "venue": "KDD 2026",
@@ -68,6 +152,45 @@
           "details": {
             "abstractZh": "角色扮演智能体（RPAs）已成为大语言模型的一项重要应用，能够实现沉浸式且高保真的角色模拟。准确扮演已有角色不仅需要模仿其表达风格，还要求行为推理在时间上保持一致，并具有因果依据。然而，现有角色扮演智能体主要依赖静态角色描述和非结构化记忆，这限制了它们维持长期叙事一致性和人格连贯性的能力。本文提出 DREAM，这是一种受激活事件—信念—后果（Activating Event-Belief-Consequence，ABC）认知模型启发的角色扮演智能体结构化记忆框架。DREAM 将非结构化文学文本转换为事件感知记忆图（Event-aware Memory Graph，EMG），把角色经历组织成按时间排序且具有因果联系的事件图。这种表示能够构建动态的双粒度角色档案，同时捕捉稳定的人格特质和由事件驱动的行为演化。本文进一步提出时间因果记忆（Temporal Causal Memory，TCM）基准，用于评估时间一致性和长距离因果叙事连贯性。DREAM 在 CoSER、LIFECHOICE 和 TCM 上均取得了最先进的性能，超过多个强基线。该方法证明了结构化记忆在提升角色扮演智能体可解释性和一致性方面的有效性。",
             "abstractEn": "Role-playing agents (RPAs) have emerged as a key application of large language models, enabling immersive and high-fidelity character simulation. Accurate role-playing of established characters requires not only stylistic imitation but also temporally consistent and causally grounded behavioral reasoning. However, existing RPAs primarily rely on static character descriptions and unstructured memory, limiting their ability to maintain long-term narrative and personality coherence. We introduce DREAM, a structured memory framework for role-playing agents inspired by the Activating Event-Belief-Consequence (ABC) cognitive model. DREAM transforms unstructured literary text into an Event-aware Memory Graph (EMG) that organizes character experiences into temporally ordered and causally linked event graph. This representation enables the construction of dynamic, dual-granularity character profiles that capture both stable personality traits and event-driven behavioral evolution. We further propose the Temporal Causal Memory (TCM) benchmark to evaluate temporal consistency and long-range causal narrative coherence. DREAM achieves state-of-the-art performance across CoSER, LIFECHOICE, and TCM, outperforming multiple strong baselines. Our approach demonstrates the effectiveness of structured memory in enhancing the interpretability and consistency of role-playing agents."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "Trait Activation in Silicon: A Situation-Aware Framework for Psychologically Grounded Role-Playing",
+          "paperUrl": "https://aclanthology.org/2026.acl-long.1792/",
+          "venue": "ACL 2026",
+          "resource": null,
+          "trainingMethods": [],
+          "tags": [
+            "PEFT",
+            "Trait activation"
+          ],
+          "description": "Dynamically modulates bidirectional LoRA personality adapters using social-situation cues.",
+          "detailId": "2026.acl-long.1792",
+          "details": {
+            "abstractZh": "依据特质激活理论，用可双向调节的 LoRA 适配器建模人格特质，并根据不同社交情境调节特质表达。",
+            "abstractEn": "Dynamically modulates bidirectional LoRA personality adapters using social-situation cues."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "PersonaForge: Psychology-Grounded Dual-Process Architecture for Personality-Consistent Role-Playing Agents",
+          "paperUrl": "https://aclanthology.org/2026.findings-acl.386/",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/fQwQf/PersonaForge"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Personality modeling",
+            "Dual-process generation"
+          ],
+          "description": "Combines layered personality representations and dual-process generation to reduce persona drift.",
+          "detailId": "2026.findings-acl.386",
+          "details": {
+            "abstractZh": "结合分层人格建模与双过程生成，在长期对话中维持角色个性，并分析心理学约束和内部独白对角色一致性的作用。",
+            "abstractEn": "Combines layered personality representations and dual-process generation to reduce persona drift."
           }
         },
         {
@@ -325,30 +448,6 @@
           "details": {
             "abstractZh": "要构建能够依据自然语言档案忠实扮演任意角色的通用角色扮演智能体，仍然是一项具有挑战性的任务。当前的主流范式——监督微调——鼓励模型模仿行为，却没有形成深入且类似人类的内在思考过程，因此在分布外场景中的泛化能力较差。为此，本文提出 Psy-CoT，一个以心理学为基础的思维链框架，将回答前的推理拆分为三个角色特定步骤：互动感知、心理共情和逻辑构建，使模型能够依据角色档案进行动态思考，而不只是模仿表面模式。结构化推理虽然提供了基础，但仅靠它仍然不够；强化学习对于进一步使模型与人物忠实度对齐至关重要。然而，作者观察到，在基于大语言模型的奖励模型下，能够利用奖励模型漏洞的通用短语与真正体现角色特征的短语会获得相同的梯度信号。这种奖励投机会在训练过程中不断累积，误导模型将两者视为同样理想的选择。为解决这一问题，本文提出 Role-Aware Policy Optimization（RAPO），使用角色档案与词元之间的互信息对梯度进行非对称加权：在正优势下放大角色特定词元，在负优势下减弱这些词元。CoSER、CharacterBench 和 CharacterEval 上的实验表明，Psy-CoT 优于现有的角色扮演思维链方法，而 RAPO 在多种模型规模上均持续超过 GRPO。",
             "abstractEn": "Building general-purpose role-playing agents that faithfully portray any character from a natural-language profile remains challenging. The dominant paradigm -- supervised fine-tuning -- encourages behavioral mimicry without deep, human-like internal thought processes, resulting in poor out-of-distribution generalization. Therefore, we propose Psy-CoT, a psychology-grounded chain-of-thought framework that decomposes pre-response reasoning into three role-specific steps -- Interaction Perception, Psychological Empathy, and Logical Construction -- so that the model thinks dynamically from the profile rather than merely mimicking surface patterns. While structured reasoning provides a foundation, it alone is insufficient; reinforcement learning is essential to further align the model with character fidelity. However, we observe that under LLM-based reward models, both generic phrases that hack the reward model and genuinely role-specific phrases receive identical gradient signals -- this hacking accumulates over training, misleading the model into treating both as equally optimal choices. To address this, we propose Role-Aware Policy Optimization (RAPO), which uses profile--token mutual information to weight gradients asymmetrically -- amplifying role-specific tokens under positive advantage while attenuating them under negative advantage. Experiments on CoSER, CharacterBench, and CharacterEval demonstrate that Psy-CoT outperforms existing role-playing CoT methods, and RAPO consistently surpasses GRPO across multiple model scales."
-          }
-        },
-        {
-          "year": 2026,
-          "title": "From Facts to Insights: A Persona-Driven Dual Memory Framework and Dataset for Role-Playing Agents",
-          "paperUrl": "https://arxiv.org/abs/2605.25693",
-          "venue": "arXiv 2026",
-          "resource": {
-            "label": "Code",
-            "url": "https://github.com/role2026/rolememo"
-          },
-          "trainingMethods": [
-            "SFT",
-            "RL"
-          ],
-          "tags": [
-            "Memory framework",
-            "Dataset"
-          ],
-          "description": "Decouples factual cognition and persona-conditioned insight for long-term persona fidelity.",
-          "detailId": "2605.25693",
-          "details": {
-            "abstractZh": "尽管角色扮演智能体在短期互动中表现出色，但长期对话会超出上下文窗口的承载能力，因此需要引入外部记忆框架。当前系统通常依赖与人物设定无关的摘要，只记录事实而不进行人物特定的解释，因而容易生成通用化回答，损害人物忠实度。为弥补这一空白，本文提出 RoleMemo 数据集，其中包含四项推理任务；模型必须从人物设定的视角解释事实片段，才能得出正确答案。RoleMemo 上的评测揭示了人物设定无关型框架的关键局限。基于此，作者提出 DualMem，将记忆解耦为两条信息流：事实认知和人物设定条件化洞察。该框架通过监督微调（SFT）和强化学习（RL）进行训练，其 4B 参数模型在维持长期人物忠实度方面，优于由 DeepSeek-V3.2 驱动的零样本、人物设定无关型框架。相关资源可在以下地址获取：https://github.com/role2026/rolememo。",
-            "abstractEn": "While role-playing agents excel in short-term interactions, long-term conversations overwhelm context windows, motivating external memory frameworks. Current systems typically rely on persona-agnostic summarization, which records facts without persona-specific interpretation, yielding generic responses that compromise persona fidelity. To bridge this gap, we introduce RoleMemo, a dataset featuring four reasoning tasks where the factual fragments must be interpreted through the persona to reach the correct answer. Evaluation on RoleMemo exposes critical limitations of persona-agnostic frameworks. We thus propose DualMem, which decouples memory into two streams: factual cognition and persona-conditioned insight. Trained through Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL), our framework with a 4B-parameter model outperforms zero-shot persona-agnostic frameworks powered by DeepSeek-V3.2 for sustained persona fidelity. Our resources are available at https://github.com/role2026/rolememo."
           }
         },
         {
@@ -860,6 +959,47 @@
       "entries": [
         {
           "year": 2026,
+          "title": "Identifying and Mitigating Bottlenecks in Role-Playing Agents: A Systematic Study of Disentangling Character Profile Axes",
+          "paperUrl": "https://aclanthology.org/2026.emnlp-main.1590/",
+          "venue": "EMNLP 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/yonghyun010102/RPA_Bottleneck"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Character profiles"
+          ],
+          "description": "Disentangles the effects of character familiarity, profile structure, and moral disposition on role-playing quality.",
+          "detailId": "2026.emnlp-main.1590",
+          "details": {
+            "abstractZh": "将角色档案拆分为熟悉度、结构和道德倾向三个维度，分别诊断各维度对角色扮演表现的影响。",
+            "abstractEn": "Disentangles the effects of character familiarity, profile structure, and moral disposition on role-playing quality."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "Too Good to be Bad: On the Failure of LLMs to Role-Play Villains",
+          "paperUrl": "https://aclanthology.org/2026.findings-acl.282/",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/Tencent/DigitalHuman/tree/main/RolePlay_Villain"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Persona fidelity",
+            "Safety alignment"
+          ],
+          "description": "Studies how safety-aligned LLMs portray villainous fictional characters.",
+          "detailId": "2026.findings-acl.282",
+          "details": {
+            "abstractZh": "研究安全对齐后的语言模型扮演虚构反派时的表现，分析模型能否保留角色的反社会或道德模糊特征。",
+            "abstractEn": "Studies how safety-aligned LLMs portray villainous fictional characters."
+          }
+        },
+        {
+          "year": 2026,
           "title": "Understanding Generalization in Role-Playing Models via Information Theory",
           "paperUrl": "https://arxiv.org/abs/2512.17270",
           "venue": "ACL Findings 2026",
@@ -927,6 +1067,69 @@
       "entries": [
         {
           "year": 2026,
+          "title": "ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?",
+          "paperUrl": "https://aclanthology.org/2026.emnlp-main.1998/",
+          "venue": "EMNLP 2026",
+          "resource": null,
+          "trainingMethods": [
+            "SFT",
+            "RL"
+          ],
+          "tags": [
+            "Dataset",
+            "Temporal character evolution"
+          ],
+          "description": "",
+          "detailId": "2606.05553",
+          "details": {
+            "abstractZh": "角色扮演语言智能体应随故事进展呈现不断变化的价值观与行为，而不是维持固定人物。ArcANE 覆盖 17 部小说和 80 个主要角色，以心理轴将叙事切分为人物弧阶段，并在不同阶段询问相同场景，包括原作内外的情境。在六个模型和六种上下文设置中，提供人物弧始终优于其他策略，对原作未涉及的场景优势最大；基于同一数据微调得到的 ArcANE-8B/32B 进一步扩大了这一优势。",
+            "abstractEn": "Role-playing language agents (RPLAs) should play characters whose values and behavior evolve as the story progresses, not maintain a fixed persona. Existing benchmarks measure factual recall at a given chapter, not whether responses align with the character's psychological trajectory, especially in scenarios the source text never explores. We introduce ArcANE (Arc-Aware Narrative Evaluation), an automatically constructed benchmark spanning 17 novels and 80 principal characters. A Character Arc segments the narrative into phases along a psychological axis, and each probe poses the same scenario across phases, spanning both situations within the source text and situations beyond it. Across six models and six context modes, conditioning on the Character Arc tops every other context strategy on every model, and the gap is largest on scenarios outside the source text where retrieval has nothing to find. We further fine-tune open-weight models on the same data to obtain ArcANE-8B/32B, which widen the Arc advantage even more on scenarios outside the source text."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "REMP: A Structured Event-Probing Benchmark for Long-Horizon Role-Playing Dialogue",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.602/",
+          "venue": "EMNLP Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/DreamFragrance/REMP"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Benchmark",
+            "Long-horizon role-playing"
+          ],
+          "description": "Uses structured event probes to diagnose long-horizon role-playing across relationships, emotion, memory, and personality.",
+          "detailId": "2026.findings-emnlp.602",
+          "details": {
+            "abstractZh": "通过结构化事件探针对长程角色扮演中的关系、情绪、记忆和人格表现进行诊断。",
+            "abstractEn": "Uses structured event probes to diagnose long-horizon role-playing across relationships, emotion, memory, and personality."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "CHARM: Character Hallucination for Multicultural Role Play Benchmark",
+          "paperUrl": "https://aclanthology.org/2026.findings-emnlp.460/",
+          "venue": "EMNLP Findings 2026",
+          "resource": {
+            "label": "Data",
+            "url": "https://github.com/sunkyoung19/CHARM"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Dataset",
+            "Character knowledge boundaries"
+          ],
+          "description": "Tests whether models recognize and respect knowledge boundaries across 40 multicultural characters.",
+          "detailId": "2026.findings-emnlp.460",
+          "details": {
+            "abstractZh": "使用 40 个跨文化的真实与虚构角色，区分模型是否识别角色的知识边界，以及识别后是否遵守边界。",
+            "abstractEn": "Tests whether models recognize and respect knowledge boundaries across 40 multicultural characters."
+          }
+        },
+        {
+          "year": 2026,
           "title": "OmniCharacter++: Towards Comprehensive Benchmark for Realistic Role-Playing Agents",
           "paperUrl": "https://doi.org/10.1109/TPAMI.2026.3690447",
           "venue": "TPAMI 2026",
@@ -944,6 +1147,27 @@
           "details": {
             "abstractZh": "现有由大语言模型驱动的角色扮演智能体（RPAs）主要在静态、纯文本、双人对话环境中进行评估，无法充分反映现实人类互动中多名参与者和多模态交流所带来的复杂性。为弥补这一空白，本文提出 OmniCharacter++，首个在文本—语音联合环境中评估多角色互动的基准。具体而言，OmniCharacter++ 包含三项主要贡献：（1）一个大规模数据集，涵盖 10,287 个角色、118,017 段多轮对话和超过一百万条语音回答，涉及 8 个开放世界主题和 31 个子领域，覆盖多种多模态角色扮演场景；（2）一套综合评估体系，用于评测对话理解、生成质量和感知自然度；（3）UniCharacter-7B，一个使用该数据集训练的统一文本—语音模型，用于处理复杂的多角色动态，同时确保角色特定的声音忠实度和参与者之间的语义对齐。实验结果表明，UniCharacter-7B 在吸引力和一致性方面都能生成更加真实且连贯的角色扮演回答；实验同时说明，OmniCharacter++ 对当前最先进模型仍然构成显著挑战，并为未来研究提供了清晰方向。代码已公开于：https://github.com/zchoi/OmniCharacter-plus。",
             "abstractEn": "Existing Role-Playing Agents (RPAs), powered by large language models, are predominantly evaluated on static, text-only, dyadic conversations, which inadequately reflect the complexity of realistic human interactions involving multiple interlocutors and multi-modal communication. To bridge this gap, we propose OmniCharacter++, the first benchmark for evaluating multi-character interactions in a joint text-speech context. Specifically, OmniCharacter++ contributes: (1) a large-scale dataset comprising 10,287 characters, 118,017 multi-turn dialogues, and over one million audio responses across 8 open-world topics and 31 subfields, covering diverse multi-modal role-playing scenarios; (2) a comprehensive evaluation suite for dialogue understanding, generation quality, and perceptual naturalness; and (3) UniCharacter-7B, a unified text-speech model trained on this dataset to manage complex multi-character dynamics, ensuring both role-specific vocal fidelity and cross-participant semantic alignment. Experimental results demonstrate that UniCharacter-7B achieves more realistic and consistent role-playing responses in terms of both attractiveness and consistency, while also highlighting that OmniCharacter++ poses substantial challenges for state-of-the-art models, charting a clear path for future research. The Code is publicly available at: https://github.com/zchoi/OmniCharacter-plus."
+          }
+        },
+        {
+          "year": 2026,
+          "title": "Memory-Driven Role-Playing: Evaluation and Enhancement of Persona Knowledge Utilization in LLMs",
+          "paperUrl": "https://aclanthology.org/2026.findings-acl.1175/",
+          "venue": "ACL Findings 2026",
+          "resource": {
+            "label": "Code",
+            "url": "https://github.com/41522/MDRP"
+          },
+          "trainingMethods": [],
+          "tags": [
+            "Benchmark",
+            "Persona knowledge utilization"
+          ],
+          "description": "Introduces a bilingual benchmark and prompting method for retrieving and applying persona knowledge in dialogue.",
+          "detailId": "2026.findings-acl.1175",
+          "details": {
+            "abstractZh": "提出中英双语基准 MRBench 及结构化提示方法，评估模型能否根据多轮对话自主检索并运用角色知识。",
+            "abstractEn": "Introduces a bilingual benchmark and prompting method for retrieving and applying persona knowledge in dialogue."
           }
         },
         {
@@ -1004,27 +1228,6 @@
           "details": {
             "abstractZh": "要让虚拟角色实现真实、类似人类的对话，不仅需要简单地记忆和回想过去事件，还需要有策略地使用记忆，以满足事实需求和社会互动需求。当前与记忆使用相关的基准——例如记忆增强生成和长期对话基准等——忽视了这一细微差别，主要将记忆视为静态的事实存储库，而不是一种需要在对话中有策略地调用的动态资源。为弥补这一空白，本文设计 StratMem-Bench，一个用于评估以角色为中心的对话中策略性记忆使用的新基准。该数据集包含 657 个实例，虚拟角色需要处理由必要记忆、支持性记忆和无关记忆组成的异构记忆池。作者还提出一个包含多种评估指标的框架，包括严格记忆遵循度、记忆整合质量、主动丰富分数和条件无关率，用于评测虚拟角色的策略性记忆使用能力。在 StratMem-Bench 上，以当前先进大语言模型作为虚拟角色的实验表明，所有模型都能较好地区分必要记忆与无关记忆，但当支持性记忆被纳入决策过程后，模型的表现会明显下降。",
             "abstractEn": "Achieving realistic human-like conversation for virtual characters requires not only a simple memorization and recall of past events, but also the strategic utilization of memory to meet factual needs and social engagement. Current memory utilization relevant (e.g., memory-augmented generation, long-term dialogue, and etc.) benchmarks overlook this nuance, treating memory primarily as a static repository of facts rather than a dynamic resource to be strategically deployed in dialogues. To address this gap, we design StratMem-Bench, a new benchmark to evaluate strategic memory use in character-centric dialogues. This dataset comprises 657 instances where virtual characters must navigate heterogeneous memory pools containing required, supportive, and irrelevant memories. We also propose a framework with different evaluation metrics including Strict Memory Compliance, Memory Integration Quality, Proactive Enrichment Score and Conditional Irrelevance Rate, to evaluate strategic memory use capabilities of virtual characters. Experiments on StratMem-Bench which leverage the state-of-the-art large language models as virtual characters show that all models perform well at distinguishing between required and irrelevant memories, but struggle once supportive memories are introduced into the decision process."
-          }
-        },
-        {
-          "year": 2026,
-          "title": "ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?",
-          "paperUrl": "https://arxiv.org/abs/2606.05553",
-          "venue": "arXiv 2026",
-          "resource": null,
-          "trainingMethods": [
-            "SFT",
-            "RL"
-          ],
-          "tags": [
-            "Dataset",
-            "Temporal character evolution"
-          ],
-          "description": "",
-          "detailId": "2606.05553",
-          "details": {
-            "abstractZh": "角色扮演语言智能体应随故事进展呈现不断变化的价值观与行为，而不是维持固定人物。ArcANE 覆盖 17 部小说和 80 个主要角色，以心理轴将叙事切分为人物弧阶段，并在不同阶段询问相同场景，包括原作内外的情境。在六个模型和六种上下文设置中，提供人物弧始终优于其他策略，对原作未涉及的场景优势最大；基于同一数据微调得到的 ArcANE-8B/32B 进一步扩大了这一优势。",
-            "abstractEn": "Role-playing language agents (RPLAs) should play characters whose values and behavior evolve as the story progresses, not maintain a fixed persona. Existing benchmarks measure factual recall at a given chapter, not whether responses align with the character's psychological trajectory, especially in scenarios the source text never explores. We introduce ArcANE (Arc-Aware Narrative Evaluation), an automatically constructed benchmark spanning 17 novels and 80 principal characters. A Character Arc segments the narrative into phases along a psychological axis, and each probe poses the same scenario across phases, spanning both situations within the source text and situations beyond it. Across six models and six context modes, conditioning on the Character Arc tops every other context strategy on every model, and the gap is largest on scenarios outside the source text where retrieval has nothing to find. We further fine-tune open-weight models on the same data to obtain ArcANE-8B/32B, which widen the Arc advantage even more on scenarios outside the source text."
           }
         },
         {
